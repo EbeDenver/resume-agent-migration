@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LiveRamp AI & Product Transformation Dashboard</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <style>
+    /* Custom scrollbar */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: rgba(100, 116, 139, 0.3); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(100, 116, 139, 0.5); }
+    .topic-card { transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1); }
+    .topic-card:hover { transform: translateY(-2px); box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); }
+  </style>
+</head>
+<body class="bg-[var(--background)] text-[var(--foreground)] antialiased p-4 md:p-8 min-h-screen">
+  <div class="max-w-7xl mx-auto space-y-6">
+
+    <!-- Header Banner -->
+    <header class="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-6 shadow-sm">
+      <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4">
+        <div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-100 text-blue-800 dark:bg-blue-900/60 dark:text-blue-200">
+              LiveRamp (NYSE: RAMP)
+            </span>
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-900/60 dark:text-emerald-200">
+              Grounded AI & Product Dashboard
+            </span>
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-purple-100 text-purple-800 dark:bg-purple-900/60 dark:text-purple-200">
+              Requisition JR162206
+            </span>
+          </div>
+          <h1 class="text-2xl md:text-3xl font-bold tracking-tight text-[var(--foreground)]">
+            AI & Business Transformation Strategic Alignment
+          </h1>
+          <p class="text-sm md:text-base text-[var(--muted-foreground)] mt-1">
+            Bridging LiveRamp Product Architecture (RampID, Habu Clean Rooms, Agentic AI) with Enterprise Business Transformation
+          </p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 bg-[var(--background)] p-3 rounded-xl border border-[var(--border)]">
+          <div class="text-left sm:text-right">
+            <div class="text-xs text-[var(--muted-foreground)] font-medium">Prepared for Discussions With</div>
+            <div class="text-sm font-bold text-[var(--foreground)]">VP of Product & Leadership</div>
+          </div>
+          <div class="h-8 w-px bg-[var(--border)] hidden sm:block"></div>
+          <div>
+            <div class="text-xs text-[var(--muted-foreground)] font-medium">Candidate Profile</div>
+            <div class="text-sm font-bold text-blue-600 dark:text-blue-400">Ebenezer J. Rolston</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Metrics Ribbon -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-6 pt-6 border-t border-[var(--border)] text-center">
+        <div class="p-3 rounded-lg bg-[var(--background)] border border-[var(--border)]">
+          <div class="text-xs text-[var(--muted-foreground)] font-medium uppercase tracking-wider">Identity Heritage</div>
+          <div class="text-lg md:text-xl font-bold text-[var(--foreground)] mt-0.5">10+ Yrs Acxiom</div>
+          <div class="text-xs text-blue-600 dark:text-blue-400">Citibank Scoring • AVS • CDI</div>
+        </div>
+        <div class="p-3 rounded-lg bg-[var(--background)] border border-[var(--border)]">
+          <div class="text-xs text-[var(--muted-foreground)] font-medium uppercase tracking-wider">Systems Transformation</div>
+          <div class="text-lg md:text-xl font-bold text-[var(--foreground)] mt-0.5">14 Yrs Enterprise</div>
+          <div class="text-xs text-emerald-600 dark:text-emerald-400">$1M+ Annual Reclaim • SAP S/4</div>
+        </div>
+        <div class="p-3 rounded-lg bg-[var(--background)] border border-[var(--border)]">
+          <div class="text-xs text-[var(--muted-foreground)] font-medium uppercase tracking-wider">AI Architecture</div>
+          <div class="text-lg md:text-xl font-bold text-[var(--foreground)] mt-0.5">Harvard & DU</div>
+          <div class="text-xs text-purple-600 dark:text-purple-400">LangGraph Agents • NIST RMF</div>
+        </div>
+        <div class="p-3 rounded-lg bg-[var(--background)] border border-[var(--border)]">
+          <div class="text-xs text-[var(--muted-foreground)] font-medium uppercase tracking-wider">Target Role</div>
+          <div class="text-lg md:text-xl font-bold text-[var(--foreground)] mt-0.5">Lead Partner</div>
+          <div class="text-xs text-amber-600 dark:text-amber-400">AI & Business Enablement</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Controls: Filter Tabs & Search -->
+    <div class="flex flex-col md:flex-row justify-between items-stretch md:items-center gap-3">
+      <div class="flex items-center gap-2 overflow-x-auto pb-1" id="filter-tabs">
+        <button onclick="setFilter('all')" class="tab-btn px-4 py-2 rounded-xl text-xs md:text-sm font-semibold transition bg-blue-600 text-white shadow-sm" data-filter="all">
+          All Topics (7)
+        </button>
+        <button onclick="setFilter('identity')" class="tab-btn px-4 py-2 rounded-xl text-xs md:text-sm font-semibold transition bg-[var(--card)] text-[var(--muted-foreground)] border border-[var(--border)] hover:bg-[var(--background)]" data-filter="identity">
+          Identity & Clean Rooms
+        </button>
+        <button onclick="setFilter('ai-agents')" class="tab-btn px-4 py-2 rounded-xl text-xs md:text-sm font-semibold transition bg-[var(--card)] text-[var(--muted-foreground)] border border-[var(--border)] hover:bg-[var(--background)]" data-filter="ai-agents">
+          AI & Agentic Workflows
+        </button>
+        <button onclick="setFilter('governance')" class="tab-btn px-4 py-2 rounded-xl text-xs md:text-sm font-semibold transition bg-[var(--card)] text-[var(--muted-foreground)] border border-[var(--border)] hover:bg-[var(--background)]" data-filter="governance">
+          Governance & FinOps
+        </button>
+        <button onclick="setFilter('operating')" class="tab-btn px-4 py-2 rounded-xl text-xs md:text-sm font-semibold transition bg-[var(--card)] text-[var(--muted-foreground)] border border-[var(--border)] hover:bg-[var(--background)]" data-filter="operating">
+          Operating Model
+        </button>
+      </div>
+
+      <div class="relative min-w-[240px]">
+        <input type="text" id="search-input" oninput="applySearch()" placeholder="Search topics, products, or tags..." 
+               class="w-full bg-[var(--card)] border border-[var(--border)] rounded-xl px-3.5 py-2 text-xs md:text-sm text-[var(--foreground)] placeholder-[var(--muted-foreground)] focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+    </div>
+
+    <!-- Topics Grid -->
+    <div id="topics-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <!-- Dynamic cards injected via JS -->
+    </div>
+
+    <!-- Deep-Dive Modal / Flyout Drawer -->
+    <div id="detail-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
+      <div class="bg-[var(--card)] border border-[var(--border)] rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl p-6 md:p-8 space-y-6">
+        <div class="flex justify-between items-start">
+          <div class="space-y-1">
+            <div class="flex items-center gap-2">
+              <span id="modal-seq" class="text-xs font-bold px-2 py-0.5 rounded bg-blue-100 text-blue-800 dark:bg-blue-900/60 dark:text-blue-200"></span>
+              <span id="modal-category" class="text-xs font-medium text-[var(--muted-foreground)]"></span>
+            </div>
+            <h2 id="modal-title" class="text-xl md:text-2xl font-bold text-[var(--foreground)]"></h2>
+          </div>
+          <button onclick="closeModal()" class="text-[var(--muted-foreground)] hover:text-[var(--foreground)] p-2 rounded-lg hover:bg-[var(--background)] text-lg">
+            ✕
+          </button>
+        </div>
+
+        <div class="space-y-4 text-xs md:text-sm">
+          <div class="p-4 rounded-xl bg-[var(--background)] border border-[var(--border)]">
+            <h3 class="text-xs uppercase tracking-wider font-bold text-blue-600 dark:text-blue-400 mb-1.5">Technical & Product Foundation</h3>
+            <p id="modal-explanation" class="text-[var(--foreground)] leading-relaxed"></p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-800/40">
+            <h3 class="text-xs uppercase tracking-wider font-bold text-emerald-700 dark:text-emerald-400 mb-1.5">Applicability to LiveRamp Operations</h3>
+            <p id="modal-applicability" class="text-[var(--foreground)] leading-relaxed"></p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-purple-50/50 dark:bg-purple-950/20 border border-purple-200 dark:border-purple-800/40">
+            <h3 class="text-xs uppercase tracking-wider font-bold text-purple-700 dark:text-purple-400 mb-1.5">Candidate Asset & Competitive Moat</h3>
+            <p id="modal-candidate" class="text-[var(--foreground)] leading-relaxed"></p>
+          </div>
+
+          <div>
+            <h3 class="text-xs uppercase tracking-wider font-bold text-[var(--muted-foreground)] mb-2">Grounded Source Materials</h3>
+            <div id="modal-links" class="flex flex-wrap gap-2"></div>
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-[var(--border)] flex justify-end">
+          <button onclick="closeModal()" class="px-5 py-2 rounded-xl text-xs md:text-sm font-semibold bg-[var(--background)] border border-[var(--border)] hover:bg-[var(--border)] text-[var(--foreground)] transition">
+            Close Overview
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Summary Card -->
+    <footer class="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-6 shadow-sm flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-[var(--muted-foreground)]">
+      <div>
+        <span class="font-semibold text-[var(--foreground)]">Interview Preparation Package:</span>
+        Lead Business Transformation Partner (Req JR162206) • Target: VP of Product, LiveRamp
+      </div>
+      <div class="flex items-center gap-4">
+        <span>Verified Grounded Links</span>
+        <span>•</span>
+        <span>Identity & Data Governance</span>
+        <span>•</span>
+        <span>Enterprise Transformation</span>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    const TOPICS = [
+      {
+        id: "01",
+        category: "identity",
+        seq: "Topic 01",
+        title: "Core Identity Resolution & RampID Architecture",
+        tag: "Core Identity",
+        summary: "Deterministic & probabilistic entity resolution, RampID encryption envelopes, and AbiliTec lineage eliminating third-party cookie dependency.",
+        explanation: "LiveRamp RampID is a people-based, privacy-first identifier that links offline customer records with online digital touchpoints. It translates fragmented PII into pseudonymous RampIDs keyed specifically per client domain and encryption envelope, enabling precise targeting and attribution without cookie leakage.",
+        applicability: "Forms the bedrock of LiveRamp Connect, ATS, and cloud-native solutions. In Business Technology, this identity foundation governs internal customer master data, partner onboarding synchronization, and billing linkage.",
+        candidate: "10+ years at Acxiom engineering Citibank's first Online Identity Scoring Model; architected AVS (Application Verification System) and customer data integration pipelines directly ancestral to AbiliTec and RampID.",
+        links: [
+          { name: "LiveRamp RampID", url: "https://liveramp.com/our-platform/identity/rampid/" },
+          { name: "Identity Solutions", url: "https://liveramp.com/our-platform/identity/" },
+          { name: "APIs & AbiliTec", url: "https://liveramp.com/our-platform/apis/" }
+        ]
+      },
+      {
+        id: "02",
+        category: "identity",
+        seq: "Topic 02",
+        title: "Cross-Cloud Data Clean Rooms (Habu Integration)",
+        tag: "Clean Rooms",
+        summary: "Multi-party data collaboration across Snowflake, Databricks, AWS, Azure, and GCP without raw data movement.",
+        explanation: "LiveRamp's acquisition of Habu created a native cross-cloud data collaboration platform. By executing federated SQL queries with differential privacy and dual-custody approval workflows, brands and publishers collaborate securely directly inside their existing data clouds.",
+        applicability: "LiveRamp unified Habu into LiveRamp Connect. Transformation leads must standardize cross-functional partner provisioning, resolve cloud entitlement discrepancies, and harmonise CRM/billing pipelines across clouds.",
+        candidate: "14 years reconciling fragmented enterprise databases (DOI FBMS ETL conversion, SAP S/4), deobligation tracking models reclaiming $1M+ annually, and cross-platform data hygiene.",
+        links: [
+          { name: "Data Clean Room", url: "https://liveramp.com/our-platform/data-collaboration/clean-room/" },
+          { name: "Habu Acquisition Brief", url: "https://liveramp.com/blog/liveramp-acquires-habu/" },
+          { name: "Snowflake Native App", url: "https://www.snowflake.com/en/solutions/partners/liveramp/" }
+        ]
+      },
+      {
+        id: "03",
+        category: "ai-agents",
+        seq: "Topic 03",
+        title: "Embedded Clean Room Generative AI & Natural Language Querying",
+        tag: "Generative AI",
+        summary: "AI Helper Bot predicting valuable cross-party analyses, generating governed queries, and drafting partner approval memos.",
+        explanation: "LiveRamp Clean Room embeds a generative AI assistant that lowers the barrier to entry for business users. It analyzes organization use cases, automatically generates complex SQL logic, drafts plain-language query explanations for partner privacy officers, and flags threshold anomalies.",
+        applicability: "Demonstrates product-led AI maturity. In Business Technology, similar generative interfaces can be operationalized internally to assist Commercial sales reps, automate RFP responses, and generate customer usage summaries.",
+        candidate: "Harvard SEAS LLM & Agentic AI certification; Stanford Python exploratory data analysis; AI Guardians enterprise readiness scorecards and ROI calculators.",
+        links: [
+          { name: "GenAI in Clean Rooms", url: "https://liveramp.com/blog/generative-ai-in-the-clean-room/" },
+          { name: "Collaboration Platform", url: "https://liveramp.com/our-platform/data-collaboration/" }
+        ]
+      },
+      {
+        id: "04",
+        category: "ai-agents",
+        seq: "Topic 04",
+        title: "Agentic Orchestration & Secure Multi-Party Agent Workflows",
+        tag: "Agentic AI",
+        summary: "Clean rooms as secure context intermediaries for autonomous AI agents collaborating across enterprise boundaries.",
+        explanation: "Enterprises are deploying AI agents for personalization, fraud detection, and automated decisions. LiveRamp Clean Rooms act as secure intermediaries, giving internal or external AI agents access to rich multi-party context without exposing raw PII or violating partner sharing rules.",
+        applicability: "High-growth product frontier. For internal operations, enables the AI CoE to deploy multi-agent workflows across Commercial, Legal, and Finance (e.g., automated partner schema validation and contract review).",
+        candidate: "TECH 77 LangGraph auditable document intelligence: state machines, deterministic Pydantic schema validation, prompt-injection defense filters, and human-in-the-loop (HITL) escalation gates.",
+        links: [
+          { name: "AI Agents & Clean Rooms", url: "https://liveramp.com/blog/ai-agents-data-collaboration/" },
+          { name: "LangGraph Architecture", url: "https://www.langchain.com/langgraph" }
+        ]
+      },
+      {
+        id: "05",
+        category: "governance",
+        seq: "Topic 05",
+        title: "AI Governance, Privacy-Enhancing Technologies & Risk",
+        tag: "Governance",
+        summary: "Differential privacy, zero-knowledge queries, and compliance with NIST AI RMF, EU AI Act, GDPR Art 9, and FTC rules.",
+        explanation: "LiveRamp balances utility and privacy using PETs (differential privacy, cryptographic hashing, and output threshold suppression). LiveRamp must comply with evolving global AI standards including the NIST AI RMF 1.0, EU AI Act, and FTC health breach rules.",
+        applicability: "LiveRamp's brand equity is built on trust. Internal AI deployments by the AI CoE must have formal risk gating, zero data-leakage controls, and audit logs to ensure enterprise compliance and protect customer trust.",
+        candidate: "University of Denver ChatGPT Health Compliance Plan operationalizing NIST AI RMF, GDPR Art 9, and EU AI Act; AI Tech & Privacy Academy certification in AI Governance.",
+        links: [
+          { name: "Privacy & Ethics", url: "https://liveramp.com/our-platform/privacy-and-data-ethics/" },
+          { name: "NIST AI RMF 1.0", url: "https://www.nist.gov/itl/ai-risk-management-framework" },
+          { name: "EU AI Act", url: "https://artificialintelligenceact.eu/" }
+        ]
+      },
+      {
+        id: "06",
+        category: "governance",
+        seq: "Topic 06",
+        title: "AI FinOps, Stack Optimization & Operational Cost Control",
+        tag: "FinOps",
+        summary: "Prompt caching, model right-sizing (SLMs vs frontier), context compaction, and bounded agentic recursion loops.",
+        explanation: "Scaling enterprise AI requires disciplined unit economics. Utilizing prompt caching for repeated system instructions (yielding up to 90% cost savings), cascading model architectures (SLMs for extraction, frontier for complex synthesis), and bounding recursive loops to prevent runaway inference bills.",
+        applicability: "As LiveRamp expands internal AI adoption across hundreds of commercial and operations users, Business Technology must institute FinOps cost governance, cache-hit tracking, and ROI baselines.",
+        candidate: "AI Realist 'Learn to Optimise Your AI Stack' credential; prompt caching, token cost modeling, and loop-capping architectural design.",
+        links: [
+          { name: "AI Stack Optimization", url: "https://airealist.ai/" },
+          { name: "Harvard SEAS AI", url: "https://seas.harvard.edu/" }
+        ]
+      },
+      {
+        id: "07",
+        category: "operating",
+        seq: "Topic 07",
+        title: "Business Technology Operating Model & Change Enablement",
+        tag: "Transformation",
+        summary: "Bridging Product and GTM/Finance, eliminating operational friction, and driving user enablement with measurable ROI.",
+        explanation: "A high-performing Business Technology operating model acts as the operational nervous system of the enterprise—translating product innovation into streamlined commercial, billing, and customer workflows.",
+        applicability: "The exact mandate of the Lead Business Transformation Partner: working with the AI CoE and business leaders across Commercial, Finance, and Customer Engagement to optimize operating models and workflows.",
+        candidate: "14 years leading change enablement, Remedy incident trend analysis isolating recurring operational failure modes, and training 85+ cohort users with measurable ticket reductions.",
+        links: [
+          { name: "LiveRamp Careers", url: "https://liveramp.com/careers/" },
+          { name: "Developer APIs", url: "https://liveramp.com/our-platform/apis/" }
+        ]
+      }
+    ];
+
+    let currentFilter = 'all';
+
+    function renderCards() {
+      const container = document.getElementById('topics-container');
+      const searchQuery = document.getElementById('search-input').value.toLowerCase();
+      
+      const filtered = TOPICS.filter(t => {
+        const matchesCategory = currentFilter === 'all' || t.category === currentFilter;
+        const matchesSearch = t.title.toLowerCase().includes(searchQuery) ||
+                              t.summary.toLowerCase().includes(searchQuery) ||
+                              t.tag.toLowerCase().includes(searchQuery);
+        return matchesCategory && matchesSearch;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div class="col-span-full p-8 text-center bg-[var(--card)] rounded-2xl border border-[var(--border)]">
+            <p class="text-[var(--muted-foreground)] text-sm">No topics match your current filter or search criteria.</p>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = filtered.map(t => `
+        <div class="topic-card bg-[var(--card)] border border-[var(--border)] rounded-2xl p-5 shadow-sm flex flex-col justify-between cursor-pointer" onclick="openModal('${t.id}')">
+          <div class="space-y-3">
+            <div class="flex justify-between items-center">
+              <span class="text-xs font-bold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/40 px-2.5 py-0.5 rounded-full border border-blue-200 dark:border-blue-900/40">
+                ${t.seq}
+              </span>
+              <span class="text-xs font-semibold text-[var(--muted-foreground)] uppercase tracking-wider">
+                ${t.tag}
+              </span>
+            </div>
+            
+            <h3 class="text-base font-bold text-[var(--foreground)] leading-snug hover:text-blue-600 transition">
+              ${t.title}
+            </h3>
+
+            <p class="text-xs text-[var(--muted-foreground)] leading-relaxed line-clamp-3">
+              ${t.summary}
+            </p>
+          </div>
+
+          <div class="pt-4 mt-4 border-t border-[var(--border)] flex justify-between items-center text-xs">
+            <span class="text-blue-600 dark:text-blue-400 font-semibold group flex items-center gap-1">
+              Explore Blueprint & Moat →
+            </span>
+            <span class="text-[var(--muted-foreground)] font-medium">
+              ${t.links.length} sources
+            </span>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function setFilter(filter) {
+      currentFilter = filter;
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        if (btn.getAttribute('data-filter') === filter) {
+          btn.className = "tab-btn px-4 py-2 rounded-xl text-xs md:text-sm font-semibold transition bg-blue-600 text-white shadow-sm";
+        } else {
+          btn.className = "tab-btn px-4 py-2 rounded-xl text-xs md:text-sm font-semibold transition bg-[var(--card)] text-[var(--muted-foreground)] border border-[var(--border)] hover:bg-[var(--background)]";
+        }
+      });
+      renderCards();
+    }
+
+    function applySearch() {
+      renderCards();
+    }
+
+    function openModal(id) {
+      const topic = TOPICS.find(t => t.id === id);
+      if (!topic) return;
+
+      document.getElementById('modal-seq').textContent = topic.seq;
+      document.getElementById('modal-category').textContent = `Category: ${topic.tag}`;
+      document.getElementById('modal-title').textContent = topic.title;
+      document.getElementById('modal-explanation').textContent = topic.explanation;
+      document.getElementById('modal-applicability').textContent = topic.applicability;
+      document.getElementById('modal-candidate').textContent = topic.candidate;
+
+      const linksContainer = document.getElementById('modal-links');
+      linksContainer.innerHTML = topic.links.map(l => `
+        <a href="${l.url}" target="_blank" rel="noopener noreferrer" 
+           class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-semibold bg-[var(--background)] border border-[var(--border)] hover:border-blue-500 hover:text-blue-600 transition text-[var(--foreground)]">
+          🔗 ${l.name} ↗
+        </a>
+      `).join('');
+
+      document.getElementById('detail-modal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      document.getElementById('detail-modal').classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Initialize
+    renderCards();
+  </script>
+</body>
+</html>

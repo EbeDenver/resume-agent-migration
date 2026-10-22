@@ -1,0 +1,24 @@
+{
+  "builtin": "schedule",
+  "args": [
+    "CRON_TZ=America/Denver 0 7 * * 3",
+    "agentapi",
+    "new-conversation",
+    "--",
+    "Run the automated job search component (python3 job_search_engine.py --min-score 60) to discover, evaluate, and deduplicate active market postings for Ebenezer J. Rolston across AI Enablement (RAG, Python, Prompt Engineering, Agentic AI), Federal Modernization, and Enterprise Systems. Persist findings directly into SQLite (data/jobs.db) avoiding repetitions, refresh score tiers (90-100, 80-89, 70-79, 60-69), update the browser dashboard, and generate tailored application packages into output/ for new high-probability positions."
+  ],
+  "restart_policy": "always",
+  "display_name": "Weekly Analyst & AI Enablement Job Search",
+  "description": "Every Wednesday at 7:00 AM (America/Denver), executes python3 job_search_engine.py --min-score 60, deduplicates into SQLite data/jobs.db, and updates dashboard tiers.",
+  "agent_permissions": {
+    "workspace_uris": [
+      "file:///Volumes/SanDiskOne/AI%20Projects/Gumloop/resume-agent-migration"
+    ],
+    "access_grants": [
+      "read_file(/Volumes/SanDiskOne/AI Projects/Gumloop/resume-agent-migration/data/master_resume.md)",
+      "read_file(/Volumes/SanDiskOne/AI Projects/Gumloop/resume-agent-migration/data/certifications_repository.md)",
+      "read_file(/Volumes/SanDiskOne/AI Projects/Gumloop/resume-agent-migration/data/jobs.db)",
+      "read_file(/Volumes/SanDiskOne/AI Projects/Gumloop/resume-agent-migration/config.json)"
+    ]
+  }
+}

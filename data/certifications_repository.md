@@ -1,0 +1,220 @@
+# Candidate Certification & Skill Repository
+
+**Owner:** Ebenezer J. Rolston  
+**Contact:** eberolston@yahoo.com • 501-307-3237 • [LinkedIn Profile](https://www.linkedin.com/in/ebenezer-rolston/) • [AI Guardians Portal](https://portal.aiguardiansllc.us/)  
+**Last Updated:** 2026-10-12  
+**Purpose:** Authoritative repository of verified certifications, professional training, and academic credentials. Used by the Resume Generator, Cover Letter Writer, and Interview Prep agents to dynamically extract job-tailored credentials, tools, competencies, and proof points.
+
+---
+
+## 1. Verified Credentials Catalog
+
+### 1. Data Analysis with Python — Stanford Continuing Studies
+* **Issuing Organization:** Stanford Continuing Studies (Stanford University)
+* **Recipient:** Ebenezer J Rolston
+* **Term / Completion Date:** Fall 2025
+* **Instructor:** Matt Harrison (Renowned Python author & data instructor)
+* **Credential Signatory:** Jennifer Deitz, Associate Dean and Director
+* **Verification:** VeriX QR Code Secure Credential
+* **Domains:** Data Analytics, Python Programming, Exploratory Data Analysis (EDA), Data Science
+* **Target Roles:** Program Analyst (Data Analytics), Data Analyst, BI Analyst, Data Engineer
+* **Verified Skills & Tools:**
+  * Python, Pandas, NumPy, Data Cleansing, Data Wrangling, Aggregation & Grouping
+  * Statistical Profiling, Exploratory Data Analysis (EDA), Programmatic Data Visualization
+* **Extractable Resume Bullets:**
+  * *Bullet A:* "Completed Stanford Continuing Studies 'Data Analysis with Python' (taught by Matt Harrison), mastering programmatic data wrangling, exploratory data analysis (EDA), and data manipulation using Pandas and NumPy."
+  * *Bullet B:* "Applied advanced Python data structures and Pandas transformations to ingest, sanitize, profile, and aggregate complex multi-variable datasets."
+  * *Bullet C:* "Engineered repeatable Python analytical workflows and statistical data visualizations for exploratory trend discovery."
+* **Display Format:** `Data Analysis with Python : Stanford Continuing Studies (Taught by Matt Harrison)`
+
+---
+
+### 2. Large Language Models: From Transformer Basics to Agentic AI — Harvard SEAS
+* **Issuing Organization:** Harvard John A. Paulson School of Engineering and Applied Sciences (SEAS)
+* **Recipient:** Ebenezer J Rolston
+* **Date Issued:** October 2025
+* **Credential Identifier (CeDiD):** `25TR-9XBP-E5NU`
+* **Verification URL:** [Harvard CeCredential Validation](https://cecredential-validation.tlt.harvard.edu/)
+* **Signatories:** Pavlos Protopapas (Program Director), Catherine A. Chute (Assistant Dean)
+* **Domains:** Generative AI, Large Language Models (LLMs), Agentic AI, Transformers, RAG
+* **Target Roles:** AI Strategy Consultant, GenAI Solutions Architect, Agentic AI Engineer, Transformation Lead
+* **Verified Skills & Tools:**
+  * Transformer Architectures, Multi-Head Self-Attention, LLM Training & Fine-Tuning Principles
+  * Retrieval-Augmented Generation (RAG), Prompt Engineering, Agentic Tool Calling, Multi-Agent Workflows
+* **Extractable Resume Bullets:**
+  * *Bullet A:* "Earned executive credential in 'Large Language Models: From Transformer Basics to Agentic AI' from Harvard SEAS (CeDiD: 25TR-9XBP-E5NU), covering transformer mechanics, attention algorithms, and autonomous agent architectures."
+  * *Bullet B:* "Engineered agentic AI workflows integrating tool calling, multi-agent state machines, and dynamic retrieval-augmented generation (RAG) pipelines."
+  * *Bullet C:* "Evaluated enterprise LLM architectures against accuracy, hallucination bounds, and workflow integration standards."
+* **Display Format:** `Executive Certificate, Large Language Models: From Transformer Basics to Agentic AI : Harvard John A. Paulson School of Engineering and Applied Sciences`
+*(Note: CeDiD validation 25TR-9XBP-E5NU stored in repository; omitted from resume face per candidate rule).*
+
+---
+
+### 3. AI Literacy, Ethics, and Governance — University of Denver
+* **Issuing Organization:** University of Denver — College of Professional Studies
+* **Recipient:** Ebe Rolston
+* **Issue Date:** 23 JUN 2026 | **Expiration Date:** 23 JUN 2031
+* **Credential Identifier:** `wIjGxM38`
+* **Verification URL:** [Credly Badge Validation](https://www.credly.com/go/wIjGxM38)
+* **Domains:** AI Governance, AI Ethics, Algorithmic Fairness, Regulatory Compliance, Responsible AI
+* **Target Roles:** AI Governance Specialist, AI Ethics & Policy Analyst, Public Sector AI Lead, Strategy Consultant
+* **Verified Skills & Tools:**
+  * AI Ethics Frameworks, Governance Policies, Algorithmic Bias Mitigation, Transparency & Accountability
+  * Organizational AI Literacy, Societal Impact Assessment, Responsible Deployment Safeguards
+* **Extractable Resume Bullets:**
+  * *Bullet A:* "Earned University of Denver credential in 'AI Literacy, Ethics, and Governance' (Credly verified), establishing frameworks for responsible enterprise AI adoption."
+  * *Bullet B:* "Formulated AI ethical risk assessments and governance scorecards addressing algorithmic bias, explainability, and regulatory compliance."
+  * *Bullet C:* "Designed enterprise AI literacy modules and organizational readiness criteria to support trustworthy AI transformation."
+* **Display Format:** `Credential, AI Literacy, Ethics, and Governance : University of Denver (Credly Verified)`
+
+---
+
+### 4. AI Governance Training — AI, Tech & Privacy Academy
+* **Issuing Organization:** AI, Tech & Privacy Academy ([aitechprivacy.com](https://aitechprivacy.com))
+* **Recipient:** Ebenezer Rolston
+* **Issue Date:** January 30, 2026
+* **Instructor / Authority:** Luiza Jarovsky, PhD (CEO & Co-founder)
+* **Domains:** AI Governance, Data Privacy, Compliance, Trustworthy AI, Regulatory Risk
+* **Target Roles:** AI Governance Analyst, Privacy & Compliance Lead, AI Risk Specialist
+* **Verified Skills & Tools:**
+  * AI Governance Frameworks, AI Risk Assessment & Scoring, Data Privacy Safeguards
+  * EU AI Act & Global Regulatory Alignment, Auditability & Human Oversight Controls
+* **Extractable Resume Bullets:**
+  * *Bullet A:* "Completed intensive 'AI Governance Training' with AI, Tech & Privacy Academy (under Dr. Luiza Jarovsky), focusing on AI risk mitigation, privacy safeguards, and global regulatory compliance."
+  * *Bullet B:* "Structured multi-dimensional AI risk frameworks evaluating data privacy, intellectual property protection, and automated decision-making impact."
+* **Display Format:** `AI Governance Training : AI, Tech & Privacy Academy (Dr. Luiza Jarovsky)`
+
+---
+
+### 5. Learn to Optimise Your AI Stack — AI Realist / AI Stack
+* **Issuing Organization:** AI Realist / AI Stack (AI Realist OOD, UIC 208702317)
+* **Recipient:** Ebenezer Rolston
+* **Workshop Date:** 30 July 2026 | **Certificate Issued:** 13 August 2026
+* **Certificate Number:** `AIS-2026-010`
+* **Instructor:** Maria Sukhareva
+* **Verification Contact:** `hello@airealist.org`
+* **Regulatory Alignment:** Evidence supporting AI literacy under Article 4 of Regulation (EU) 2024/1689 (EU AI Act), as amended by Regulation (EU) 2026/1744
+* **Domains:** AI Cost Optimization, AI FinOps, LLMOps, Prompt Caching, Context Compaction, Agent Loop Capping
+* **Target Roles:** AI FinOps Analyst, LLMOps Engineer, AI Solutions Architect, Agentic AI Developer
+* **Verified Skills & Tools:**
+  * Consumption-Priced AI Billing Analysis & Cost Driver Identification
+  * Model Right-Sizing (matching task complexity to lowest-cost capable model)
+  * Workload Offloading (shifting deterministic tasks off LLMs into code or skills)
+  * Token Cost Reduction via Prompt Caching & Context Compaction
+  * Agentic Loop Bounding & Budget Guards (capping loops to eliminate runaway cost)
+  * API Gateway vs. Subscription Cost Modeling & Golden-Set Benchmark Evaluation
+* **Extractable Resume Bullets:**
+  * *Bullet A:* "Completed technical workshop in 'Learn to Optimise Your AI Stack' (AI Realist / Maria Sukhareva, Cert #AIS-2026-010), focusing on LLM cost engineering, prompt caching, and context compaction."
+  * *Bullet B:* "Engineered cost-reduction strategies for generative AI pipelines: matched task complexity to right-sized models, capped agentic loops to prevent budget overruns, and offloaded deterministic routines from models into code."
+  * *Bullet C:* "Designed golden-set benchmark evaluations to rigorously validate that lower-cost, optimized model pipelines maintained full response fidelity."
+  * *Bullet D:* "Analyzed consumption-based AI billing structures, evaluating subscription, API gateway, and model routing trade-offs to maximize enterprise ROI."
+* **Display Format:** `Technical Workshop, Learn to Optimise Your AI Stack : AI Realist (Cert #AIS-2026-010)`
+
+---
+
+### 6. Graduate Certificate, AI Strategy & Applications in IT — University of Denver
+* **Issuing Organization:** University of Denver
+* **Domains:** AI Strategy, Enterprise Transformation, AI Maturity Roadmapping, ROI Modeling
+* **Display Rule:** `Graduate Certificate, AI Strategy & Applications in IT : University of Denver` *(Never use "Expected" or graduation dates unless explicitly requested).*
+
+### 7. Professional Program in Machine Learning & Deep Learning — UC Berkeley
+* **Issuing Organization:** University of California, Berkeley
+* **Domains:** Machine Learning, Deep Learning, Predictive Modeling
+* **Display Format:** `Machine Learning : UC Berkeley Extension`
+
+### 8. Academic Degrees — St. Joseph's College
+* **Master of Science (M.S.) & Bachelor of Science (B.S.), Computer Science**
+* **Display Format:** `M.S. & B.S., Computer Science : St. Joseph's College`
+
+---
+
+### 9. Auditable Multimodal Document Intelligence — TECH 77: Modern AI Architectures
+* **Issuing Institution / Course:** TECH 77 — Modern AI Architectures
+* **Author / Student:** Ebenezer Rolston
+* **Project Format:** Individual Research & Engineering Project
+* **Domains:** Multimodal AI, Document Understanding, LangGraph Workflow Orchestration, Prompt-Injection Defense, Auditability
+* **Target Roles:** AI Solutions Architect, AI Transformation Lead, Agentic AI Engineer, Technical Product Manager
+* **Verified Skills & Architectures:**
+  * Vision Language Models (VLMs), Document Transformers (Donut baseline), OCR Baselines (Tesseract)
+  * LangGraph StateGraph, Conditional-Edge Graph Execution, Schema & Evidence Gating, Single Bounded Retry
+  * Prompt-Injection Detection & Anomaly Gating (treating document text as data, never system instructions)
+  * Human-in-the-Loop (HITL) Decision Routing for Accounts Payable and Contract Invoices
+* **Extractable Resume Bullets:**
+  * *Bullet A (Architectural / Non-Technical):* "Designed an auditable extraction architecture for enterprise invoices and contracts, benchmarking Vision Language Models against Document Transformers and OCR baselines; engineered schema-governed LangGraph controls with evidence-based verification, prompt-injection anomaly gating, and human-in-the-loop decision routing (TECH 77)."
+  * *Bullet B (Engineering Focus):* "Engineered multimodal document intelligence pipeline comparing VLM, Donut, and OCR extractors; implemented LangGraph StateGraph conditional routing, enforcing deterministic validation rules, audit logging, and hard-capped single-retry limits for accounts payable processing."
+* **Display Format:** `Academic Engineering Project, Auditable Multimodal Document Intelligence : TECH 77 Modern AI Architectures`
+
+---
+
+### 10. ChatGPT Health – Compliance Plan — University of Denver
+* **Issuing Organization:** University of Denver — College of Professional Studies
+* **Course:** AI Ethics, Policy and Governance
+* **Faculty:** Professor Peggy Tsai
+* **Author / Student:** Ebenezer Rolston
+* **Date Completed:** March 15, 2026
+* **Domains:** AI Governance, Healthcare AI Privacy, NIST AI RMF, HIPAA / FTC HBNR, GDPR Article 9, EU AI Act, Risk Management
+* **Target Roles:** AI Governance Lead, Privacy & Compliance Partner, AI Risk Specialist, Transformation Lead
+* **Verified Frameworks & Controls:**
+  * NIST AI RMF (GOVERN function), WHO Health AI Guidance, EU AI Act High-Risk Dual Conformity, FTC Health Breach Notification Rule (HBNR), HIPAA
+  * FAIR-Informed Risk Register & ICO Harms Taxonomy (Clinical Hallucinations, Privacy Leakage, Automation Bias, Equity Gaps)
+  * Privacy-by-Design Controls: Default non-retention, ephemeral prompt processing in memory, PII/PHI detectors, 30–90-day TTL hashing/redaction, anti-memorization & repeat-word defenses, dynamic health consent gates
+  * Human-in-the-Loop (HITL) clinical safety gates and stop-ship escalation procedures
+* **Extractable Resume Bullets:**
+  * *Bullet A (Governance & Privacy):* "Authored comprehensive AI Compliance Plan for ChatGPT Health (University of Denver), operationalizing NIST AI RMF, GDPR Article 9, FTC Health Breach Notification Rule, and EU AI Act; established privacy-by-design controls including default non-retention, ephemeral prompt processing, PII/PHI leakage defenses, dynamic consent gates, and clinical safety escalation protocols."
+  * *Bullet B (Risk Management):* "Structured lifecycle AI risk management program (Identify, Assess, Mitigate, Monitor) mapping clinical hallucinations, PII/PHI leakage, and automation bias to concrete engineering controls, audit trails, and human-in-the-loop clinical review gates."
+* **Display Format:** `Graduate Portfolio Project, ChatGPT Health Compliance Plan : University of Denver (Prof. Peggy Tsai)`
+
+---
+
+## 2. Dynamic Extraction Rules for Resume Generator
+
+When generating or updating a tailored resume, cover letter, or interview package, the **Resume Generator** MUST apply the following extraction logic:
+
+```mermaid
+flowchart TD
+    JD["Analyze Target Job Description & Requirements"] --> Match{"Domain Requirement Matching"}
+    
+    Match -->|"Python / Data Wrangling / Analytics"| P1["Extract: Stanford 'Data Analysis with Python' (Matt Harrison)<br>• Add Pandas, NumPy, EDA to Skills<br>• Add analytical workflow bullets"]
+    Match -->|"GenAI / LLMs / Agentic AI / RAG"| P2["Extract: Harvard SEAS CeCertificate (CeDiD: 25TR-9XBP-E5NU)<br>• Add Transformers, Multi-Agent, RAG to Skills<br>• Add CeDiD verification link"]
+    Match -->|"AI Governance / Ethics / Privacy / EU AI Act"| P3["Extract: DU 'AI Literacy, Ethics & Governance' (Credly) & AI Tech & Privacy<br>• Add Governance frameworks & Bias scorecards<br>• Add Credly badge link"]
+    Match -->|"AI FinOps / Cost Engineering / LLMOps"| P4["Extract: AI Realist 'Learn to Optimise Your AI Stack' (Cert #AIS-2026-010)<br>• Add Prompt Caching, Loop Capping, Model Right-Sizing<br>• Add EU AI Act Art. 4 reference"]
+    Match -->|"Enterprise AI Strategy / Transformation"| P5["Extract: DU Graduate Certificate in AI Strategy<br>• Add Maturity Assessment & 3-Year Roadmap<br>• Enforce NO DATE display rule"]
+    
+    P1 --> Assemble["Synthesize into Resume Sections:<br>1. Education & Credentials<br>2. Core Competencies<br>3. Technical Proficiencies<br>4. Relevant Portfolio/Project Bullets"]
+    P2 --> Assemble
+    P3 --> Assemble
+    P4 --> Assemble
+    P5 --> Assemble
+```
+
+### Specific Section Placement Rules:
+1. **EDUCATION & CREDENTIALS:**
+   - Always place academic degrees and top job-relevant credentials in this section.
+   - For technical data roles, prominently feature the Stanford Python credential.
+   - For GenAI/Agentic roles, feature Harvard SEAS with CeDiD.
+   - For governance/policy roles, feature DU Credly credential and AI Tech & Privacy Academy.
+   - Enforce standing guardrail: University of Denver Graduate Certificate must never have a date attached.
+
+2. **CORE COMPETENCIES & TECHNICAL PROFICIENCIES:**
+   - Extract verified tools directly from the matched certificates:
+     * *Data roles:* Add `Python (Pandas, NumPy)`, `Exploratory Data Analysis (EDA)`.
+     * *AI cost/FinOps roles:* Add `Prompt Caching`, `Context Compaction`, `Agentic Loop Bounding`, `Model Right-Sizing`.
+     * *Agentic AI roles:* Add `Agentic AI Workflows`, `Multi-Agent Routing`, `RAG`.
+     * *Governance roles:* Add `AI Governance Frameworks`, `Algorithmic Bias Mitigation`, `EU AI Act Compliance`.
+
+3. **PORTFOLIO / SABBATICAL PROJECTS:**
+   - Use pre-drafted extractable bullets when creating project callouts or describing career sabbatical upskilling accomplishments.
+
+---
+
+## 3. How to Add Future Certificates to This Repository
+
+To add future certificates:
+1. **Add JSON entry:** Open `data/certifications_repository.json` and append a new certificate object following the standard schema.
+2. **Add Markdown entry:** Append a new numbered entry in `data/certifications_repository.md` with:
+   - Official credential name and institution
+   - Date, expiration, and ID/verification link
+   - Primary domains and matching target roles
+   - Specific verified skills/tools
+   - 2–3 extractable, accomplishment-focused resume bullets
+3. **Tagging:** Ensure at least 2 domain tags match prospective job keywords to enable instant extraction during automated resume runs.

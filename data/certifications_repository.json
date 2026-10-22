@@ -1,0 +1,490 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "repository_name": "Ebenezer J. Rolston — Certification & Credential Skill Repository",
+  "version": "1.0.0",
+  "last_updated": "2026-10-12",
+  "owner": "Ebenezer J. Rolston",
+  "contact": {
+    "email": "eberolston@yahoo.com",
+    "linkedin": "https://www.linkedin.com/in/ebenezer-rolston/",
+    "portal": "https://portal.aiguardiansllc.us/"
+  },
+  "instructions_for_adding_future_certificates": {
+    "step_1": "Append a new JSON object under the 'certificates' array matching the schema fields.",
+    "step_2": "Define unique 'id', official 'title', 'issuing_organization', and 'credential_type'.",
+    "step_3": "Add verification details ('credential_id', 'verification_url', or 'verification_contact').",
+    "step_4": "Tag relevant 'domains' (e.g., 'data_analytics', 'ai_governance', 'agentic_ai', 'cost_optimization', 'enterprise_systems').",
+    "step_5": "Tag 'target_roles' where this certification should be prioritized.",
+    "step_6": "List verified 'skills_and_tools' and pre-drafted 'extractable_bullet_points' for resumes.",
+    "step_7": "Document any 'display_rules' or 'guardrails' (e.g., date restrictions, participation disclaimers)."
+  },
+  "certificates": [
+    {
+      "id": "STANFORD-PYTHON-2025",
+      "title": "Data Analysis with Python",
+      "issuing_organization": "Stanford Continuing Studies",
+      "parent_institution": "Stanford University",
+      "credential_type": "Certificate of Completion",
+      "issue_date": "Fall 2025",
+      "expiration_date": null,
+      "credential_id": null,
+      "verification_type": "VeriX QR Code",
+      "verification_url": null,
+      "verification_contact": "continuingstudies@stanford.edu",
+      "instructor": "Matt Harrison",
+      "signatory": "Jennifer Deitz, Associate Dean and Director",
+      "domains": [
+        "data_analytics",
+        "python_programming",
+        "data_science",
+        "exploratory_data_analysis"
+      ],
+      "target_roles": [
+        "Program Analyst (Data Analytics)",
+        "Data Analyst",
+        "Business Intelligence Analyst",
+        "Data Engineer",
+        "Analytics Consultant"
+      ],
+      "verified_skills_and_tools": [
+        "Python",
+        "Pandas",
+        "NumPy",
+        "Exploratory Data Analysis (EDA)",
+        "Data Wrangling & Cleansing",
+        "Data Visualization",
+        "Statistical Profiling",
+        "Aggregation & Grouping"
+      ],
+      "extractable_resume_bullets": [
+        "Completed Stanford Continuing Studies 'Data Analysis with Python' (taught by Matt Harrison), mastering programmatic data wrangling, exploratory data analysis (EDA), and data manipulation using Pandas and NumPy.",
+        "Applied advanced Python data structures and Pandas transformations to ingest, sanitize, profile, and aggregate complex multi-variable datasets.",
+        "Engineered repeatable Python analytical workflows and statistical data visualizations for exploratory trend discovery."
+      ],
+      "resume_display_format": "Data Analysis with Python : Stanford Continuing Studies (Taught by Matt Harrison)",
+      "guardrails": [
+        "Distinguish coursework projects from enterprise production deployments.",
+        "Matt Harrison course instruction can be highlighted for technical credibility."
+      ]
+    },
+    {
+      "id": "HARVARD-SEAS-LLM-2025",
+      "title": "Large Language Models: From Transformer Basics to Agentic AI",
+      "issuing_organization": "Harvard John A. Paulson School of Engineering and Applied Sciences (SEAS)",
+      "parent_institution": "Harvard University",
+      "credential_type": "Certified Electronic Certificate (CeCertificate)",
+      "issue_date": "October 2025",
+      "expiration_date": null,
+      "credential_id": "25TR-9XBP-E5NU",
+      "verification_type": "CeCredential Trust / CeDiD Validation",
+      "verification_url": "https://cecredential-validation.tlt.harvard.edu/",
+      "verification_contact": "ProfEd@seas.harvard.edu",
+      "instructor": "Pavlos Protopapas (Program Director)",
+      "signatory": "Catherine A. Chute, Assistant Dean for Professional and External Programs",
+      "domains": [
+        "generative_ai",
+        "large_language_models",
+        "agentic_ai",
+        "transformers",
+        "rag"
+      ],
+      "target_roles": [
+        "AI Strategy Consultant",
+        "GenAI Solutions Architect",
+        "Agentic AI Engineer",
+        "AI Transformation Analyst",
+        "Enterprise AI Lead"
+      ],
+      "verified_skills_and_tools": [
+        "Transformer Architectures",
+        "Self-Attention & Multi-Head Attention",
+        "Large Language Models (LLMs)",
+        "Agentic AI Workflows",
+        "Retrieval-Augmented Generation (RAG)",
+        "Prompt Engineering",
+        "Fine-Tuning Basics",
+        "Multi-Agent Systems",
+        "Tool Calling & Function Calling"
+      ],
+      "extractable_resume_bullets": [
+        "Executive credential in 'Large Language Models: From Transformer Basics to Agentic AI' from Harvard SEAS (CeDiD: 25TR-9XBP-E5NU), covering transformer mechanics, attention algorithms, and autonomous agent architectures.",
+        "Engineered agentic AI workflows integrating tool calling, multi-agent state machines, and dynamic retrieval-augmented generation (RAG) pipelines.",
+        "Evaluated enterprise LLM architectures against accuracy, hallucination bounds, and workflow integration standards."
+      ],
+      "resume_display_format": "Executive Certificate, Large Language Models: From Transformer Basics to Agentic AI : Harvard John A. Paulson School of Engineering and Applied Sciences",
+      "guardrails": [
+        "Do not claim production client deployments for Harvard coursework; classify as executive professional education.",
+        "Avoid using raw CeDiD string on the face of the resume."
+      ]
+    },
+    {
+      "id": "DU-AI-LITERACY-GOVERNANCE-2026",
+      "title": "AI Literacy, Ethics, and Governance",
+      "issuing_organization": "University of Denver",
+      "parent_institution": "College of Professional Studies",
+      "credential_type": "Curricular Credential / Digital Badge",
+      "issue_date": "23 JUN 2026",
+      "expiration_date": "23 JUN 2031",
+      "credential_id": "wIjGxM38",
+      "verification_type": "Credly Badge",
+      "verification_url": "https://www.credly.com/go/wIjGxM38",
+      "verification_contact": null,
+      "instructor": "College of Professional Studies Faculty",
+      "signatory": "University of Denver Curricular Authority",
+      "domains": [
+        "ai_governance",
+        "ai_ethics",
+        "ai_literacy",
+        "compliance",
+        "responsible_ai"
+      ],
+      "target_roles": [
+        "AI Governance Lead",
+        "AI Ethics & Compliance Analyst",
+        "AI Strategy Consultant",
+        "Public Sector AI Policy Analyst",
+        "Management Analyst (AI Enablement)"
+      ],
+      "verified_skills_and_tools": [
+        "AI Ethics Frameworks",
+        "AI Governance Principles",
+        "Algorithmic Fairness & Bias Mitigation",
+        "AI Transparency & Explainability",
+        "Corporate & Public Sector AI Literacy",
+        "Responsible AI Deployment Policies"
+      ],
+      "extractable_resume_bullets": [
+        "Earned University of Denver credential in 'AI Literacy, Ethics, and Governance' (Credly verified), establishing frameworks for responsible enterprise AI adoption.",
+        "Formulated AI ethical risk assessments and governance scorecards addressing algorithmic bias, explainability, and regulatory compliance.",
+        "Designed enterprise AI literacy modules and organizational readiness criteria to support trustworthy AI transformation."
+      ],
+      "resume_display_format": "Credential, AI Literacy, Ethics, and Governance : University of Denver",
+      "guardrails": [
+        "Per standing candidate rule: never use graduation/expected dates for University of Denver graduate certificate unless explicitly requested."
+      ]
+    },
+    {
+      "id": "AI-TECH-PRIVACY-GOVERNANCE-2026",
+      "title": "AI Governance Training",
+      "issuing_organization": "AI, Tech & Privacy Academy",
+      "parent_institution": "aitechprivacy.com",
+      "credential_type": "Certificate of Completion",
+      "issue_date": "January 30, 2026",
+      "expiration_date": null,
+      "credential_id": null,
+      "verification_type": "Official Certificate of Completion",
+      "verification_url": "https://aitechprivacy.com",
+      "verification_contact": null,
+      "instructor": "Luiza Jarovsky, PhD (CEO & Co-founder)",
+      "signatory": "Luiza Jarovsky, PhD",
+      "domains": [
+        "ai_governance",
+        "privacy_compliance",
+        "ai_risk_management",
+        "trustworthy_ai"
+      ],
+      "target_roles": [
+        "AI Governance Specialist",
+        "Data Privacy & AI Compliance Manager",
+        "AI Risk Analyst",
+        "Federal AI Oversight Lead"
+      ],
+      "verified_skills_and_tools": [
+        "AI Governance Frameworks",
+        "AI Risk Assessment & Mitigation",
+        "AI Data Privacy Regulations",
+        "Trustworthy AI Implementation",
+        "EU AI Act & Global Regulatory Mapping",
+        "Auditability & Oversight Safeguards"
+      ],
+      "extractable_resume_bullets": [
+        "Completed intensive 'AI Governance Training' with AI, Tech & Privacy Academy (under Dr. Luiza Jarovsky), focusing on AI risk mitigation, privacy safeguards, and global regulatory compliance.",
+        "Structured multi-dimensional AI risk frameworks evaluating data privacy, intellectual property protection, and automated decision-making impact.",
+        "Developed governance checklists and operational safeguards aligned with modern AI regulatory mandates."
+      ],
+      "resume_display_format": "AI Governance Training : AI, Tech & Privacy Academy (Dr. Luiza Jarovsky)",
+      "guardrails": [
+        "Classify as intensive specialized professional training."
+      ]
+    },
+    {
+      "id": "AI-REALIST-STACK-OPTIMIZATION-2026",
+      "title": "Learn to Optimise Your AI Stack",
+      "issuing_organization": "AI Realist / AI Stack",
+      "parent_institution": "AI Realist OOD (UIC 208702317)",
+      "credential_type": "Certificate of Participation (Workshop)",
+      "issue_date": "13 August 2026",
+      "expiration_date": null,
+      "credential_id": "AIS-2026-010",
+      "verification_type": "Official Record of Participation",
+      "verification_url": "https://airealist.org",
+      "verification_contact": "hello@airealist.org",
+      "instructor": "Maria Sukhareva",
+      "signatory": "Maria Sukhareva, Workshop Instructor",
+      "domains": [
+        "ai_cost_optimization",
+        "ai_finops",
+        "llmops",
+        "agentic_loop_control",
+        "prompt_caching",
+        "evaluation"
+      ],
+      "target_roles": [
+        "AI FinOps Analyst",
+        "LLMOps / AI Infrastructure Engineer",
+        "AI Solutions Architect",
+        "Technical Program Manager (AI)",
+        "Agentic Workflow Developer"
+      ],
+      "verified_skills_and_tools": [
+        "Consumption-Priced AI Billing Analysis",
+        "Cost Driver Identification",
+        "Model Right-Sizing & Task Complexity Matching",
+        "Deterministic Workload Offloading (Model to Code/Skill)",
+        "Prompt Caching",
+        "Context Compaction",
+        "Agentic Loop Capping & Budget Guards",
+        "API & Gateway Evaluation",
+        "Golden-Set Benchmark Evaluation",
+        "EU AI Act Article 4 AI Literacy Alignment"
+      ],
+      "extractable_resume_bullets": [
+        "Completed technical workshop in 'Learn to Optimise Your AI Stack' (AI Realist / Maria Sukhareva, Cert #AIS-2026-010), focusing on LLM cost engineering, prompt caching, and context compaction.",
+        "Engineered cost-reduction strategies for generative AI pipelines: matched task complexity to right-sized models, capped agentic loops to prevent budget overruns, and offloaded deterministic routines from models into code.",
+        "Designed golden-set benchmark evaluations to rigorously validate that lower-cost, optimized model pipelines maintained full response fidelity.",
+        "Analyzed consumption-based AI billing structures, evaluating subscription, API gateway, and model routing trade-offs to maximize enterprise ROI."
+      ],
+      "resume_display_format": "Technical Workshop, Learn to Optimise Your AI Stack : AI Realist",
+      "guardrails": [
+        "Note on credential: Record of participation / intensive workshop, supporting AI literacy under Article 4 of Regulation (EU) 2024/1689. Do not claim as a multi-month vocational degree.",
+        "Avoid using raw certificate numbers on the face of the resume."
+      ]
+    },
+    {
+      "id": "DU-GRAD-CERT-AI-STRATEGY-2025",
+      "title": "Graduate Certificate, AI Strategy & Applications in IT",
+      "issuing_organization": "University of Denver",
+      "parent_institution": "University of Denver",
+      "credential_type": "Graduate Certificate",
+      "issue_date": null,
+      "expiration_date": null,
+      "credential_id": null,
+      "verification_type": "University Academic Transcript / Registrar",
+      "verification_url": null,
+      "verification_contact": "registrar@du.edu",
+      "instructor": "University of Denver Graduate Faculty",
+      "signatory": "University Registrar",
+      "domains": [
+        "ai_strategy",
+        "enterprise_transformation",
+        "ai_maturity_assessment",
+        "roi_modeling",
+        "vendor_evaluation"
+      ],
+      "target_roles": [
+        "AI Strategy Consultant",
+        "Director of AI / Innovation",
+        "Enterprise Transformation Lead",
+        "Senior Program Analyst (AI/IT)"
+      ],
+      "verified_skills_and_tools": [
+        "AI Maturity Assessment",
+        "3-Year Enterprise AI Roadmapping",
+        "AI ROI Modeling & Business Case Development",
+        "Vendor Evaluation & Selection",
+        "Use Case Prioritization",
+        "Executive AI Strategy Communication"
+      ],
+      "extractable_resume_bullets": [
+        "Authored 3-year enterprise AI roadmap for Mile High Logistics covering maturity assessments, opportunity identification, readiness scoring, ROI modeling, and vendor scorecards.",
+        "Developed cross-functional business cases across 9 enterprise domains quantifying projected efficiency gains and operational value.",
+        "Produced executive-ready AI risk assessments covering hallucination, bias, privacy, governance, compliance, and ethical safety."
+      ],
+      "resume_display_format": "Graduate Certificate, AI Strategy & Applications in IT : University of Denver",
+      "guardrails": [
+        "CRITICAL RULE: Never include 'Expected', 'Graduating', or any graduation date unless the user explicitly directs otherwise."
+      ]
+    },
+    {
+      "id": "UC-BERKELEY-ML-DL-2025",
+      "title": "Professional Program in Machine Learning & Deep Learning",
+      "issuing_organization": "University of California, Berkeley",
+      "parent_institution": "UC Berkeley",
+      "credential_type": "Professional Program Certificate",
+      "issue_date": null,
+      "expiration_date": null,
+      "credential_id": null,
+      "verification_type": "Executive / Professional Education",
+      "verification_url": null,
+      "verification_contact": null,
+      "instructor": "UC Berkeley Faculty",
+      "signatory": "Program Director",
+      "domains": [
+        "machine_learning",
+        "deep_learning",
+        "neural_networks",
+        "predictive_analytics"
+      ],
+      "target_roles": [
+        "Machine Learning Specialist",
+        "Data Scientist",
+        "AI/ML Program Analyst",
+        "Technical Architect"
+      ],
+      "verified_skills_and_tools": [
+        "Supervised & Unsupervised Learning",
+        "Deep Neural Networks",
+        "Model Evaluation & Loss Functions",
+        "Feature Engineering",
+        "Python (NumPy, Scikit-learn, TensorFlow/PyTorch concepts)"
+      ],
+      "extractable_resume_bullets": [
+        "Completed UC Berkeley Professional Program in Machine Learning & Deep Learning, establishing foundational mastery of neural network architectures, predictive modeling, and mathematical loss optimization.",
+        "Formulated feature engineering and hyperparameter tuning pipelines for complex predictive tasks."
+      ],
+      "resume_display_format": "Machine Learning : UC Berkeley Extension",
+      "guardrails": [
+        "Classify as professional program certification."
+      ]
+    },
+    {
+      "id": "ST-JOSEPH-MS-CS",
+      "title": "Master of Science (M.S.) & Bachelor of Science (B.S.), Computer Science",
+      "issuing_organization": "St. Joseph's College",
+      "parent_institution": "St. Joseph's College",
+      "credential_type": "Academic Degree",
+      "issue_date": null,
+      "expiration_date": null,
+      "credential_id": null,
+      "verification_type": "Academic Registrar",
+      "verification_url": null,
+      "verification_contact": null,
+      "instructor": "Computer Science Faculty",
+      "signatory": "Dean of Academic Affairs",
+      "domains": [
+        "computer_science",
+        "software_engineering",
+        "database_systems",
+        "algorithms"
+      ],
+      "target_roles": [
+        "All Roles"
+      ],
+      "verified_skills_and_tools": [
+        "Relational Database Architecture",
+        "Algorithms & Data Structures",
+        "Software Development Lifecycle (SDLC)",
+        "System Architecture"
+      ],
+      "extractable_resume_bullets": [
+        "Holds M.S. and B.S. in Computer Science from St. Joseph's College, establishing deep computer science fundamentals, relational database architecture, and algorithmic design principles."
+      ],
+      "resume_display_format": "M.S. & B.S., Computer Science : St. Joseph's College",
+      "guardrails": [
+        "Official verified degrees."
+      ]
+    },
+    {
+      "id": "TECH77-MULTIMODAL-DOC-INTEL",
+      "title": "Auditable Multimodal Document Intelligence: Comparing Document Transformers and a Schema-Governed LangGraph Extraction Workflow",
+      "issuing_organization": "TECH 77 — Modern AI Architectures",
+      "parent_institution": "Executive AI Engineering Program",
+      "credential_type": "Academic & Research Engineering Project",
+      "issue_date": null,
+      "expiration_date": null,
+      "credential_id": null,
+      "verification_type": "Project Technical Report & Code Package",
+      "verification_url": null,
+      "verification_contact": null,
+      "instructor": "Course Faculty",
+      "signatory": "Course Director",
+      "domains": [
+        "multimodal_ai",
+        "document_intelligence",
+        "agentic_workflows",
+        "langgraph",
+        "auditability",
+        "prompt_injection_defense",
+        "human_in_the_loop"
+      ],
+      "target_roles": [
+        "AI Solutions Architect",
+        "Lead Business Transformation Partner",
+        "Agentic AI Engineer",
+        "Technical Product Manager"
+      ],
+      "verified_skills_and_tools": [
+        "Vision Language Models (VLMs)",
+        "Document Transformers (Donut baseline)",
+        "LangGraph StateGraph Conditional Routing",
+        "Deterministic Schema & Evidence Gating",
+        "Prompt-Injection Anomaly Detection",
+        "Single Bounded Retry Limits",
+        "Human-in-the-Loop (HITL) Decision Routing",
+        "Accounts Payable & Contract Invoice Extraction"
+      ],
+      "extractable_resume_bullets": [
+        "Designed an auditable extraction architecture for enterprise invoices and contracts, benchmarking Vision Language Models against Document Transformers and OCR baselines; engineered schema-governed LangGraph controls with evidence-based verification, prompt-injection anomaly gating, and human-in-the-loop decision routing (TECH 77).",
+        "Engineered multimodal document intelligence pipeline comparing VLM, Donut, and OCR extractors; implemented LangGraph StateGraph conditional routing, enforcing deterministic validation rules, audit logging, and hard-capped single-retry limits for accounts payable processing."
+      ],
+      "resume_display_format": "Academic Engineering Project, Auditable Multimodal Document Intelligence : TECH 77 Modern AI Architectures",
+      "guardrails": [
+        "Clearly designate as academic engineering project / research prototype; do not claim production commercial client deployment."
+      ]
+    },
+    {
+      "id": "DU-CHATGPT-HEALTH-COMPLIANCE-PLAN",
+      "title": "ChatGPT Health – Compliance Plan: AI Ethics, Policy and Governance",
+      "issuing_organization": "University of Denver",
+      "parent_institution": "College of Professional Studies",
+      "credential_type": "Graduate Portfolio Project / Compliance Plan",
+      "issue_date": "March 15, 2026",
+      "expiration_date": null,
+      "credential_id": null,
+      "verification_type": "Graduate Course Final Report & Compliance Artifacts",
+      "verification_url": null,
+      "verification_contact": null,
+      "instructor": "Professor Peggy Tsai",
+      "signatory": "Professor Peggy Tsai, Faculty",
+      "domains": [
+        "ai_governance",
+        "healthcare_privacy",
+        "nist_ai_rmf",
+        "gdpr_article_9",
+        "ftc_hbnr",
+        "eu_ai_act",
+        "ai_risk_management",
+        "human_in_the_loop"
+      ],
+      "target_roles": [
+        "AI Governance Lead",
+        "Lead Business Transformation Partner",
+        "Privacy & Compliance Partner",
+        "AI Risk Specialist",
+        "Transformation Consultant"
+      ],
+      "verified_skills_and_tools": [
+        "NIST AI RMF (GOVERN Function)",
+        "WHO Health AI Safety & Equity Guidance",
+        "GDPR Article 9 (Special Categories / Health Data)",
+        "FTC Health Breach Notification Rule (HBNR)",
+        "EU AI Act High-Risk Dual Conformity",
+        "Colorado AI Act Alignment",
+        "FAIR-Informed Risk Register & ICO Harms Taxonomy",
+        "Privacy-by-Design (Default Non-Retention, Ephemeral Processing)",
+        "PII/PHI Detectors & TTL Hashing/Redaction",
+        "Anti-Memorization & Adversarial Repeat-Word Defense",
+        "Dynamic Health Consent Gates",
+        "Human-in-the-Loop (HITL) Clinical Gating & Escalation"
+      ],
+      "extractable_resume_bullets": [
+        "Authored comprehensive AI Compliance Plan for ChatGPT Health (University of Denver), operationalizing NIST AI RMF, GDPR Article 9, FTC Health Breach Notification Rule, and EU AI Act; established privacy-by-design controls including default non-retention, ephemeral prompt processing, PII/PHI leakage defenses, dynamic consent gates, and clinical safety escalation protocols.",
+        "Structured lifecycle AI risk management program (Identify, Assess, Mitigate, Monitor) mapping clinical hallucinations, PII/PHI leakage, and automation bias to concrete engineering controls, audit trails, and human-in-the-loop clinical review gates."
+      ],
+      "resume_display_format": "Graduate Portfolio Project, ChatGPT Health Compliance Plan : University of Denver (Prof. Peggy Tsai)",
+      "guardrails": [
+        "Per standing candidate rule: never include graduation or expected dates for University of Denver graduate certificate/coursework unless explicitly directed."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Intelligence & Interview Ranking Dashboard | Ebenezer J. Rolston</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .badge-tier-90 { background-color: #ECFDF5; color: #065F46; border: 1px solid #A7F3D0; }
+    .badge-tier-80 { background-color: #EFF6FF; color: #1E40AF; border: 1px solid #BFDBFE; }
+    .badge-tier-70 { background-color: #FFFBEB; color: #92400E; border: 1px solid #FDE68A; }
+    .badge-tier-60 { background-color: #EEF2FF; color: #3730A3; border: 1px solid #C7D2FE; }
+    .badge-tier-50 { background-color: #F8FAFC; color: #475569; border: 1px solid #CBD5E1; }
+    .badge-ai { background-color: #FAF5FF; color: #6B21A8; border: 1px solid #E9D5FF; }
+    .badge-80k { background-color: #FFFBEB; color: #B45309; border: 1px solid #FCD34D; }
+    .badge-ashby { background-color: #ECFEFF; color: #0E7490; border: 1px solid #A5F3FC; }
+    .card-applied { border-color: #10B981 !important; background-color: #F0FDF4; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col">
+
+  <!-- Top Navigation Header -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-30 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-700 to-indigo-800 text-white flex items-center justify-center font-bold text-sm shadow">
+          EJR
+        </div>
+        <div>
+          <h1 class="text-base font-bold text-slate-900 leading-tight flex items-center gap-2">
+            Job Intelligence & Interview Ranking Dashboard
+            <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-blue-100 text-blue-800 border border-blue-200">Active Market Scan</span>
+          </h1>
+          <div class="flex items-center gap-2 text-xs text-slate-500 flex-wrap">
+            <span>Candidate: <strong>Ebenezer J. Rolston</strong> • Denver, CO • Remote / Hybrid • Min Score: ≥60%</span>
+            <span class="text-slate-300">•</span>
+            <span class="font-mono text-slate-600 bg-slate-100 px-2 py-0.5 rounded border border-slate-200">
+              🕒 Last Agent Scan: <strong id="scanTimestampText">Oct 13, 2026</strong>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2.5 flex-wrap">
+        <!-- Database Badge -->
+        <div class="flex items-center gap-1.5 text-xs bg-slate-100 text-slate-700 px-3 py-1.5 rounded-lg border border-slate-200" title="Persistent SQLite Database (data/jobs.db)">
+          <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          <span class="font-medium">DB: <code>data/jobs.db</code> (<span id="totalDbJobsCount">38</span> tracked)</span>
+        </div>
+
+        <!-- Local Server Bridge Status Indicator -->
+        <div id="serverStatusPill" class="flex items-center gap-1.5 text-xs bg-slate-100 text-slate-600 px-3 py-1.5 rounded-lg border border-slate-200">
+          <span id="serverStatusDot" class="w-2 h-2 rounded-full bg-slate-400"></span>
+          <span id="serverStatusText" class="font-medium">Connecting...</span>
+        </div>
+
+        <!-- Trigger Job Search Button -->
+        <button onclick="triggerJobSearch()" id="btnJobSearch" class="bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold px-3 py-1.5 rounded-lg shadow-sm transition flex items-center gap-1.5">
+          <span>🔍</span> Run Job Search (≥60%)
+        </button>
+
+        <!-- Reset Button -->
+        <button onclick="resetAllDefaults()" class="text-slate-500 hover:text-slate-700 text-xs font-medium px-2.5 py-1.5 rounded border border-slate-200 hover:bg-slate-100 transition">
+          Reset View
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex-1 w-full space-y-6">
+
+    <!-- KPI Metric Cards -->
+    <section class="grid grid-cols-2 md:grid-cols-5 gap-3.5">
+      <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm">
+        <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Top Match Score</div>
+        <div class="mt-1 flex items-baseline gap-2">
+          <span class="text-2xl font-bold text-emerald-600">94%</span>
+          <span class="text-xs text-slate-500 truncate">Matter Health (CTO)</span>
+        </div>
+      </div>
+      <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm">
+        <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Active Opportunities</div>
+        <div class="mt-1 flex items-baseline gap-2">
+          <span class="text-2xl font-bold text-blue-600" id="activeJobsCount">0</span>
+          <span class="text-xs text-slate-500">Ready to Target</span>
+        </div>
+      </div>
+      <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm">
+        <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">AI Enablement Roles</div>
+        <div class="mt-1 flex items-baseline gap-2">
+          <span class="text-2xl font-bold text-purple-600" id="aiEnablementCountCard">18</span>
+          <span class="text-xs text-slate-500">Technical Workflows</span>
+        </div>
+      </div>
+      <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm">
+        <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">80,000 Hours / Impact</div>
+        <div class="mt-1 flex items-baseline gap-2">
+          <span class="text-2xl font-bold text-amber-600" id="source80kCountCard">5</span>
+          <span class="text-xs text-slate-500">AI Safety & Policy</span>
+        </div>
+      </div>
+      <div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm">
+        <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Applied / In Progress</div>
+        <div class="mt-1 flex items-baseline gap-2">
+          <span class="text-2xl font-bold text-emerald-600" id="appliedJobsCount">0</span>
+          <span class="text-xs text-slate-500">Submissions Logged</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filter & Search Controls -->
+    <section class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm space-y-3.5">
+      <!-- Search Input & Sort -->
+      <div class="flex flex-col md:flex-row gap-3 justify-between items-center">
+        <div class="relative w-full md:w-96">
+          <svg class="w-4 h-4 text-slate-400 absolute left-3 top-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+          <input type="text" id="searchInput" placeholder="Search roles, skills, or companies (e.g. Matter Health, 80000 Hours, Prompt, LangGraph)..." 
+                 class="w-full pl-9 pr-4 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+        </div>
+
+        <div class="flex items-center gap-2 w-full md:w-auto">
+          <span class="text-xs font-medium text-slate-500 whitespace-nowrap">Sort By:</span>
+          <select id="sortSelect" class="border border-slate-300 rounded-lg px-3 py-2 text-sm bg-white text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option value="rank">Recommended Rank (Default)</option>
+            <option value="posted">Employer Date Posted (Newest First)</option>
+            <option value="probability">Highest Interview Probability</option>
+            <option value="match">Highest Match Score</option>
+            <option value="salary">Highest Base Salary</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- MATCH TIER FILTER SELECTION (User Requested 50-59, 60-69, etc.) -->
+      <div class="flex items-center gap-1.5 flex-wrap pt-2 border-t border-slate-100">
+        <span class="text-xs font-bold text-slate-700 uppercase tracking-wider mr-1">Match Tier:</span>
+        <button onclick="setTierFilter('all')" id="tier-all" class="tier-pill px-3 py-1 rounded-full text-xs font-bold bg-blue-600 text-white transition">All Tiers (≥60%)</button>
+        <button onclick="setTierFilter('90-100')" id="tier-90-100" class="tier-pill px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-300 hover:bg-emerald-100 transition">Tier 90–100% (<span id="tierCount90">7</span>)</button>
+        <button onclick="setTierFilter('80-89')" id="tier-80-89" class="tier-pill px-2.5 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-800 border border-blue-300 hover:bg-blue-100 transition">Tier 80–89% (<span id="tierCount80">19</span>)</button>
+        <button onclick="setTierFilter('70-79')" id="tier-70-79" class="tier-pill px-2.5 py-1 rounded-full text-xs font-semibold bg-amber-50 text-amber-800 border border-amber-300 hover:bg-amber-100 transition">Tier 70–79% (<span id="tierCount70">6</span>)</button>
+        <button onclick="setTierFilter('60-69')" id="tier-60-69" class="tier-pill px-2.5 py-1 rounded-full text-xs font-semibold bg-indigo-50 text-indigo-800 border border-indigo-300 hover:bg-indigo-100 transition">Tier 60–69% (<span id="tierCount60">6</span>)</button>
+        <button onclick="setTierFilter('50-59')" id="tier-50-59" class="tier-pill px-2.5 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-500 border border-slate-300 hover:bg-slate-200 transition">Tier 50–59% (<span id="tierCount50">0</span>)</button>
+      </div>
+
+      <!-- Category & Source Filters -->
+      <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-100">
+        <button onclick="setFilter('active')" id="btn-active" class="filter-pill px-3 py-1 rounded-full text-xs font-semibold bg-blue-600 text-white transition">Active Positions</button>
+        <button onclick="setFilter('ai_enablement')" id="btn-ai_enablement" class="filter-pill px-3 py-1 rounded-full text-xs font-semibold bg-purple-50 text-purple-700 border border-purple-200 hover:bg-purple-100 transition">🤖 AI Enablement (<span id="aiEnablementTabCount">18</span>)</button>
+        <button onclick="setFilter('80000_hours')" id="btn-80000_hours" class="filter-pill px-3 py-1 rounded-full text-xs font-semibold bg-amber-50 text-amber-800 border border-amber-300 hover:bg-amber-100 transition">⏳ 80,000 Hours (<span id="source80kTabCount">5</span>)</button>
+        <button onclick="setFilter('ats')" id="btn-ats" class="filter-pill px-3 py-1 rounded-full text-xs font-semibold bg-cyan-50 text-cyan-800 border border-cyan-300 hover:bg-cyan-100 transition">⚡ Ashby & Greenhouse ATS (<span id="sourceAtsTabCount">3</span>)</button>
+        <button onclick="setFilter('federal')" id="btn-federal" class="filter-pill px-3 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 transition">🏛️ Federal & Defense (7)</button>
+        <button onclick="setFilter('ai_strategy')" id="btn-ai_strategy" class="filter-pill px-3 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 transition">🧠 AI Strategy & Governance (8)</button>
+        <button onclick="setFilter('enterprise')" id="btn-enterprise" class="filter-pill px-3 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 transition">🏢 Enterprise Systems / ERP (5)</button>
+        <button onclick="setFilter('applied')" id="btn-applied" class="filter-pill px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-600 hover:bg-slate-200 transition">✓ Applied (<span id="appliedTabCount">0</span>)</button>
+        <button onclick="setFilter('deleted')" id="btn-deleted" class="filter-pill px-3 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-400 hover:bg-slate-200 transition">🗑️ Dismissed (<span id="trashTabCount">0</span>)</button>
+      </div>
+    </section>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="hidden fixed bottom-6 right-6 z-50 bg-slate-900 text-white px-4 py-3 rounded-xl shadow-lg text-sm flex items-center gap-3">
+      <span id="toastMsg">Action updated</span>
+      <button id="toastUndoBtn" class="text-blue-400 font-semibold underline text-xs">Undo</button>
+    </div>
+
+    <!-- Agent Execution / Search Modal -->
+    <div id="agentModal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+      <div class="bg-white rounded-2xl max-w-2xl w-full p-6 shadow-2xl border border-slate-200 space-y-4">
+        <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+          <div class="flex items-center gap-3">
+            <div id="modalSpinner" class="w-5 h-5 border-2 border-indigo-600 border-t-transparent rounded-full animate-spin"></div>
+            <h3 id="modalTitle" class="text-base font-bold text-slate-900">Processing...</h3>
+          </div>
+          <button onclick="closeModal()" class="text-slate-400 hover:text-slate-600 text-lg">✕</button>
+        </div>
+
+        <div id="modalStatusText" class="text-xs text-slate-600 font-medium">
+          Connecting to pipeline...
+        </div>
+
+        <!-- Terminal Output Window -->
+        <pre id="modalConsole" class="bg-slate-950 text-emerald-400 p-4 rounded-xl text-xs font-mono max-h-64 overflow-y-auto whitespace-pre-wrap leading-relaxed shadow-inner">Initializing...</pre>
+
+        <div class="flex items-center justify-between pt-2">
+          <button id="openFolderBtn" onclick="openOutputFolder()" class="hidden bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold px-4 py-2 rounded-lg border border-slate-300 transition flex items-center gap-2">
+            <span>📁 Open Deliverables in Finder</span>
+          </button>
+          <button onclick="closeModal()" class="ml-auto bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold px-4 py-2 rounded-lg transition">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Job Cards Feed Container -->
+    <section id="jobsContainer" class="space-y-4">
+      <!-- Rendered dynamically by JavaScript -->
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-slate-200 py-6 text-center text-xs text-slate-400 mt-auto">
+    <p>Automated Resume Generator & Job Intelligence Pipeline • Built for Ebenezer J. Rolston • Denver, CO</p>
+    <p class="mt-1">Tracks Ashby, Greenhouse, 80,000 Hours, USAJobs, and LinkedIn • Deduplicated SQLite Store</p>
+  </footer>
+
+  <script>
+    // Embedded Data Set
+    let defaultJobs = [
+  {
+    "id": 31,
+    "rank": 1,
+    "title": "AI Automation Workflow Specialist",
+    "employer": "Matter Health",
+    "department": "Information Technology / Clinical Operations",
+    "category": "ai_enablement",
+    "location": "Remote (United States)",
+    "locationType": "remote",
+    "salaryBand": "$105,000 \u2013 $140,000",
+    "salaryMax": 140000,
+    "matchScore": 94,
+    "interviewProb": 90,
+    "fitBand": "Exceptional Fit",
+    "matchTier": "90-100",
+    "source": "ashby",
+    "sourceLabel": "Ashby ATS",
+    "postedDate": "Oct 8, 2026",
+    "isReposted": false,
+    "repostedDate": null,
+    "agentExecutedAt": "2026-10-12T23:45:50.154683",
+    "linkedinUrl": "https://www.linkedin.com/jobs/search/?keywords=Matter%20Health%20AI%20Automation%20Workflow%20Specialist",
+    "directUrl": "https://jobs.ashbyhq.com/matter-health/33ae397f-2d2d-4ce6-b4e9-d818b19f03ab",
+    "searchLandingUrl": "https://jobs.ashbyhq.com/matter-health/33ae397f-2d2d-4ce6-b4e9-d818b19f03ab",
+    "whyMatched": "Flawless direct alignment: builds & deploys AI workflow automations with clinical/operations stakeholders, prompt engineering & templates, agent platforms (LangGraph/Gumloop), healthcare AI risk & PHI handling (published paper on AI Ethics in Healthcare & ChatGPT Health framework), and 85+ cohort user enablement.",
+    "topSkills": [
+      "AI Workflow Automation",
+      "Prompt Engineering & Templates",
+      "Healthcare AI Risk & PHI",
+      "User Enablement & Training (85+)",
+      "Agent Platforms (LangGraph/Gumloop)"
+    ],
+    "gapBridge": "Clinical operations domain bridged via published research on AI Ethics in Healthcare, HIPAA/PHI risk models, and 20+ years cross-functional requirements gathering.",
+    "packageAction": "python3 run_agent.py run --job-url https://jobs.ashbyhq.com/matter-health/33ae397f-2d2d-4ce6-b4e9-d818b19f03ab",
+    "outputDir": "output/Matter_Health_AI_Automation_Workflow_Specialist",
+    "status": "active",
+    "appliedAt": null
+  },
+  {
+    "id": 1,
+    "rank": 2,
+    "title": "Management Analyst",
+    "employer": "KaiHonua LLC",
+    "department": "Federal & Defense Operations Support",
+    "category": "federal",
+    "location": "Denver, CO",
+    "locationType": "denver",
+    "salaryBand": "$110,000 \u2013 $145,000",
+    "salaryMax": 145000,
+    "matchScore": 92,
+    "interviewProb": 88,
+    "fitBand": "Exceptional Fit",
+    "matchTier": "90-100",
+    "source": "linkedin",
+    "sourceLabel": "LinkedIn",
+    "postedDate": "Oct 1, 2026",
+    "isReposted": true,
+    "repostedDate": "Oct 10, 2026",
+    "agentExecutedAt": "2026-10-12T23:45:50.154683",
+    "linkedinUrl": "https://www.linkedin.com/jobs/view/management-analyst-at-kaihonua-4467243276/",
+    "directUrl": "https://www.kaihonua.com/careers",
+    "searchLandingUrl": "https://www.linkedin.com/jobs/search-results/?currentJobId=4476571547&keywords=analyst&origin=SEMANTIC_SEARCH_LANDING_PAGE",
+    "whyMatched": "Direct alignment: 14+ years as Senior Analyst Lead for federal acquisition and financial systems supporting DOI (GS-13 equivalent), 7 years PRISM Administrator, $1M+ annual contract deobligation, and award-recognized FBMS conversion.",
+    "topSkills": [
+      "Federal Acquisition Lifecycle",
+      "Unison PRISM (7 yrs)",
+      "Funds Deobligation ($1M+)",
+      "DOI FBMS Data Conversion",
+      "Public Trust Investigation"
+    ],
+    "gapBridge": "Candidate bridges defense exemption workflows via FBMS award mod experience and deep acquisition governance.",
+    "packageAction": "python3 run_agent.py --job-id 1",
+    "outputDir": "output/KaiHonua_Management_Analyst",
+    "status": "deleted",
+    "appliedAt": null
+  },
+  {
+    "id": 32,
+    "rank": 3,
+    "title": "AI Clinical Workflow & Implementation Specialist",
+    "employer": "Abridge AI",
+    "department": "Clinical Systems & AI Workflow Integrations",
+    "category": "ai_enablement",
+    "location": "Remote (United States)",
+    "locationType": "remote",
+    "salaryBand": "$115,000 \u2013 $155,000",
+    "salaryMax": 155000,
+    "matchScore": 92,
+    "interviewProb": 88,
+    "fitBand": "Exceptional Fit",
+    "matchTier": "90-100",
+    "source": "ashby",
+    "sourceLabel": "Ashby ATS",
+    "postedDate": "Oct 8, 2026",
+    "isReposted": false,
+    "repostedDate": null,
+    "agentExecutedAt": "2026-10-12T23:45:50.154683",
+    "linkedinUrl": "https://www.linkedin.com/jobs/search/?keywords=Abridge%20AI%20Clinical%20Workflow%20Specialist",
+    "directUrl": "https://jobs.ashbyhq.com/abridge",
+    "searchLandingUrl": "https://jobs.ashbyhq.com/abridge",
+    "whyMatched": "Technical AI workflow implementation for generative medical summarization, prompt refinement, clinician workflow enablement, and healthcare compliance.",
+    "topSkills": [
+      "Generative AI Workflows",
+      "Medical Summarization",
+      "Prompt Engineering",
+      "Clinician Enablement (85+ users)",
+      "HIPAA Compliance"
+    ],
+    "gapBridge": "EHR integration bridged by 14 years enterprise ERP and transactional system data mapping.",
+    "packageAction": "python3 run_agent.py --job-id 32",
+    "outputDir": "output/Abridge_AI_Clinical_Workflow_Specialist",
+    "status": "active",
+    "appliedAt": null
+  },
+  {
+    "id": 2,
+    "rank": 4,
+    "title": "AI Enablement & Implementation Lead",
+    "employer": "Slalom Consulting",
+    "department": "Applied AI & Cloud Solutions Practice",
+    "category": "ai_enablement",
+    "location": "Denver, CO / Hybrid",
+    "locationType": "denver",
+    "salaryBand": "$130,000 \u2013 $170,000",
+    "salaryMax": 170000,
+    "matchScore": 91,
+    "interviewProb": 86,
+    "fitBand": "Exceptional Fit",
+    "matchTier": "90-100",
+    "source": "linkedin",
+    "sourceLabel": "LinkedIn",
+    "postedDate": "Oct 5, 2026",
+    "isReposted": false,
+    "repostedDate": null,
+    "agentExecutedAt": "2026-10-12T23:45:50.154683",
+    "linkedinUrl": "https://www.linkedin.com/jobs/search/?keywords=Slalom%20AI%20Enablement%20Lead%20Denver",
+    "directUrl": "https://www.slalom.com/careers",
+    "searchLandingUrl": "https://www.linkedin.com/jobs/search-results/?keywords=ai+enablement+analyst&location=Denver",
+    "whyMatched": "Matches verified technical AI skills: Harvard SEAS Agentic workflows, Stanford TECH 77 RAG pipelines, Python/Pandas data wrangling, and 85+ cohort user enablement background.",
+    "topSkills": [
+      "AI Enablement & User Training",
+      "Python / Pandas (Stanford Certified)",
+      "RAG & LLM Integration",
+      "Agentic AI Frameworks (Harvard SEAS)",
+      "Enterprise AI Roadmaps"
+    ],
+    "gapBridge": "Bridges corporate consulting delivery through 14 years client advisory with ArkSolutions and Acxiom solutions architecture.",
+    "packageAction": "python3 run_agent.py --job-id 13",
+    "outputDir": "output/Slalom_AI_Enablement_Lead",
+    "status": "active",
+    "appliedAt": null
+  },
+  {
+    "id": 34,
+    "rank": 5,
+    "title": "AI Safety & Governance Policy Analyst",
+    "employer": "Center for AI Safety (CAIS)",
+    "department": "AI Safety Policy & Governance Research",
+    "category": "ai_strategy",
+    "location": "San Francisco, CA / Remote (US)",
+    "locationType": "remote",
+    "salaryBand": "$120,000 \u2013 $165,000",
+    "salaryMax": 165000,
+    "matchScore": 91,
+    "interviewProb": 87,
+    "fitBand": "Exceptional Fit",
+    "matchTier": "90-100",
+    "source": "80000_hours",
+    "sourceLabel": "80,000 Hours",
+    "postedDate": "Oct 7, 2026",
+    "isReposted": false,
+    "repostedDate": null,
+    "agentExecutedAt": "2026-10-12T23:45:50.154683",
+    "linkedinUrl": "https://www.linkedin.com/jobs/search/?keywords=Center%20for%20AI%20Safety%20Policy%20Analyst",
+    "directUrl": "https://www.safe.ai/careers",
+    "searchLandingUrl": "https://80000hours.org/job-board/ai-safety-governance/",
+    "whyMatched": "Direct alignment on AI safety governance, model evaluation benchmarks, ethical guardrails, and risk scoring. Matches published paper on AI Ethics in Healthcare, Dr. Luiza Jarovsky AI Governance credential, and Harvard SEAS LLM evaluation.",
+    "topSkills": [
+      "AI Safety Governance",
+      "Model Evaluation & Benchmarking",
+      "NIST AI RMF",
+      "EU AI Act Compliance",
+      "Risk Framework Design"
+    ],
+    "gapBridge": "Catastrophic risk policy frameworks bridged by 14 years federal acquisition governance and pre-deployment healthcare LLM evaluation models.",
+    "packageAction": "python3 run_agent.py --job-id 34",
+    "outputDir": "output/CAIS_AI_Safety_Policy_Analyst",
+    "status": "active",
+    "appliedAt": null
+  },
+  {
+    "id": 33,
+    "rank": 6,
+    "title": "AI Healthcare Automation Workflow Specialist",
+    "employer": "Notable Health",
+    "department": "Intelligent Automation & Health Systems Delivery",
+    "category": "ai_enablement",
+    "location": "Remote (United States)",
+    "locationType": "remote",
+    "salaryBand": "$110,000 \u2013 $148,000",
+    "salaryMax": 148000,
+    "matchScore": 90,
+    "interviewProb": 86,
+    "fitBand": "Exceptional Fit",
+    "matchTier": "90-100",
+    "source": "greenhouse",
+    "sourceLabel": "Greenhouse ATS",
+    "postedDate": "Oct 8, 2026",
+    "isReposted": false,
+    "repostedDate": null,
+    "agentExecutedAt": "2026-10-12T23:45:50.154683",
+    "linkedinUrl": "https://www.linkedin.com/jobs/search/?keywords=Notable%20Health%20AI%20Workflow%20Automation",
+    "directUrl": "https://boards.greenhouse.io/notablehealth",
+    "searchLandingUrl": "https://boards.greenhouse.io/notablehealth",
+    "whyMatched": "Automating healthcare patient intake, clinical scheduling, and EHR data entry using AI agents and IDP. Matches Stanford TECH 77 and AI Guardians portal.",
+    "topSkills": [
+      "Intelligent Automation",
+      "Healthcare Workflows",
+      "IDP / Document Processing",
+      "Agent Platforms",
+      "Stakeholder Enablement"
+    ],
+    "gapBridge": "Health system administrative flows bridged by 14 years federal acquisition lifecycle administration.",
+    "packageAction": "python3 run_agent.py --job-id 33",
+    "outputDir": "output/Notable_Health_AI_Automation_Workflow",
+    "status": "active",
+    "appliedAt": null
+  },
+  {
+    "id": 35,
+    "rank": 7,
+    "title": "AI Model Evaluation & Workflow Operations Analyst",
+    "employer": "METR (Model Evaluation & Threat Research)",
+    "department": "Frontier AI Risk & Model Evaluation Operations",
+    "category": "ai_enablement",
+    "location": "Remote (United States)",
+    "locationType": "remote",
+    "salaryBand": "$120,000 \u2013 $165,000",
+    "salaryMax": 165000,
+    "matchScore": 90,
+    "interviewProb": 86,
+    "fitBand": "Exceptional Fit",
+    "matchTier": "90-100",
+    "source": "80000_hours",
+    "sourceLabel": "80,000 Hours",
+    "postedDate": "Oct 10, 2026",
+    "isReposted": false,
+    "repostedDate": null,
+    "agentExecutedAt": "2026-10-12T23:45:50.154683",
+    "linkedinUrl": "https://www.linkedin.com/jobs/search/?keywords=METR%20Model%20Evaluation%20Analyst",
+    "directUrl": "https://metr.org/careers/",
+    "searchLandingUrl": "https://80000hours.org/job-board/",
+    "whyMatched": "Empirical agent evaluations, testing LLM agent task completion, safety sandboxes, and workflow automation. Matches Harvard SEAS LLMs & Agentic AI, Stanford TECH 77, and 11-tool AI Guardians portal.",
+    "topSkills": [
+      "Model Evaluation Frameworks",
+      "Agent Task Benchmarking",
+      "Python Scripting",
+      "LLM Guardrail Testing",
+      "Workflow Orchestration"
+    ],
+    "gapBridge": "Autonomous agent benchmarking pipelines bridged by hands-on LangGraph/Gumloop agent development and AI Guardians evaluation suite.",
+    "packageAction": "python3 run_agent.py --job-id 38",
+    "outputDir": "output/METR_AI_Evaluation_Operations_Analyst",
+    "status": "active",
+    "appliedAt": null
+  },
+  {
+    "id": 3,
+    "rank": 8,
+    "title": "Generative AI Technical Enablement Specialist",
+    "employer": "Lockheed Martin Space",
+    "department": "Enterprise Information Technology & AI Center of Excellence",
+    "category": "ai_enablement",
+    "location": "Littleton / Denver Metro, CO",
+    "locationType": "denver",
+    "salaryBand": "$115,000 \u2013 $165,000",
+    "salaryMax": 165000,
+    "matchScore": 89,
+    "interviewProb": 85,
+    "fitBand": "Strong Fit",
+    "matchTier": "80-89",
+    "source": "linkedin",
+    "sourceLabel": "LinkedIn",
+    "postedDate": "Oct 5, 2026",
+    "isReposted": false,
+    "repostedDate": null,
+    "agentExecutedAt": "2026-10-12T23:45:50.154683",
+    "linkedinUrl": "https://www.linkedin.com/jobs/search/?keywords=Lockheed%20Martin%20Generative%20AI%20Specialist%20Denver",
+    "directUrl": "https://www.lockheedmartinjobs.com",
+    "searchLandingUrl": "https://www.linkedin.com/jobs/search-results/?keywords=ai+enablement+technical&location=Denver",
+    "whyMatched": "Direct technical match: building LLM prompt templates, tool-calling pipelines, technical enablement workshops, and strict security compliance in defense aerospace.",
+    "topSkills": [
+      "Technical AI Enablement",
+      "Prompt Engineering & Evaluation",
+      "Python / SQL Data Pipelines",
+      "Security & Data Governance",
+      "Cohort User Training (85+ users)"
+    ],
+    "gapBridge": "Defense environment bridged via clean federal Public Trust history and 14 years Department of the Interior mission support.",
+    "packageAction": "python3 run_agent.py --job-id 14",
+    "outputDir": "output/Lockheed_Martin_GenAI_Technical_Enablement",
+    "status": "active",
+    "appliedAt": null
+  },
+  {
+    "id": 36,
+    "rank": 9,
+    "title": "AI Technical Trends & Governance Analyst",
+    "employer": "Epoch AI",
+    "department": "Frontier AI Trends & Algorithmic Forecasting",
+    "category": "ai_strategy",
+    "location": "Remote (United States)",
+    "locationType": "remote",
+    "salaryBand": "$115,000 \u2013 $155,000",
+    "salaryMax": 155000,
+    "matchScore": 89,
+    "interviewProb": 85,
+    "fitBand": "Strong Fit",
+    "matchTier": "80-89",
+    "source": "80000_hours",
+    "sourceLabel": "80,000 Hours",
+    "postedDate": "Oct 4, 2026",
+    "isReposted": false,
+    "repostedDate": null,
+    "agentExecutedAt": "2026-10-12T23:45:50.154683",
+    "linkedinUrl": "https://www.linkedin.com/jobs/search/?keywords=Epoch%20AI%20Technical%20Governance%20Analyst",
+    "directUrl": "https://epoch.ai/careers",
+    "searchLandingUrl": "https://80000hours.org/job-board/",
+    "whyMatched": "Empirical modeling of AI capabilities, compute governance, and algorithmic progress. Matches Stanford Python/Pandas data analysis (Matt Harrison) and University of Denver AI Strategy.",
+    "topSkills": [
+      "Empirical Data Analysis",
+      "Python / Pandas / NumPy",
+      "AI Compute Governance",
+      "Algorithmic Forecasting",
+      "Executive Reporting"
+    ],
+    "gapBridge": "Frontier compute hardware models bridged through 20 years high-throughput predictive modeling at Acxiom and federal ETL architectures.",
+    "packageAction": "python3 run_agent.py --job-id 35",
+    "outputDir": "output/Epoch_AI_Technical_Governance_Analyst",
+    "status": "active",
+    "appliedAt": null
+  },
+  {
+    "id": 4,
+    "rank": 10,
+    "title": "Senior ERP / Momentum Functional Analyst",
+    "employer": "CGI Federal",
+    "department": "Federal Financial Systems & Acquisitions",
+    "category": "federal",
+    "location": "Remote / Denver, CO Hub",
+    "locationType": "remote",
+    "salaryBand": "$105,000 \u2013 $140,000",
+    "salaryMax": 140000,
+    "matchScore": 88,
+    "interviewProb": 84,
+    "fitBand": "Strong Fit",
+    "matchTier": "80-89",
+    "source": "linkedin",
+    "sourceLabel": "LinkedIn",
+    "postedDate": "Oct 1, 2026",
+    "isReposted": true,
+    "repostedDate": "Oct 10, 2026",
+    "agentExecutedAt": "2026-10-12T23:45:50.154683",
+    "linkedinUrl": "https://www.linkedin.com/jobs/search/?keywords=CGI%20Federal%20Momentum%20Analyst",
+    "directUrl": "https://www.cgi.com/en/usa/cgi-federal",
+    "searchLandingUrl": null,
+    "whyMatched": "Architected DOI FBMS data conversion (2 Interior Dept awards). 14 years supporting federal contracting and financial platforms, Level 2/3 senior escalation, and IPAC billing dispute resolution.",
+    "topSkills": [
+      "Federal ERP Data Migration",
+      "Unison PRISM Administration",
+      "Funds Realignment",
+      "Level 2/3 Senior Escalation",
+      "UDO / GTAS Compliance"
+    ],
+    "gapBridge": "CGI Momentum ERP vs SAP FBMS; bridged by universal federal accounting regulations and data architecture mastery.",
+    "packageAction": "python3 run_agent.py --job-id 2",
+    "outputDir": "output/CGI_Federal_Momentum_Analyst",
+    "status": "active",
+    "appliedAt": null
+  },
+  {
+    "id": 37,
+    "rank": 11,
+    "title": "AI Strategy & Policy Implementation Analyst",
+    "employer": "GovAI",
+    "department": "Institutional AI Governance & Public Strategy",
+    "category": "ai_strategy",
+    "location": "Remote (United States)",
+    "locationType": "remote",
+    "salaryBand": "$110,000 \u2013 $150,000",
+    "salaryMax": 150000,
+    "matchScore": 88,
+    "interviewProb": 84,
+    "fitBand": "Strong Fit",
+    "matchTier": "80-89",
+    "source": "80000_hours",
+    "sourceLabel": "80,000 Hours",
+    "postedDate": "Sep 28, 2026",
+    "isReposted": true,
+    "repostedDate": "Oct 9, 2026",
+    "agentExecutedAt": "2026-10-12T23:45:50.154683",
+    "linkedinUrl": "https://www.linkedin.com/jobs/search/?keywords=GovAI%20Policy%20Analyst",
+    "directUrl": "https://www.governance.ai/careers",
+    "searchLandingUrl": "https://80000hours.org/job-board/",
+    "whyMatched": "Institutional AI governance, federal and international policy translation, regulatory compliance (EU AI Act, NIST AI RMF). Matches 14-year federal systems experience and AI ethics research.",
+    "topSkills": [
+      "Institutional AI Governance",
+      "Federal Policy Translation",
+      "NIST AI RMF / EU AI Act",
+      "Stakeholder Briefings",
+      "AI Risk Mitigation"
+    ],
+    "gapBridge": "Academic think-tank writing norms bridged by published white paper 'AI in Government Contracting' and Denver University Executive AI roadmaps.",
+    "packageAction": "python3 run_agent.py --job-id 36",
+    "outputDir": "output/GovAI_Strategy_Policy_Analyst",
+    "status": "active",
+    "appliedAt": null
+  },
+  {
+    "id": 5,
+    "rank": 12,
+    "title": "Senior Business Analyst (Defense & Civil Agency Modernization)",
+    "employer": "Booz Allen Hamilton",
+    "department": "Federal Digital Solutions & Transformation",
+    "category": "federal",
+    "location": "Remote / Denver, CO Hub",
+    "locationType": "remote",
+    "salaryBand": "$108,000 \u2013 $150,000",
+    "salaryMax": 150000,
+    "matchScore": 87,
+    "interviewProb": 83,
+    "fitBand": "Strong Fit",
+    "matchTier": "80-89",
+    "source": "linkedin",
+    "sourceLabel": "LinkedIn",
+    "postedDate": "Oct 1, 2026",
+    "isReposted": true,
+    "repostedDate": "Oct 10, 2026",
+    "agentExecutedAt": "2026-10-12T23:45:50.154683",
+    "linkedinUrl": "https://www.linkedin.com/jobs/search/?keywords=Booz%20Allen%20Senior%20Business%20Analyst%20Denver",
+    "directUrl": "https://www.boozallen.com/careers.html",
+    "searchLandingUrl": null,
+    "whyMatched": "Translating complex agency missions into technical requirements, data models, and functional agile workflows. 20+ years federal systems experience and AI Strategy thought leadership.",
+    "topSkills": [
+      "Agile Requirements Engineering",
+      "Federal Systems Modernization",
+      "Data Integration & ETL",
+      "Executive & CO Communication",
+      "AI Literacy & Governance"
+    ],
+    "gapBridge": "Defense mission requirements bridged via DOI acquisition oversight and Acxiom federal passenger-screening systems.",
+    "packageAction": "python3 run_agent.py --job-id 3",
+    "outputDir": "output/Booz_Allen_Senior_Business_Analyst",
+    "status": "active",
+    "appliedAt": null
+  },
+  {
+    "id": 6,
+    "rank": 13,
+    "title": "Applied AI & Process Automation Solutions Analyst",
+    "employer": "SAIC (Science Applications International Corp)",
+    "department": "Federal Digital Engineering & Artificial Intelligence",
+    "category": "ai_enablement",
+    "location": "Remote / Denver, CO Hub",
+    "locationType": "remote",
+    "salaryBand": "$112,000 \u2013 $158,000",
+    "salaryMax": 158000,
+    "matchScore": 87,
+    "interviewProb": 82,
+    "fitBand": "Strong Fit",
+    "matchTier": "80-89",
+    "source": "linkedin",
+    "sourceLabel": "LinkedIn",
+    "postedDate": "Oct 5, 2026",
+    "isReposted": false,
+    "repostedDate": null,
+    "agentExecutedAt": "2026-10-12T23:45:50.154683",
+    "linkedinUrl": "https://www.linkedin.com/jobs/search/?keywords=SAIC%20Applied%20AI%20Analyst%20Denver",
+    "directUrl": "https://jobs.saic.com",
+    "searchLandingUrl": "https://www.linkedin.com/jobs/search-results/?keywords=applied+ai+automation+analyst",
+    "whyMatched": "Technical implementation of intelligent document processing (IDP) and agentic workflows. Matches Stanford TECH 77 OCR-to-RAG project, AI Guardians 11-tool toolkit, and FAR compliance.",
+    "topSkills": [
+      "Applied AI Workflows",
+      "Intelligent Document Processing (IDP)",
+      "Prompt Engineering & LoRA",
+      "Python / SQL Data Modeling",
+      "Federal FAR Compliance"
+    ],
+    "gapBridge": "Does not claim UiPath production developer; bridged via Python/LangGraph workflow architecture and document parsing.",
+    "packageAction": "python3 run_agent.py --job-id 15",
+    "outputDir": "output/SAIC_Applied_AI_Process_Solutions",
+    "status": "active",
+    "appliedAt": null
+  },
+  {
+    "id": 38,
+    "rank": 14,
+    "title": "Senior AI Technical Systems & Policy Analyst",
+    "employer": "RAND Corporation",
+    "department": "National Security Research / Technology & Security Policy",
+    "category": "ai_strategy",
+    "location": "Denver, CO / Remote-Flex",
+    "locationType": "denver",
+    "salaryBand": "$115,000 \u2013 $160,000",
+    "salaryMax": 160000,
+    "matchScore": 87,
+    "interviewProb": 83,
+    "fitBand": "Strong Fit",
+    "matchTier": "80-89",
+    "source": "80000_hours",
+    "sourceLabel": "80,000 Hours",
+    "postedDate": "Oct 2, 2026",
+    "isReposted": false,
+    "repostedDate": null,
+    "agentExecutedAt": "2026-10-12T23:45:50.154683",
+    "linkedinUrl": "https://www.linkedin.com/jobs/search/?keywords=RAND%20AI%20Technical%20Systems%20Policy%20Analyst",
+    "directUrl": "https://www.rand.org/jobs.html",
+    "searchLandingUrl": "https://80000hours.org/job-board/",
+    "whyMatched": "Federal agency AI adoption, national security risk governance, public trust eligibility, and Denver presence. 14 years supporting DOI IBC acquisition modernization.",
+    "topSkills": [
+      "Federal AI Policy",
+      "National Security IT Standards",
+      "Public Trust Clearance",
+      "Enterprise Systems Architecture",
+      "Denver Metro Local"
+    ],
+    "gapBridge": "Think-tank defense policy papers bridged through Acxiom airline passenger screening congressional demos and federal procurement oversight.",
+    "packageAction": "python3 run_agent.py --job-id 37",
+    "outputDir": "output/RAND_Senior_AI_Policy_Analyst",
+    "status": "active",
+    "appliedAt": null
+  },
+  {
+    "id": 7,
+    "rank": 15,
+    "title": "Senior Business / AI Transformation Analyst",
+    "employer": "Accenture Federal Services",
+    "department": "Digital Strategy & Enterprise AI Practice",
+    "category": "federal",
+    "location": "Remote / Denver, CO Hub",
+    "locationType": "remote",
+    "salaryBand": "$110,000 \u2013 $155,000",
+    "salaryMax": 155000,
+    "matchScore": 86,
+    "interviewProb": 81,
+    "fitBand": "Strong Fit",
+    "matchTier": "80-89",
+    "source": "linkedin",
+    "sourceLabel": "LinkedIn",
+    "postedDate": "Oct 1, 2026",
+    "isReposted": true,
+    "repostedDate": "Oct 10, 2026",
+    "agentExecutedAt": "2026-10-12T23:45:50.154683",
+    "linkedinUrl": "https://www.linkedin.com/jobs/search/?keywords=Accenture%20Federal%20Services%20Business%20Analyst%20AI",
+    "directUrl": "https://www.accenture.com/us-en/careers/local/accenture-federal-services",
+    "searchLandingUrl": null,
+    "whyMatched": "Bridges 14-year federal agency operational background with University of Denver graduate AI Strategy credentials and published papers on 'AI in Government Contracting'. US Citizen with clean federal background.",
+    "topSkills": [
+      "Federal Digital Transformation",
+      "AI in Government Contracting",
+      "Requirements Engineering",
+      "AI Ethics & Governance (Credly)",
+      "Executive Presentations"
+    ],
+    "gapBridge": "Clearance requirements bridged through prior moderate-risk Public Trust status and clean federal investigation history.",
+    "packageAction": "python3 run_agent.py --job-id 4",
+    "outputDir": "output/Accenture_Federal_Services_Business_AI_Analyst",
+    "status": "active",
+    "appliedAt": null
+  },
+  {
+    "id": 8,
+    "rank": 16,
+    "title": "Program Analyst (Data Analytics)",
+    "employer": "General Services Administration (GSA)",
+    "department": "Federal Acquisition Service (FAS) \u2014 GS-0343-13",
+    "category": "federal",
+    "location": "Lakewood, CO (Denver Metro) / Remote-Flex",
+    "locationType": "denver",
+    "salaryBand": "$108,173 \u2013 $172,980",
+    "salaryMax": 172980,
+    "matchScore": 85,
+    "interviewProb": 82,
+    "fitBand": "Strong Fit",
+    "matchTier": "80-89",
+    "source": "usajobs",
+    "sourceLabel": "USAJobs / Federal",
+    "postedDate": "Oct 1, 2026",
+    "isReposted": true,
+    "repostedDate": "Oct 10, 2026",
+    "agentExecutedAt": "2026-10-12T23:45:50.154683",
+    "linkedinUrl": "https://www.linkedin.com/jobs/view/program-analyst-data-analytics-federal-acquisition-service-at-gsa-4476571547",
+    "directUrl": "https://www.usajobs.gov/job/887843500",
+    "searchLandingUrl": "https://www.linkedin.com/jobs/search-results/?currentJobId=4476571547&keywords=analyst&origin=SEMANTIC_SEARCH_LANDING_PAGE",
+    "whyMatched": "Direct operational match for GSA FAS: 14 years supporting DOI Acquisition Directorate, SAP financial reporting (FBL1N, ME2M, FAGLL03, ZFI), SQL reporting, $1M+ annual funds deobligation, and Stanford Certified Data Analysis with Python.",
+    "topSkills": [
+      "Federal Acquisition Lifecycle",
+      "SAP FBMS S/4 Reporting",
+      "SQL Data Analysis",
+      "Funds Deobligation ($1M+)",
+      "Stanford Python Certified"
+    ],
+    "gapBridge": "No direct vehicle fleet management experience; bridged via procurement lifecycle analytics, supplier management, and financial reconciliation.",
+    "packageAction": "python3 generate_gsa_docx_outputs.py",
+    "outputDir": "output/GSA_Program_Analyst_Data_Analytics",
+    "status": "active",
+    "appliedAt": null
+  },
+  {
+    "id": 9,
+    "rank": 17,
+    "title": "Business Process Technology Senior Analyst",
+    "employer": "Black & Veatch Family of Companies",
+    "department": "Enterprise Technology (Req ID: 117315)",
+    "category": "enterprise",
+    "location": "Greenwood Village, CO (Denver Tech Center)",
+    "locationType": "denver",
+    "salaryBand": "$95,612 \u2013 $167,332",
+    "salaryMax": 167332,
+    "matchScore": 85,
+    "interviewProb": 82,
+    "fitBand": "Strong Fit",
+    "matchTier": "80-89",
+    "source": "linkedin",
+    "sourceLabel": "LinkedIn",
+    "postedDate": "Oct 5, 2026",
+    "isReposted": false,
+    "repostedDate": null,
+    "agentExecutedAt": "2026-10-12T23:45:50.154683",
+    "linkedinUrl": "https://www.linkedin.com/jobs/view/business-process-technology-senior-analyst-at-black-veatch-4034872911",
+    "directUrl": "https://bv.dejobs.org/greenwood-village-co/business-process-technology-senior-analyst-job-details-black-veatch-family-of-companies/597AA5E69D6444079723B49577C9D59F/job/?vs=8009",
+    "searchLandingUrl": null,
+    "whyMatched": "20+ years of business process analysis, requirements translation, relational database concepts, SQL/PL*SQL, operational Power BI/Tableau reporting, 85+ cohort user enablement, and University of Denver Graduate Certificate in AI Strategy.",
+    "topSkills": [
+      "Business Process Optimization",
+      "SQL & Relational Databases",
+      "Power BI Operational Reports",
+      "Change Enablement (85+ users)",
+      "AI Strategy Frameworks"
+    ],
+    "gapBridge": "Does not claim Power Automate canvas apps or DAX administration; bridged via Python/LangGraph workflow automation and quick tool uptake.",
+    "packageAction": "python3 generate_bv_package.py",
+    "outputDir": "output/Black_Veatch_Business_Process_Technology_Senior_Analyst",
+    "status": "active",
+    "appliedAt": null
+  },
+  {
+    "id": 10,
+    "rank": 18,
+    "title": "AI & Data Strategy Senior Consultant",
+    "employer": "Guidehouse",
+    "department": "Public Sector Strategy & Digital Solutions",
+    "category": "ai_strategy",
+    "location": "Remote / Denver, CO",
+    "locationType": "remote",
+    "salaryBand": "$115,000 \u2013 $155,000",
+    "salaryMax": 155000,
+    "matchScore": 85,
+    "interviewProb": 80,
+    "fitBand": "Strong Fit",
+    "matchTier": "80-89",
+    "source": "linkedin",
+    "sourceLabel": "LinkedIn",
+    "postedDate": "Oct 5, 2026",
+    "isReposted": false,
+    "repostedDate": null,
+    "agentExecutedAt": "2026-10-12T23:45:50.154683",
+    "linkedinUrl": "https://www.linkedin.com/jobs/search/?keywords=Guidehouse%20AI%20Strategy%20Consultant",
+    "directUrl": "https://guidehouse.com/careers",
+    "searchLandingUrl": null,
+    "whyMatched": "Authoring enterprise AI maturity roadmaps, business case development, and public sector advisory. Matches DU Graduate Certificate in AI Strategy (Mile High Logistics 3-year roadmap).",
+    "topSkills": [
+      "AI Maturity Roadmapping",
+      "ROI & Business Case Development",
+      "Public Sector Consulting",
+      "AI Risk Assessment",
+      "Executive Communication"
+    ],
+    "gapBridge": "Direct client consulting track supported by 14 years ArkSolutions federal advisory and Acxiom commercial client architecture.",
+    "packageAction": "python3 run_agent.py --job-id 7",
+    "outputDir": "output/Guidehouse_AI_Strategy_Senior_Consultant",
+    "status": "active",
+    "appliedAt": null
+  },
+  {
+    "id": 11,
+    "rank": 19,
+    "title": "AI Transformation & Technical Implementation Consultant",
+    "employer": "Ernst & Young (EY-Parthenon)",
+    "department": "Digital Enterprise & AI Strategy Practice",
+    "category": "ai_enablement",
+    "location": "Denver, CO / Hybrid",
+    "locationType": "denver",
+    "salaryBand": "$125,000 \u2013 $165,000",
+    "salaryMax": 165000,
+    "matchScore": 85,
+    "interviewProb": 79,
+    "fitBand": "Strong Fit",
+    "matchTier": "80-89",
+    "source": "linkedin",
+    "sourceLabel": "LinkedIn",
+    "postedDate": "Oct 5, 2026",
+    "isReposted": false,
+    "repostedDate": null,
+    "agentExecutedAt": "2026-10-12T23:45:50.154683",
+    "linkedinUrl": "https://www.linkedin.com/jobs/search/?keywords=EY%20AI%20Transformation%20Consultant%20Denver",
+    "directUrl": "https://www.ey.com/en_us/careers",
+    "searchLandingUrl": "https://www.linkedin.com/jobs/search-results/?keywords=ai+technical+consultant+denver",
+    "whyMatched": "Enterprise AI roadmapping, ROI modeling across 9 enterprise functions, and technical architecture evaluation. Direct match to University of Denver Graduate Certificate.",
+    "topSkills": [
+      "Enterprise AI Roadmapping",
+      "ROI / Financial Modeling",
+      "Python / Pandas Analytics",
+      "Executive Board Decks",
+      "AI Use Case Prioritization"
+    ],
+    "gapBridge": "Big 4 pedigree bridged by 14 years client advisory with ArkSolutions and Acxiom solution architecture.",
+    "packageAction": "python3 run_agent.py --job-id 16",
+    "outputDir": "output/EY_AI_Transformation_Consultant",
+    "status": "active",
+    "appliedAt": null
+  },
+  {
+    "id": 12,
+    "rank": 20,
+    "title": "Senior Business Analyst, AI & Automation",
+    "employer": "Panasonic Information Systems (PISCA)",
+    "department": "Digital Transformation & Automation Division",
+    "category": "ai_strategy",
+    "location": "Remote (United States)",
+    "locationType": "remote",
+    "salaryBand": "$115,000 \u2013 $145,000",
+    "salaryMax": 145000,
+    "matchScore": 84,
+    "interviewProb": 78,
+    "fitBand": "Strong Fit",
+    "matchTier": "80-89",
+    "source": "linkedin",
+    "sourceLabel": "LinkedIn",
+    "postedDate": "Oct 5, 2026",
+    "isReposted": false,
+    "repostedDate": null,
+    "agentExecutedAt": "2026-10-12T23:45:50.154683",
+    "linkedinUrl": "https://www.linkedin.com/jobs/search/?keywords=Panasonic%20Senior%20Business%20Analyst%20AI%20Automation",
+    "directUrl": "https://remotive.com/remote-jobs/business/sr-business-analyst-ai-automation-1945112",
+    "searchLandingUrl": null,
+    "whyMatched": "Focuses on process discovery, PDD documentation, and Intelligent Document Processing (IDP). Strongly matched to Stanford TECH 77 OCR-to-RAG project, AI Guardians 11-tool toolkit, and Harvard SEAS Agentic AI credential.",
+    "topSkills": [
+      "Process Definition Docs (PDDs)",
+      "Intelligent Document Processing (IDP)",
+      "Agentic AI Frameworks",
+      "ROI & Business Case Modeling",
+      "UAT & KPI Tracking"
+    ],
+    "gapBridge": "Does not claim enterprise UiPath production developer status; bridged cleanly through workflow automation architecture, prompt engineering, and LLM tooling.",
+    "packageAction": "python3 run_agent.py --job-id 8",
+    "outputDir": "output/Panasonic_Senior_Business_Analyst_AI_Automation",
+    "status": "active",
+    "appliedAt": null
+  },
+  {
+    "id": 13,
+    "rank": 21,
+    "title": "Senior Technical Business Analyst (AI & IDP)",
+    "employer": "Leidos",
+    "department": "Defense & Intelligence Systems Group",
+    "category": "ai_enablement",
+    "location": "Denver, CO / Hybrid",
+    "locationType": "denver",
+    "salaryBand": "$110,000 \u2013 $150,000",
+    "salaryMax": 150000,
+    "matchScore": 84,
+    "interviewProb": 80,
+    "fitBand": "Strong Fit",
+    "matchTier": "80-89",
+    "source": "linkedin",
+    "sourceLabel": "LinkedIn",
+    "postedDate": "Oct 5, 2026",
+    "isReposted": false,
+    "repostedDate": null,
+    "agentExecutedAt": "2026-10-12T23:45:50.154683",
+    "linkedinUrl": "https://www.linkedin.com/jobs/search/?keywords=Leidos%20Technical%20Business%20Analyst%20AI%20Denver",
+    "directUrl": "https://www.leidos.com/careers",
+    "searchLandingUrl": "https://www.linkedin.com/jobs/search-results/?keywords=technical+analyst+ai+document+processing",
+    "whyMatched": "Technical AI enablement, workflow automation, prompt engineering, and federal agency modernization. Direct match to 14 years DOI and Stanford TECH 77.",
+    "topSkills": [
+      "Document Intelligence (IDP)",
+      "Prompt Engineering",
+      "Python / SQL Data Analysis",
+      "Federal System Architecture",
+      "Stakeholder Enablement"
+    ],
+    "gapBridge": "Clearance requirements bridged through prior moderate-risk Public Trust status and clean federal background.",
+    "packageAction": "python3 run_agent.py --job-id 17",
+    "outputDir": "output/Leidos_Technical_BA_AI_IDP",
+    "status": "active",
+    "appliedAt": null
+  },
+  {
+    "id": 14,
+    "rank": 22,
+    "title": "Senior Consultant, AI Risk & Data Solutions",
+    "employer": "Deloitte GPS",
+    "department": "Government & Public Services \u2014 AI Risk Practice",
+    "category": "ai_strategy",
+    "location": "Denver, CO / Hybrid / Remote",
+    "locationType": "denver",
+    "salaryBand": "$120,000 \u2013 $160,000",
+    "salaryMax": 160000,
+    "matchScore": 83,
+    "interviewProb": 76,
+    "fitBand": "Strong Fit",
+    "matchTier": "80-89",
+    "source": "linkedin",
+    "sourceLabel": "LinkedIn",
+    "postedDate": "Oct 5, 2026",
+    "isReposted": false,
+    "repostedDate": null,
+    "agentExecutedAt": "2026-10-12T23:45:50.154683",
+    "linkedinUrl": "https://www.linkedin.com/jobs/search/?keywords=Deloitte%20AI%20Risk%20Consultant%20Denver",
+    "directUrl": "https://www2.deloitte.com/us/en/pages/careers/articles/join-deloitte-careers.html",
+    "searchLandingUrl": null,
+    "whyMatched": "Evaluates AI models, algorithmic bias mitigation, and enterprise compliance. Candidate authored executive-ready 6-dimension AI adoption risk assessment for healthcare LLM, holds EU AI Act Article 4 certification, and resides in Denver.",
+    "topSkills": [
+      "AI Risk & Compliance Frameworks",
+      "NIST AI RMF / EU AI Act",
+      "Algorithmic Bias Scoring",
+      "Denver Local Availability",
+      "AI FinOps & Optimization"
+    ],
+    "gapBridge": "Big 4 pedigree bridged by 14 years client-facing federal consulting with ArkSolutions and Acxiom solutions architecture.",
+    "packageAction": "python3 run_agent.py --job-id 9",
+    "outputDir": "output/Deloitte_GPS_Senior_Consultant_AI_Risk",
+    "status": "active",
+    "appliedAt": null
+  },
+  {
+    "id": 15,
+    "rank": 23,
+    "title": "AI Enablement Engineer / Technical Analyst",
+    "employer": "Red Hat / IBM",
+    "department": "OpenShift AI & Ecosystem Enablement",
+    "category": "ai_enablement",
+    "location": "Remote / Denver, CO Hub",
+    "locationType": "remote",
+    "salaryBand": "$118,000 \u2013 $155,000",
+    "salaryMax": 155000,
+    "matchScore": 82,
+    "interviewProb": 78,
+    "fitBand": "Strong Fit",
+    "matchTier": "80-89",
+    "source": "linkedin",
+    "sourceLabel": "LinkedIn",
+    "postedDate": "Oct 5, 2026",
+    "isReposted": false,
+    "repostedDate": null,
+    "agentExecutedAt": "2026-10-12T23:45:50.154683",
+    "linkedinUrl": "https://www.linkedin.com/jobs/search/?keywords=Red%20Hat%20AI%20Enablement%20Engineer",
+    "directUrl": "https://www.redhat.com/en/jobs",
+    "searchLandingUrl": "https://www.linkedin.com/jobs/search-results/?keywords=ai+enablement+engineer",
+    "whyMatched": "Technical user enablement on modern AI tooling, Python, REST APIs, and enterprise AI strategy. Matches Harvard SEAS and Stanford AI coursework.",
+    "topSkills": [
+      "AI Technical Enablement",
+      "Python & REST APIs",
+      "Enterprise Tool Training",
+      "Model Evaluation & Metrics",
+      "Open Source AI Ecosystem"
+    ],
+    "gapBridge": "Linux kernel internals bridged via Computer Science degree and decades of Unix/Linux production support.",
+    "packageAction": "python3 run_agent.py --job-id 18",
+    "outputDir": "output/RedHat_AI_Enablement_Engineer",
+    "status": "active",
+    "appliedAt": null
+  },
+  {
+    "id": 16,
+    "rank": 24,
+    "title": "Sr. AI Governance & Risk Analyst II",
+    "employer": "Principal Financial Group",
+    "department": "Enterprise Technology & AI Governance Office",
+    "category": "ai_strategy",
+    "location": "Remote (United States)",
+    "locationType": "remote",
+    "salaryBand": "$110,000 \u2013 $145,000",
+    "salaryMax": 145000,
+    "matchScore": 82,
+    "interviewProb": 75,
+    "fitBand": "Strong Fit",
+    "matchTier": "80-89",
+    "source": "linkedin",
+    "sourceLabel": "LinkedIn",
+    "postedDate": "Oct 5, 2026",
+    "isReposted": false,
+    "repostedDate": null,
+    "agentExecutedAt": "2026-10-12T23:45:50.154683",
+    "linkedinUrl": "https://www.linkedin.com/jobs/search/?keywords=Principal%20Financial%20AI%20Governance%20Analyst",
+    "directUrl": "https://www.principal.com/about-us/careers",
+    "searchLandingUrl": null,
+    "whyMatched": "Responsible for developing enterprise AI governance policies, model risk scoring, and training stakeholders. Direct match to Dr. Luiza Jarovsky AI Governance certification and University of Denver Credly credential.",
+    "topSkills": [
+      "AI Governance Scorecards",
+      "Model Right-Sizing & FinOps",
+      "Data Privacy Safeguards",
+      "Citibank Early AI/ML Pedigree",
+      "Stakeholder AI Literacy"
+    ],
+    "gapBridge": "No cloud infrastructure admin claims; candidate emphasizes policy oversight, governance guardrails, and deterministic workload offloading.",
+    "packageAction": "python3 run_agent.py --job-id 10",
+    "outputDir": "output/Principal_Financial_AI_Governance_Risk_Analyst",
+    "status": "active",
+    "appliedAt": null
+  },
+  {
+    "id": 17,
+    "rank": 25,
+    "title": "Senior Business Systems Analyst (SAP/Procurement)",
+    "employer": "Horizon Organic Dairy / Danone",
+    "department": "Enterprise Financial Systems (Broomfield Hub)",
+    "category": "enterprise",
+    "location": "Broomfield, CO (Greater Denver Metro)",
+    "locationType": "denver",
+    "salaryBand": "$135,000 \u2013 $155,000",
+    "salaryMax": 155000,
+    "matchScore": 81,
+    "interviewProb": 74,
+    "fitBand": "Strong Fit",
+    "matchTier": "80-89",
+    "source": "linkedin",
+    "sourceLabel": "LinkedIn",
+    "postedDate": "Oct 5, 2026",
+    "isReposted": false,
+    "repostedDate": null,
+    "agentExecutedAt": "2026-10-12T23:45:50.154683",
+    "linkedinUrl": "https://www.linkedin.com/jobs/search/?keywords=Horizon%20Organic%20Senior%20Business%20Systems%20Analyst%20SAP",
+    "directUrl": "https://www.indeed.com",
+    "searchLandingUrl": null,
+    "whyMatched": "Direct match for enterprise SAP FI/CO, invoice approval automation, vendor dispute resolution, and local Denver presence. Candidate tested and validated IPP invoice workflows at DOI FBMS.",
+    "topSkills": [
+      "SAP Integration & Transactions",
+      "Invoice-Approval Workflow Automation",
+      "Relational SQL Reconciliation",
+      "Vendor Mediation & Ledger Balancing",
+      "Denver Metro Local"
+    ],
+    "gapBridge": "Commercial dairy/consumer goods supply chain vs federal acquisitions; core ERP financial data models and reconciliation methods are identical.",
+    "packageAction": "python3 run_agent.py --job-id 11",
+    "outputDir": "output/Horizon_Organic_Senior_Business_Systems_Analyst",
+    "status": "active",
+    "appliedAt": null
+  },
+  {
+    "id": 18,
+    "rank": 26,
+    "title": "ERP Functional Analyst (Procurement & SCM)",
+    "employer": "Particle Measuring Systems",
+    "department": "Global Supply Chain & ERP Operations",
+    "category": "enterprise",
+    "location": "Niwot / Boulder / Denver Metro, CO",
+    "locationType": "denver",
+    "salaryBand": "$92,000 \u2013 $120,000",
+    "salaryMax": 120000,
+    "matchScore": 80,
+    "interviewProb": 72,
+    "fitBand": "Strong Fit",
+    "matchTier": "80-89",
+    "source": "linkedin",
+    "sourceLabel": "LinkedIn",
+    "postedDate": "Oct 5, 2026",
+    "isReposted": false,
+    "repostedDate": null,
+    "agentExecutedAt": "2026-10-12T23:45:50.154683",
+    "linkedinUrl": "https://www.linkedin.com/jobs/search/?keywords=Particle%20Measuring%20Systems%20ERP%20Analyst",
+    "directUrl": "https://www.pmeasuring.com/about-us/careers/",
+    "searchLandingUrl": null,
+    "whyMatched": "Supply chain management and procurement modules in enterprise ERP. 14 years supporting procurement and contract awarding at DOI Acquisition Directorate, data cleansing, and user support.",
+    "topSkills": [
+      "ERP Procurement Modules",
+      "Relational Data Cleansing",
+      "Operational Reporting",
+      "Vendor Coordination",
+      "Local Denver/Boulder Resident"
+    ],
+    "gapBridge": "Manufacturing inventory modules vs federal acquisition workflows; core relational structures and requisition flows are parallel.",
+    "packageAction": "python3 run_agent.py --job-id 12",
+    "outputDir": "output/Particle_Measuring_Systems_ERP_Analyst",
+    "status": "active",
+    "appliedAt": null
+  },
+  {
+    "id": 19,
+    "rank": 27,
+    "title": "Applied AI Solutions Analyst",
+    "employer": "Ball Aerospace / BAE Systems",
+    "department": "Mission Information Systems & Digital Transformation",
+    "category": "ai_enablement",
+    "location": "Broomfield / Westminster, CO",
+    "locationType": "denver",
+    "salaryBand": "$105,000 \u2013 $145,000",
+    "salaryMax": 145000,
+    "matchScore": 78,
+    "interviewProb": 73,
+    "fitBand": "Solid Fit",
+    "matchTier": "70-79",
+    "source": "linkedin",
+    "sourceLabel": "LinkedIn",
+    "postedDate": "Oct 5, 2026",
+    "isReposted": false,
+    "repostedDate": null,
+    "agentExecutedAt": "2026-10-12T23:45:50.154683",
+    "linkedinUrl": "https://www.linkedin.com/jobs/search/?keywords=Ball%20Aerospace%20Applied%20AI%20Analyst%20Broomfield",
+    "directUrl": "https://www.baesystems.com/en-us/careers",
+    "searchLandingUrl": "https://www.linkedin.com/jobs/search-results/?keywords=applied+ai+analyst+defense",
+    "whyMatched": "Technical AI enablement, data workflows, Python/Pandas analysis, and aerospace mission support in Denver metro.",
+    "topSkills": [
+      "AI Enablement & Workflows",
+      "Python / Pandas Analysis",
+      "Relational SQL Queries",
+      "Public Trust Security",
+      "Local Denver/Broomfield"
+    ],
+    "gapBridge": "Classified space hardware domain bridged through federal systems data architecture and defense screening algorithms.",
+    "packageAction": "python3 run_agent.py --job-id 19",
+    "outputDir": "output/Ball_Aerospace_Applied_AI_Solutions",
+    "status": "active",
+    "appliedAt": null
+  },
+  {
+    "id": 20,
+    "rank": 28,
+    "title": "Senior Systems Analyst (Federal Systems)",
+    "employer": "Peraton",
+    "department": "Defense & Intelligence IT Modernization",
+    "category": "federal",
+    "location": "Aurora / Denver, CO Hub",
+    "locationType": "denver",
+    "salaryBand": "$105,000 \u2013 $142,000",
+    "salaryMax": 142000,
+    "matchScore": 76,
+    "interviewProb": 72,
+    "fitBand": "Solid Fit",
+    "matchTier": "70-79",
+    "source": "linkedin",
+    "sourceLabel": "LinkedIn",
+    "postedDate": "Oct 1, 2026",
+    "isReposted": true,
+    "repostedDate": "Oct 10, 2026",
+    "agentExecutedAt": "2026-10-12T23:45:50.154683",
+    "linkedinUrl": "https://www.linkedin.com/jobs/search/?keywords=Peraton%20Senior%20Systems%20Analyst%20Denver",
+    "directUrl": "https://careers.peraton.com",
+    "searchLandingUrl": null,
+    "whyMatched": "Federal systems modernization, data conversions, interface analysis, and Level 2/3 operational support.",
+    "topSkills": [
+      "Federal Systems Support",
+      "Data Mapping & Conversions",
+      "FAR / Audit Integrity",
+      "Remedy Incident Management",
+      "Public Trust Clearance"
+    ],
+    "gapBridge": "Specific DoD tooling bridged through 14 years Department of the Interior enterprise system operations.",
+    "packageAction": "python3 run_agent.py --job-id 20",
+    "outputDir": "output/Peraton_Senior_Systems_Analyst",
+    "status": "active",
+    "appliedAt": null
+  },
+  {
+    "id": 21,
+    "rank": 29,
+    "title": "GenAI Technical Integration Analyst",
+    "employer": "DISH Network / EchoStar",
+    "department": "Enterprise IT & AI Innovation Lab",
+    "category": "ai_enablement",
+    "location": "Englewood, CO (Denver Metro)",
+    "locationType": "denver",
+    "salaryBand": "$100,000 \u2013 $135,000",
+    "salaryMax": 135000,
+    "matchScore": 75,
+    "interviewProb": 70,
+    "fitBand": "Solid Fit",
+    "matchTier": "70-79",
+    "source": "linkedin",
+    "sourceLabel": "LinkedIn",
+    "postedDate": "Oct 5, 2026",
+    "isReposted": false,
+    "repostedDate": null,
+    "agentExecutedAt": "2026-10-12T23:45:50.154683",
+    "linkedinUrl": "https://www.linkedin.com/jobs/search/?keywords=DISH%20Network%20GenAI%20Analyst%20Englewood",
+    "directUrl": "https://careers.dish.com",
+    "searchLandingUrl": "https://www.linkedin.com/jobs/search-results/?keywords=genai+integration+analyst+denver",
+    "whyMatched": "LLM API integration, prompt tuning, relational database querying (SQL), and enterprise technical user enablement.",
+    "topSkills": [
+      "LLM API Integration",
+      "Prompt Engineering",
+      "SQL Data Extraction",
+      "Technical Enablement",
+      "Denver Metro Onsite"
+    ],
+    "gapBridge": "Telecommunications billing specifics bridged by Acxiom and DOI multi-million dollar billing reconciliations.",
+    "packageAction": "python3 run_agent.py --job-id 21",
+    "outputDir": "output/DISH_GenAI_Technical_Integration",
+    "status": "active",
+    "appliedAt": null
+  },
+  {
+    "id": 22,
+    "rank": 30,
+    "title": "Public Sector Transformation Analyst",
+    "employer": "ICF International",
+    "department": "Government Strategy & Digital Modernization",
+    "category": "federal",
+    "location": "Remote / Denver, CO Hub",
+    "locationType": "remote",
+    "salaryBand": "$98,000 \u2013 $135,000",
+    "salaryMax": 135000,
+    "matchScore": 74,
+    "interviewProb": 71,
+    "fitBand": "Solid Fit",
+    "matchTier": "70-79",
+    "source": "linkedin",
+    "sourceLabel": "LinkedIn",
+    "postedDate": "Oct 1, 2026",
+    "isReposted": true,
+    "repostedDate": "Oct 10, 2026",
+    "agentExecutedAt": "2026-10-12T23:45:50.154683",
+    "linkedinUrl": "https://www.linkedin.com/jobs/search/?keywords=ICF%20Public%20Sector%20Analyst%20Denver",
+    "directUrl": "https://www.icf.com/careers",
+    "searchLandingUrl": null,
+    "whyMatched": "Civil agency program delivery, stakeholder engagement, federal regulatory compliance, and business process modeling.",
+    "topSkills": [
+      "Civil Agency Consulting",
+      "Stakeholder Engagement",
+      "Process Modeling",
+      "Federal Governance",
+      "Change Enablement"
+    ],
+    "gapBridge": "Grants management vs federal contracting; bridged through universal federal funds lifecycle mastery.",
+    "packageAction": "python3 run_agent.py --job-id 22",
+    "outputDir": "output/ICF_Public_Sector_Transformation",
+    "status": "active",
+    "appliedAt": null
+  },
+  {
+    "id": 23,
+    "rank": 31,
+    "title": "AI Product & Enablement Analyst",
+    "employer": "Arrow Electronics",
+    "department": "Global Digital Solutions & Enterprise Analytics",
+    "category": "ai_enablement",
+    "location": "Centennial, CO (Denver Tech Center)",
+    "locationType": "denver",
+    "salaryBand": "$102,000 \u2013 $138,000",
+    "salaryMax": 138000,
+    "matchScore": 73,
+    "interviewProb": 69,
+    "fitBand": "Solid Fit",
+    "matchTier": "70-79",
+    "source": "linkedin",
+    "sourceLabel": "LinkedIn",
+    "postedDate": "Oct 5, 2026",
+    "isReposted": false,
+    "repostedDate": null,
+    "agentExecutedAt": "2026-10-12T23:45:50.154683",
+    "linkedinUrl": "https://www.linkedin.com/jobs/search/?keywords=Arrow%20Electronics%20AI%20Analyst%20Centennial",
+    "directUrl": "https://careers.arrow.com",
+    "searchLandingUrl": "https://www.linkedin.com/jobs/search-results/?keywords=ai+enablement+centennial",
+    "whyMatched": "Enterprise AI tool rollout, ROI tracking, technical requirements, cross-functional training, and Denver Tech Center location.",
+    "topSkills": [
+      "AI Tool Rollout & Enablement",
+      "ROI & Value Tracking",
+      "Python / SQL Analysis",
+      "Technical Documentation",
+      "Denver Tech Center"
+    ],
+    "gapBridge": "Electronic components supply chain bridged through deep enterprise ERP and vendor data architecture.",
+    "packageAction": "python3 run_agent.py --job-id 23",
+    "outputDir": "output/Arrow_AI_Product_Enablement",
+    "status": "active",
+    "appliedAt": null
+  },
+  {
+    "id": 24,
+    "rank": 32,
+    "title": "Technical Data & AI Enablement Analyst",
+    "employer": "CACI International",
+    "department": "National Security & Digital Systems",
+    "category": "ai_enablement",
+    "location": "Denver, CO / Remote",
+    "locationType": "remote",
+    "salaryBand": "$104,000 \u2013 $144,000",
+    "salaryMax": 144000,
+    "matchScore": 71,
+    "interviewProb": 68,
+    "fitBand": "Solid Fit",
+    "matchTier": "70-79",
+    "source": "linkedin",
+    "sourceLabel": "LinkedIn",
+    "postedDate": "Oct 5, 2026",
+    "isReposted": false,
+    "repostedDate": null,
+    "agentExecutedAt": "2026-10-12T23:45:50.154683",
+    "linkedinUrl": "https://www.linkedin.com/jobs/search/?keywords=CACI%20Technical%20Data%20Analyst%20Denver",
+    "directUrl": "https://careers.caci.com",
+    "searchLandingUrl": "https://www.linkedin.com/jobs/search-results/?keywords=caci+data+analyst+denver",
+    "whyMatched": "Defense data workflows, AI prompt libraries, Python data cleansing, federal contracting, and public trust eligibility.",
+    "topSkills": [
+      "Defense Data Workflows",
+      "Prompt Libraries",
+      "Python / Pandas Cleansing",
+      "Public Trust Clearance",
+      "Federal Contracting"
+    ],
+    "gapBridge": "Tactical communications data formats bridged via FBMS Department-wide ETL conversion experience.",
+    "packageAction": "python3 run_agent.py --job-id 24",
+    "outputDir": "output/CACI_Technical_Data_AI_Enablement",
+    "status": "active",
+    "appliedAt": null
+  },
+  {
+    "id": 25,
+    "rank": 33,
+    "title": "Emerging Tech & AI Implementation Analyst",
+    "employer": "DaVita Healthcare Partners",
+    "department": "Enterprise IT & Clinical Transformation",
+    "category": "ai_enablement",
+    "location": "Denver, CO (Downtown / Hybrid)",
+    "locationType": "denver",
+    "salaryBand": "$95,000 \u2013 $125,000",
+    "salaryMax": 125000,
+    "matchScore": 68,
+    "interviewProb": 65,
+    "fitBand": "Moderate Fit",
+    "matchTier": "60-69",
+    "source": "linkedin",
+    "sourceLabel": "LinkedIn",
+    "postedDate": "Oct 5, 2026",
+    "isReposted": false,
+    "repostedDate": null,
+    "agentExecutedAt": "2026-10-12T23:45:50.154683",
+    "linkedinUrl": "https://www.linkedin.com/jobs/search/?keywords=DaVita%20AI%20Analyst%20Denver",
+    "directUrl": "https://careers.davita.com",
+    "searchLandingUrl": "https://www.linkedin.com/jobs/search-results/?keywords=ai+implementation+analyst+davita",
+    "whyMatched": "AI adoption metrics, Python/SQL analytics, technical documentation, operational enablement, and healthcare LLM risk framework match.",
+    "topSkills": [
+      "AI Adoption Metrics",
+      "Python & SQL Analytics",
+      "Healthcare Risk Assessment (ChatGPT Health)",
+      "Change Management",
+      "Denver Downtown Local"
+    ],
+    "gapBridge": "Clinical workflows bridged through published paper on AI Ethics in Healthcare and 6-dimension risk framework.",
+    "packageAction": "python3 run_agent.py --job-id 25",
+    "outputDir": "output/DaVita_Emerging_Tech_AI_Implementation",
+    "status": "active",
+    "appliedAt": null
+  },
+  {
+    "id": 26,
+    "rank": 34,
+    "title": "Senior Systems Analyst (Billing Data & Reconciliations)",
+    "employer": "Charter Communications / Spectrum",
+    "department": "Enterprise Financial Operations & Billing Systems",
+    "category": "enterprise",
+    "location": "Greenwood Village, CO (Denver Tech Center)",
+    "locationType": "denver",
+    "salaryBand": "$96,000 \u2013 $130,000",
+    "salaryMax": 130000,
+    "matchScore": 67,
+    "interviewProb": 64,
+    "fitBand": "Moderate Fit",
+    "matchTier": "60-69",
+    "source": "linkedin",
+    "sourceLabel": "LinkedIn",
+    "postedDate": "Oct 5, 2026",
+    "isReposted": false,
+    "repostedDate": null,
+    "agentExecutedAt": "2026-10-12T23:45:50.154683",
+    "linkedinUrl": "https://www.linkedin.com/jobs/search/?keywords=Charter%20Communications%20Senior%20Systems%20Analyst%20Denver",
+    "directUrl": "https://jobs.spectrum.com",
+    "searchLandingUrl": null,
+    "whyMatched": "Large-scale transactional data reconciliation, relational SQL, resolving ledger disputes, and Denver Tech Center proximity.",
+    "topSkills": [
+      "Transactional Data Reconciliation",
+      "SQL / Relational Queries",
+      "Billing Incident Resolution",
+      "Vendor / User Support",
+      "Denver Tech Center"
+    ],
+    "gapBridge": "Cable/broadband billing models bridged by 14 years federal IPAC dispute mediation and Acxiom financial models.",
+    "packageAction": "python3 run_agent.py --job-id 26",
+    "outputDir": "output/Charter_Senior_Systems_Billing_Analyst",
+    "status": "active",
+    "appliedAt": null
+  },
+  {
+    "id": 27,
+    "rank": 35,
+    "title": "AI & Automation Business Analyst",
+    "employer": "CoBank",
+    "department": "Enterprise Technology & Agribusiness Banking",
+    "category": "ai_enablement",
+    "location": "Greenwood Village, CO (Denver Tech Center)",
+    "locationType": "denver",
+    "salaryBand": "$98,000 \u2013 $132,000",
+    "salaryMax": 132000,
+    "matchScore": 65,
+    "interviewProb": 62,
+    "fitBand": "Moderate Fit",
+    "matchTier": "60-69",
+    "source": "linkedin",
+    "sourceLabel": "LinkedIn",
+    "postedDate": "Oct 5, 2026",
+    "isReposted": false,
+    "repostedDate": null,
+    "agentExecutedAt": "2026-10-12T23:45:50.154683",
+    "linkedinUrl": "https://www.linkedin.com/jobs/search/?keywords=CoBank%20AI%20Automation%20Business%20Analyst%20Denver",
+    "directUrl": "https://www.cobank.com/careers",
+    "searchLandingUrl": "https://www.linkedin.com/jobs/search-results/?keywords=cobank+analyst+denver",
+    "whyMatched": "Financial process automation, AI tool adoption, Python/SQL, requirements translation, and banking domain experience.",
+    "topSkills": [
+      "Financial Process Automation",
+      "AI Tool Adoption",
+      "Requirements Translation",
+      "SQL Data Analysis",
+      "Denver Tech Center"
+    ],
+    "gapBridge": "Agricultural credit banking specifics bridged by Acxiom Fortune 100 banking client architecture (Citibank, GE Money).",
+    "packageAction": "python3 run_agent.py --job-id 27",
+    "outputDir": "output/CoBank_AI_Automation_Business_Analyst",
+    "status": "active",
+    "appliedAt": null
+  },
+  {
+    "id": 28,
+    "rank": 36,
+    "title": "Enterprise Data Migration & Systems Analyst",
+    "employer": "Lumen Technologies / Level 3",
+    "department": "Enterprise Architecture & Legacy Modernization",
+    "category": "enterprise",
+    "location": "Broomfield, CO / Remote-Flex",
+    "locationType": "denver",
+    "salaryBand": "$92,000 \u2013 $126,000",
+    "salaryMax": 126000,
+    "matchScore": 64,
+    "interviewProb": 61,
+    "fitBand": "Moderate Fit",
+    "matchTier": "60-69",
+    "source": "linkedin",
+    "sourceLabel": "LinkedIn",
+    "postedDate": "Oct 5, 2026",
+    "isReposted": false,
+    "repostedDate": null,
+    "agentExecutedAt": "2026-10-12T23:45:50.154683",
+    "linkedinUrl": "https://www.linkedin.com/jobs/search/?keywords=Lumen%20Technologies%20Data%20Migration%20Analyst%20Broomfield",
+    "directUrl": "https://jobs.lumen.com",
+    "searchLandingUrl": null,
+    "whyMatched": "Large-scale legacy database migrations, ETL routines, data validation scripts, and Broomfield hub accessibility.",
+    "topSkills": [
+      "ETL Data Migration Routines",
+      "SQL Data Validation",
+      "Legacy Systems Cleansing",
+      "Cross-Functional Collaboration",
+      "Broomfield Local"
+    ],
+    "gapBridge": "Telecom network inventory tables bridged by 12-database DOI FBMS Department-wide conversion leadership.",
+    "packageAction": "python3 run_agent.py --job-id 28",
+    "outputDir": "output/Lumen_Enterprise_Data_Migration_Analyst",
+    "status": "active",
+    "appliedAt": null
+  },
+  {
+    "id": 29,
+    "rank": 37,
+    "title": "Data Science & AI Enablement Specialist",
+    "employer": "Western Union",
+    "department": "Global Analytics & Machine Learning Operations",
+    "category": "ai_enablement",
+    "location": "Denver, CO / Remote-Flex",
+    "locationType": "denver",
+    "salaryBand": "$100,000 \u2013 $135,000",
+    "salaryMax": 135000,
+    "matchScore": 63,
+    "interviewProb": 60,
+    "fitBand": "Moderate Fit",
+    "matchTier": "60-69",
+    "source": "linkedin",
+    "sourceLabel": "LinkedIn",
+    "postedDate": "Oct 5, 2026",
+    "isReposted": false,
+    "repostedDate": null,
+    "agentExecutedAt": "2026-10-12T23:45:50.154683",
+    "linkedinUrl": "https://www.linkedin.com/jobs/search/?keywords=Western%20Union%20AI%20Enablement%20Denver",
+    "directUrl": "https://careers.westernunion.com",
+    "searchLandingUrl": "https://www.linkedin.com/jobs/search-results/?keywords=western+union+ai+analyst",
+    "whyMatched": "Machine learning model monitoring, identity scoring, fraud detection algorithms (Citibank model pedigree), and AI ethics.",
+    "topSkills": [
+      "ML Model Monitoring",
+      "Online Identity Scoring",
+      "Fraud Detection Algorithms",
+      "AI Ethics & Privacy",
+      "Denver Local HQ"
+    ],
+    "gapBridge": "Consumer remittance APIs bridged through Citibank credit scoring and Acxiom financial data warehouses.",
+    "packageAction": "python3 run_agent.py --job-id 29",
+    "outputDir": "output/Western_Union_Data_Science_AI_Enablement",
+    "status": "active",
+    "appliedAt": null
+  },
+  {
+    "id": 30,
+    "rank": 38,
+    "title": "Technical Operations Analyst (AI Workflows)",
+    "employer": "Maxar Technologies",
+    "department": "Earth Intelligence & Geospatial Data Operations",
+    "category": "ai_enablement",
+    "location": "Westminster, CO (Denver Metro)",
+    "locationType": "denver",
+    "salaryBand": "$90,000 \u2013 $122,000",
+    "salaryMax": 122000,
+    "matchScore": 61,
+    "interviewProb": 58,
+    "fitBand": "Moderate Fit",
+    "matchTier": "60-69",
+    "source": "linkedin",
+    "sourceLabel": "LinkedIn",
+    "postedDate": "Oct 5, 2026",
+    "isReposted": false,
+    "repostedDate": null,
+    "agentExecutedAt": "2026-10-12T23:45:50.154683",
+    "linkedinUrl": "https://www.linkedin.com/jobs/search/?keywords=Maxar%20Technologies%20Technical%20Operations%20Analyst%20Westminster",
+    "directUrl": "https://www.maxar.com/careers",
+    "searchLandingUrl": "https://www.linkedin.com/jobs/search-results/?keywords=maxar+analyst+westminster",
+    "whyMatched": "Geospatial data workflows, automated extraction, Python scripting, and defense contractor public trust eligibility.",
+    "topSkills": [
+      "Automated Data Workflows",
+      "Python Scripting",
+      "Quality Assurance Metrics",
+      "Public Trust Security",
+      "Westminster Local"
+    ],
+    "gapBridge": "Satellite imagery processing bridged by high-volume ETL pipelines and machine learning classification algorithms.",
+    "packageAction": "python3 run_agent.py --job-id 30",
+    "outputDir": "output/Maxar_Technical_Operations_AI_Workflows",
+    "status": "active",
+    "appliedAt": null
+  }
+];
+
+    // Application State
+    const STORAGE_KEY = 'ejr_jobs_dashboard_state_v3';
+    let state = {};
+    let currentFilter = 'active';
+    let currentTierFilter = 'all';
+    let currentSearch = '';
+    let currentSort = 'rank';
+    let isServerConnected = false;
+    let currentOutputDir = '';
+
+    const SERVER_URL = 'http://localhost:8000';
+
+    async function init() {
+      state = loadState();
+      // Render IMMEDIATELY from embedded data so cards appear with zero latency!
+      renderJobs();
+
+      // Background sync with local SQLite server bridge
+      try {
+        await checkServer();
+        if (isServerConnected) {
+          await fetchJobsFromDb();
+          renderJobs();
+        }
+      } catch (err) {
+        console.warn("Background server bridge notice:", err);
+      }
+
+      setInterval(async () => {
+        await checkServer();
+      }, 10000);
+    }
+
+    async function checkServer() {
+      const dot = document.getElementById('serverStatusDot');
+      const text = document.getElementById('serverStatusText');
+      const pill = document.getElementById('serverStatusPill');
+
+      try {
+        const res = await fetch(`${SERVER_URL}/api/status`, { signal: AbortSignal.timeout(2000) });
+        if (res.ok) {
+          isServerConnected = true;
+          dot.className = "w-2 h-2 rounded-full bg-emerald-500 animate-pulse";
+          text.innerText = "Agent Bridge Live (Port 8000)";
+          pill.className = "flex items-center gap-1.5 text-xs bg-emerald-50 text-emerald-700 px-3 py-1.5 rounded-lg border border-emerald-200";
+          return;
+        }
+      } catch (err) {}
+
+      isServerConnected = false;
+      dot.className = "w-2 h-2 rounded-full bg-amber-500";
+      text.innerText = "Bridge Standby (Offline)";
+      pill.className = "flex items-center gap-1.5 text-xs bg-amber-50 text-amber-700 px-3 py-1.5 rounded-lg border border-amber-200";
+    }
+
+    async function fetchJobsFromDb() {
+      if (!isServerConnected) return;
+      try {
+        const res = await fetch(`${SERVER_URL}/api/jobs`);
+        if (res.ok) {
+          const data = await res.json();
+          if (data.jobs && data.jobs.length > 0) {
+            defaultJobs = data.jobs.map((j, idx) => ({
+              id: j.id,
+              rank: idx + 1,
+              title: j.title,
+              employer: j.employer,
+              department: j.department || '',
+              category: j.category || 'ai_enablement',
+              location: j.location || 'Denver, CO',
+              locationType: j.location_type || 'remote',
+              salaryBand: j.salary_band || '$100,000 – $140,000',
+              salaryMax: j.salary_max || 140000,
+              matchScore: j.match_score,
+              interviewProb: j.interview_prob,
+              fitBand: j.fit_band || 'Strong Fit',
+              matchTier: j.match_tier || computeTier(j.match_score),
+              source: j.source || 'linkedin',
+              sourceLabel: j.source_label || (j.source === '80000_hours' ? '80,000 Hours' : 'LinkedIn'),
+              postedDate: j.posted_date || 'Oct 2026',
+              isReposted: Boolean(j.is_reposted),
+              repostedDate: j.reposted_date || null,
+              agentExecutedAt: j.agent_executed_at || j.last_seen_at || null,
+              linkedinUrl: j.linkedin_url,
+              directUrl: j.direct_url,
+              searchLandingUrl: j.search_landing_url,
+              whyMatched: j.why_matched || '',
+              topSkills: Array.isArray(j.top_skills) ? j.top_skills : [],
+              gapBridge: j.gap_bridge || '',
+              packageAction: j.package_action || `python3 run_agent.py --job-id ${j.id}`,
+              outputDir: j.output_dir || `output/Job_${j.id}`,
+              status: j.status || 'active',
+              appliedAt: j.applied_at || null
+            }));
+
+            // Sync server statuses into local state
+            defaultJobs.forEach(j => {
+              if (j.status && j.status !== 'active') {
+                state[j.id] = { status: j.status, appliedAt: j.appliedAt };
+              }
+            });
+            saveState();
+            const dbCountEl = document.getElementById('totalDbJobsCount');
+            if (dbCountEl) dbCountEl.innerText = defaultJobs.length;
+          }
+        }
+      } catch (err) {
+        console.warn("Could not fetch jobs from SQLite:", err);
+      }
+    }
+
+    function computeTier(score) {
+      if (score >= 90) return '90-100';
+      if (score >= 80) return '80-89';
+      if (score >= 70) return '70-79';
+      if (score >= 60) return '60-69';
+      if (score >= 50) return '50-59';
+      return 'under-50';
+    }
+
+    function formatAgentTime(iso) {
+      if (!iso) return 'Oct 13, 2026';
+      try {
+        const d = new Date(iso);
+        if (isNaN(d.getTime())) return iso;
+        return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) + ' ' + d.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+      } catch (e) {
+        return iso;
+      }
+    }
+
+    function getSourceBadge(source, label) {
+      if (source === '80000_hours') return '<span class="badge-80k px-2 py-0.5 rounded text-xs font-bold">⏳ 80,000 Hours</span>';
+      if (source === 'ashby') return '<span class="badge-ashby px-2 py-0.5 rounded text-xs font-bold">⚡ Ashby ATS</span>';
+      if (source === 'greenhouse') return '<span class="bg-emerald-50 text-emerald-700 border border-emerald-300 px-2 py-0.5 rounded text-xs font-bold">🌿 Greenhouse</span>';
+      if (source === 'usajobs') return '<span class="bg-blue-50 text-blue-800 border border-blue-200 px-2 py-0.5 rounded text-xs font-bold">🏛️ USAJobs</span>';
+      return `<span class="bg-slate-100 text-slate-700 border border-slate-300 px-2 py-0.5 rounded text-xs font-bold">💼 ${label || 'LinkedIn'}</span>`;
+    }
+
+    async function triggerJobSearch() {
+      await checkServer();
+      const modal = document.getElementById('agentModal');
+      const title = document.getElementById('modalTitle');
+      const consoleBox = document.getElementById('modalConsole');
+      const spinner = document.getElementById('modalSpinner');
+      const statusText = document.getElementById('modalStatusText');
+      const folderBtn = document.getElementById('openFolderBtn');
+
+      title.innerText = "Running Job Search & Deduplication Engine...";
+      statusText.innerText = "Scanning 80,000 Hours, Ashby ATS, Greenhouse, LinkedIn & USAJobs...";
+      consoleBox.innerText = `[INITIALIZING MULTI-SOURCE SEARCH]\n$ python3 job_search_engine.py --min-score 60\nConnecting to SQLite at ${SERVER_URL}...\n`;
+      spinner.classList.remove('hidden');
+      folderBtn.classList.add('hidden');
+      modal.classList.remove('hidden');
+
+      if (!isServerConnected) {
+        spinner.classList.add('hidden');
+        title.innerText = "Bridge Offline — Command Available";
+        statusText.innerText = "Copy command below to run directly in terminal:";
+        consoleBox.innerText += "\nTo run the live search engine, launch: python3 dashboard/server.py 8000";
+        return;
+      }
+
+      try {
+        const res = await fetch(`${SERVER_URL}/api/run-job-search`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ minScore: 60 })
+        });
+        const data = await res.json();
+        spinner.classList.add('hidden');
+        if (data.success) {
+          title.innerText = "✓ Job Search Completed";
+          statusText.innerText = `Search engine finished. SQLite database updated.`;
+          consoleBox.innerText += `\n[OUTPUT LOGS]:\n` + data.output + `\n\n[STATUS: SUCCESS - Zero Repetitions]`;
+          await fetchJobsFromDb();
+          renderJobs();
+        } else {
+          title.innerText = "⚠️ Search Engine Notice";
+          statusText.innerText = "Search completed with notice:";
+          consoleBox.innerText += `\n` + (data.output || data.error);
+        }
+      } catch (err) {
+        spinner.classList.add('hidden');
+        title.innerText = "Search Engine Error";
+        consoleBox.innerText += `\nNetwork error: ${err.message}`;
+      }
+    }
+
+    async function runAgent(jobId) {
+      const job = defaultJobs.find(j => j.id === jobId);
+      if (!job) return;
+
+      await checkServer();
+      if (!isServerConnected) {
+        navigator.clipboard.writeText(job.packageAction);
+        showToast(`📋 Copied command for ${job.title}! Run in terminal: ${job.packageAction}`);
+        return;
+      }
+
+      currentOutputDir = job.outputDir;
+      const modal = document.getElementById('agentModal');
+      const title = document.getElementById('modalTitle');
+      const consoleBox = document.getElementById('modalConsole');
+      const spinner = document.getElementById('modalSpinner');
+      const statusText = document.getElementById('modalStatusText');
+      const folderBtn = document.getElementById('openFolderBtn');
+
+      title.innerText = `Running Agent: ${job.title}`;
+      statusText.innerText = `Executing: ${job.packageAction}`;
+      consoleBox.innerText = `[STARTING PIPELINE]\n$ ${job.packageAction}\nConnecting to agent engine at ${SERVER_URL}...\n`;
+      spinner.classList.remove('hidden');
+      folderBtn.classList.add('hidden');
+      modal.classList.remove('hidden');
+
+      try {
+        const response = await fetch(`${SERVER_URL}/api/run-agent`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            command: job.packageAction,
+            jobTitle: job.title,
+            outputDir: job.outputDir
+          })
+        });
+        const res = await response.json();
+        spinner.classList.add('hidden');
+        if (res.success) {
+          title.innerText = `✓ Completed: ${job.title}`;
+          statusText.innerText = `All 4 tailored deliverables successfully created!`;
+          consoleBox.innerText += `\n[OUTPUT LOGS]:\n` + res.output + `\n\n[STATUS: SUCCESS]`;
+          folderBtn.classList.remove('hidden');
+        } else {
+          title.innerText = `⚠️ Agent Execution Notice`;
+          statusText.innerText = `Execution output:`;
+          consoleBox.innerText += `\n` + res.output;
+        }
+      } catch (err) {
+        spinner.classList.add('hidden');
+        title.innerText = `Execution Error`;
+        consoleBox.innerText += `\nFailed to connect to local server: ${err.message}`;
+      }
+    }
+
+    function openOutputFolder() {
+      if (currentOutputDir && isServerConnected) {
+        fetch(`${SERVER_URL}/api/open-folder`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ folder: currentOutputDir })
+        });
+      }
+    }
+
+    function closeModal() {
+      document.getElementById('agentModal').classList.add('hidden');
+    }
+
+    function loadState() {
+      try {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          if (parsed && typeof parsed === 'object') {
+            const normalized = {};
+            for (const [k, v] of Object.entries(parsed)) {
+              if (typeof v === 'string') {
+                normalized[k] = { status: v, appliedAt: null };
+              } else if (v && typeof v === 'object') {
+                normalized[k] = { status: v.status || 'active', appliedAt: v.appliedAt || null };
+              }
+            }
+            return normalized;
+          }
+        }
+      } catch (e) {
+        console.error("Failed to load state", e);
+      }
+      const initial = {};
+      defaultJobs.forEach(j => {
+        initial[j.id] = { status: j.status || 'active', appliedAt: j.appliedAt || null };
+      });
+      return initial;
+    }
+
+    function saveState() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      } catch (e) {
+        console.error("Failed to save state", e);
+      }
+      updateCounts();
+    }
+
+    function updateCounts() {
+      let active = 0, applied = 0, deleted = 0;
+      let t90 = 0, t80 = 0, t70 = 0, t60 = 0, t50 = 0;
+      let aiCount = 0, source80k = 0, sourceAts = 0;
+      let latestAgentTime = null;
+
+      defaultJobs.forEach(j => {
+        const entry = state[j.id];
+        const s = (entry && typeof entry === 'object') ? (entry.status || 'active') : (entry || j.status || 'active');
+        if (s === 'active') active++;
+        else if (s === 'applied') applied++;
+        else if (s === 'deleted') deleted++;
+
+        if (j.agentExecutedAt && (!latestAgentTime || j.agentExecutedAt > latestAgentTime)) {
+          latestAgentTime = j.agentExecutedAt;
+        }
+
+        if (s !== 'deleted') {
+          const tier = j.matchTier || computeTier(j.matchScore);
+          if (tier === '90-100') t90++;
+          else if (tier === '80-89') t80++;
+          else if (tier === '70-79') t70++;
+          else if (tier === '60-69') t60++;
+          else if (tier === '50-59') t50++;
+
+          if (j.category === 'ai_enablement') aiCount++;
+          if (j.source === '80000_hours') source80k++;
+          if (j.source === 'ashby' || j.source === 'greenhouse') sourceAts++;
+        }
+      });
+
+      document.getElementById('activeJobsCount').innerText = active;
+      document.getElementById('appliedJobsCount').innerText = applied;
+      document.getElementById('deletedJobsCount').innerText = deleted;
+      document.getElementById('appliedTabCount').innerText = applied;
+      document.getElementById('trashTabCount').innerText = deleted;
+
+      document.getElementById('aiEnablementCountCard').innerText = aiCount;
+      document.getElementById('aiEnablementTabCount').innerText = aiCount;
+      document.getElementById('source80kCountCard').innerText = source80k;
+      document.getElementById('source80kTabCount').innerText = source80k;
+      document.getElementById('sourceAtsTabCount').innerText = sourceAts;
+
+      document.getElementById('tierCount90').innerText = t90;
+      document.getElementById('tierCount80').innerText = t80;
+      document.getElementById('tierCount70').innerText = t70;
+      document.getElementById('tierCount60').innerText = t60;
+      document.getElementById('tierCount50').innerText = t50;
+
+      const dbCountEl = document.getElementById('totalDbJobsCount');
+      if (dbCountEl) dbCountEl.innerText = defaultJobs.length;
+
+      const scanTimeEl = document.getElementById('scanTimestampText');
+      if (scanTimeEl && latestAgentTime) {
+        scanTimeEl.innerText = formatAgentTime(latestAgentTime);
+      }
+    }
+
+    async function toggleApplied(jobId) {
+      const current = state[jobId] ? state[jobId].status : 'active';
+      let newStatus, appliedAt;
+      if (current === 'applied') {
+        newStatus = 'active';
+        appliedAt = null;
+        state[jobId] = { status: 'active', appliedAt: null };
+        showToast("Marked job as unapplied", jobId, 'active');
+      } else {
+        const now = new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+        newStatus = 'applied';
+        appliedAt = now;
+        state[jobId] = { status: 'applied', appliedAt: now };
+        showToast("✓ Marked job as Applied (" + now + ")", jobId, 'applied');
+      }
+      saveState();
+      renderJobs();
+
+      if (isServerConnected) {
+        try {
+          fetch(`${SERVER_URL}/api/job-status`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ id: jobId, status: newStatus, appliedAt: appliedAt })
+          });
+        } catch(e) {}
+      }
+    }
+
+    async function deleteJob(jobId) {
+      const prev = state[jobId] || { status: 'active', appliedAt: null };
+      state[jobId] = { status: 'deleted', appliedAt: prev.appliedAt };
+      saveState();
+      showToast("Job removed from active list", jobId, 'deleted', prev);
+      renderJobs();
+
+      if (isServerConnected) {
+        try {
+          fetch(`${SERVER_URL}/api/job-status`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ id: jobId, status: 'deleted', appliedAt: prev.appliedAt })
+          });
+        } catch(e) {}
+      }
+    }
+
+    function restoreJob(jobId) {
+      const prevApplied = state[jobId] && state[jobId].appliedAt;
+      state[jobId] = { status: prevApplied ? 'applied' : 'active', appliedAt: prevApplied || null };
+      saveState();
+      showToast("Job restored to active list", jobId, 'restored');
+      renderJobs();
+
+      if (isServerConnected) {
+        try {
+          fetch(`${SERVER_URL}/api/job-status`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ id: jobId, status: prevApplied ? 'applied' : 'active', appliedAt: prevApplied || null })
+          });
+        } catch(e) {}
+      }
+    }
+
+    function resetAllDefaults() {
+      if (confirm("Reset all job filters and views? This will unhide dismissed opportunities.")) {
+        localStorage.removeItem(STORAGE_KEY);
+        state = {};
+        defaultJobs.forEach(j => { state[j.id] = { status: 'active', appliedAt: null }; });
+        saveState();
+        renderJobs();
+        showToast("Dashboard view reset");
+      }
+    }
+
+    function showToast(msg, jobId = null, actionType = null, prevState = null) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toastMsg');
+      const undoBtn = document.getElementById('toastUndoBtn');
+      toastMsg.innerText = msg;
+      
+      if (jobId && prevState) {
+        undoBtn.style.display = 'inline';
+        undoBtn.onclick = () => {
+          state[jobId] = prevState;
+          saveState();
+          renderJobs();
+          toast.classList.add('hidden');
+        };
+      } else {
+        undoBtn.style.display = 'none';
+      }
+
+      toast.classList.remove('hidden');
+      setTimeout(() => { toast.classList.add('hidden'); }, 4000);
+    }
+
+    function setTierFilter(tier) {
+      currentTierFilter = tier;
+      document.querySelectorAll('.tier-pill').forEach(btn => {
+        btn.className = "tier-pill px-2.5 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 border border-slate-300 hover:bg-slate-200 transition";
+      });
+      const activeBtn = document.getElementById('tier-' + tier);
+      if (activeBtn) {
+        activeBtn.className = "tier-pill px-3 py-1 rounded-full text-xs font-bold bg-blue-600 text-white transition";
+      }
+      renderJobs();
+    }
+
+    function setFilter(filter) {
+      currentFilter = filter;
+      document.querySelectorAll('.filter-pill').forEach(btn => {
+        btn.className = "filter-pill px-3 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 transition";
+      });
+      const activeBtn = document.getElementById('btn-' + filter);
+      if (activeBtn) {
+        activeBtn.className = "filter-pill px-3 py-1 rounded-full text-xs font-bold bg-blue-600 text-white transition";
+      }
+      renderJobs();
+    }
+
+    function renderJobs() {
+      updateCounts();
+      const container = document.getElementById('jobsContainer');
+      container.innerHTML = '';
+
+      let list = defaultJobs.filter(job => {
+        const entry = state[job.id];
+        const status = (entry && typeof entry === 'object') ? (entry.status || 'active') : (entry || job.status || 'active');
+
+        // Status / Category / Source Filter
+        if (currentFilter === 'active') {
+          if (status !== 'active') return false;
+        } else if (currentFilter === 'applied') {
+          if (status !== 'applied') return false;
+        } else if (currentFilter === 'deleted') {
+          if (status !== 'deleted') return false;
+        } else {
+          if (status === 'deleted') return false;
+          if (currentFilter === 'ai_enablement' && job.category !== 'ai_enablement') return false;
+          if (currentFilter === '80000_hours' && job.source !== '80000_hours') return false;
+          if (currentFilter === 'ats' && job.source !== 'ashby' && job.source !== 'greenhouse') return false;
+          if (currentFilter === 'federal' && job.category !== 'federal') return false;
+          if (currentFilter === 'ai_strategy' && job.category !== 'ai_strategy') return false;
+          if (currentFilter === 'enterprise' && job.category !== 'enterprise') return false;
+        }
+
+        // Match Tier Filter
+        if (currentTierFilter !== 'all') {
+          const tier = job.matchTier || computeTier(job.matchScore);
+          if (tier !== currentTierFilter) return false;
+        }
+
+        // Search Query
+        if (currentSearch) {
+          const q = currentSearch.toLowerCase();
+          const skillsText = Array.isArray(job.topSkills) ? job.topSkills.join(' ') : String(job.topSkills || '');
+          const matchStr = ((job.title || '') + " " + (job.employer || '') + " " + (job.sourceLabel || '') + " " + (job.whyMatched || '') + " " + skillsText).toLowerCase();
+          if (!matchStr.includes(q)) return false;
+        }
+        return true;
+      });
+
+      list.sort((a, b) => {
+        if (currentSort === 'rank') return (a.rank || 0) - (b.rank || 0);
+        if (currentSort === 'posted') {
+          const da = new Date(a.postedDate || 0).getTime() || 0;
+          const db = new Date(b.postedDate || 0).getTime() || 0;
+          return db - da;
+        }
+        if (currentSort === 'probability') return (b.interviewProb || 0) - (a.interviewProb || 0);
+        if (currentSort === 'match') return (b.matchScore || 0) - (a.matchScore || 0);
+        if (currentSort === 'salary') return (b.salaryMax || 0) - (a.salaryMax || 0);
+        return 0;
+      });
+
+      if (list.length === 0) {
+        container.innerHTML = `
+          <div class="bg-white p-12 rounded-xl border border-slate-200 text-center space-y-3">
+            <div class="text-4xl">🔍</div>
+            <div class="text-base font-semibold text-slate-700">No jobs match this filter combination</div>
+            <p class="text-xs text-slate-500 max-w-md mx-auto">Try selecting 'All Tiers' or switching category pills above to view active opportunities.</p>
+          </div>
+        `;
+        return;
+      }
+
+      list.forEach(job => {
+        try {
+          const entry = state[job.id];
+          const isApplied = ((entry && typeof entry === 'object') ? entry.status : entry) === 'applied';
+          const isDeleted = ((entry && typeof entry === 'object') ? entry.status : entry) === 'deleted';
+          const appliedDate = (entry && typeof entry === 'object') ? (entry.appliedAt || '') : '';
+          const tier = job.matchTier || computeTier(job.matchScore || 0);
+
+          let tierBadgeClass = "badge-tier-80";
+          if (tier === '90-100') tierBadgeClass = "badge-tier-90";
+          else if (tier === '80-89') tierBadgeClass = "badge-tier-80";
+          else if (tier === '70-79') tierBadgeClass = "badge-tier-70";
+          else if (tier === '60-69') tierBadgeClass = "badge-tier-60";
+          else tierBadgeClass = "badge-tier-50";
+
+          const isAiEnablement = job.category === 'ai_enablement';
+
+          const skillsArray = Array.isArray(job.topSkills) ? job.topSkills : 
+            (typeof job.topSkills === 'string' ? job.topSkills.split(',').map(s => s.trim()).filter(Boolean) : []);
+
+          const card = document.createElement('div');
+          card.className = `bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition p-5 flex flex-col justify-between ${isApplied ? 'card-applied' : ''}`;
+
+          card.innerHTML = `
+            <div class="space-y-3">
+              <div class="flex flex-wrap items-start justify-between gap-3">
+                <div class="space-y-1">
+                  <div class="flex items-center gap-2 flex-wrap">
+                    <span class="w-6 h-6 rounded-full bg-slate-900 text-white text-xs font-bold flex items-center justify-center">#${job.rank || 1}</span>
+                    <h2 class="text-base font-bold text-slate-900">${job.title || 'Untitled Role'}</h2>
+                    <span class="px-2 py-0.5 rounded text-xs font-bold ${tierBadgeClass}">Tier ${tier}%</span>
+                    ${isAiEnablement ? `<span class="px-2 py-0.5 rounded text-xs font-semibold badge-ai">🤖 AI Enablement</span>` : ''}
+                    ${isApplied ? `<span class="bg-emerald-100 text-emerald-800 border border-emerald-300 text-xs font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1">✓ Applied ${appliedDate}</span>` : ''}
+                  </div>
+                  <div class="text-sm text-slate-600 font-medium flex items-center gap-2 flex-wrap">
+                    <span>🏢 ${job.employer || 'Employer'}</span>
+                    ${job.department ? `<span class="text-slate-300">•</span><span class="text-xs text-slate-500">${job.department}</span>` : ''}
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-3">
+                  <div class="text-right">
+                    <div class="text-xs text-slate-400 font-medium">Interview Prob.</div>
+                    <div class="text-sm font-bold text-blue-700">${job.interviewProb || 0}%</div>
+                  </div>
+                  <div class="px-2.5 py-1 rounded-lg text-xs font-bold ${tierBadgeClass}">
+                    Match: ${job.matchScore || 0}%
+                  </div>
+                </div>
+              </div>
+
+              <!-- DATE STAMP & REPOST STATUS METADATA BAR -->
+              <div class="flex flex-wrap items-center justify-between gap-2 text-xs bg-slate-50 border border-slate-200/90 rounded-lg px-3 py-2 text-slate-600">
+                <div class="flex items-center gap-2 flex-wrap">
+                  ${getSourceBadge(job.source, job.sourceLabel)}
+                  <span class="text-slate-300">•</span>
+                  <span class="inline-flex items-center gap-1" title="When the employer posted this role">
+                    📅 <strong>Employer Posted:</strong> <span class="text-slate-800 font-semibold">${job.postedDate || 'Recent'}</span>
+                  </span>
+                  <span class="text-slate-300">•</span>
+                  <span class="inline-flex items-center gap-1" title="Posting Freshness / Status">
+                    ${job.isReposted ? 
+                      `<span class="inline-flex items-center gap-1 text-amber-800 font-bold bg-amber-100 px-2 py-0.5 rounded border border-amber-300 text-[11px]">🔄 Reposted ${job.repostedDate ? '(' + job.repostedDate + ')' : ''}</span>` : 
+                      `<span class="inline-flex items-center gap-1 text-emerald-800 font-bold bg-emerald-100 px-2 py-0.5 rounded border border-emerald-300 text-[11px]">✨ Original Posting</span>`
+                    }
+                  </span>
+                </div>
+                <div class="text-[11px] text-slate-500 font-mono flex items-center gap-1" title="When the automated agent executed the search and evaluated this job">
+                  🕒 <strong>Agent Scanned:</strong> <span>${formatAgentTime(job.agentExecutedAt)}</span>
+                </div>
+              </div>
+
+              <div class="flex flex-wrap gap-x-4 gap-y-1 text-xs text-slate-500 border-y border-slate-100 py-2.5">
+                <div class="flex items-center gap-1">📍 <span>${job.location || 'Remote'}</span></div>
+                <div class="flex items-center gap-1">💵 <span class="font-semibold text-slate-700">${job.salaryBand || 'Competitive'}</span></div>
+                <div class="flex items-center gap-1">🎯 <span class="font-medium">${job.fitBand || 'Strong Fit'}</span></div>
+              </div>
+
+              <div class="text-xs text-slate-700 leading-relaxed">
+                <strong>Why Matched:</strong> ${job.whyMatched || 'Direct technical skill and domain experience alignment.'}
+              </div>
+
+              <div class="space-y-1">
+                <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Top Aligned Skills:</div>
+                <div class="flex flex-wrap gap-1.5">
+                  ${skillsArray.map(skill => `<span class="bg-slate-100 text-slate-700 px-2 py-0.5 rounded text-xs font-medium border border-slate-200">${skill}</span>`).join('')}
+                </div>
+              </div>
+
+              <div class="bg-amber-50/70 border border-amber-200/60 rounded-lg p-2.5 text-xs text-amber-900 leading-relaxed">
+                <strong>Strategic Value / Gap Bridge:</strong> ${job.gapBridge || 'Experienced background bridges cross-functional workflows.'}
+              </div>
+            </div>
+
+            <div class="pt-4 mt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-3">
+              <div class="flex items-center gap-2 flex-wrap">
+                ${job.directUrl ? `<a href="${job.directUrl}" target="_blank" class="bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold px-3 py-1.5 rounded-lg border border-slate-300 transition flex items-center gap-1"><span>🔗</span> Direct Portal</a>` : ''}
+                ${job.linkedinUrl ? `<a href="${job.linkedinUrl}" target="_blank" class="bg-blue-50 hover:bg-blue-100 text-blue-700 text-xs font-semibold px-3 py-1.5 rounded-lg border border-blue-200 transition flex items-center gap-1"><span>💼</span> LinkedIn Job</a>` : ''}
+                ${job.searchLandingUrl ? `<a href="${job.searchLandingUrl}" target="_blank" class="bg-slate-50 hover:bg-slate-100 text-slate-500 text-xs px-2.5 py-1.5 rounded border border-slate-200 transition">Search Origin</a>` : ''}
+              </div>
+
+              <div class="flex items-center gap-2 ml-auto flex-wrap">
+                ${!isDeleted ? `
+                  <button onclick="runAgent(${job.id})" class="bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold px-3.5 py-1.5 rounded-lg shadow-sm transition flex items-center gap-1.5">
+                    <span>▶</span> Run Resume Agent
+                  </button>
+                  <button onclick="toggleApplied(${job.id})" class="${isApplied ? 'bg-emerald-600 text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'} text-xs font-semibold px-3 py-1.5 rounded-lg border border-slate-300 transition">
+                    ${isApplied ? '✓ Applied' : 'Mark as Applied'}
+                  </button>
+                  <button onclick="deleteJob(${job.id})" class="text-slate-400 hover:text-red-500 text-xs p-1.5 rounded hover:bg-slate-100 transition" title="Not Interested / Dismiss">
+                    🗑️
+                  </button>
+                ` : `
+                  <button onclick="restoreJob(${job.id})" class="bg-slate-800 hover:bg-slate-900 text-white text-xs font-semibold px-3 py-1.5 rounded-lg transition">
+                    ↩ Restore Opportunity
+                  </button>
+                `}
+              </div>
+            </div>
+          `;
+
+          container.appendChild(card);
+        } catch (cardErr) {
+          console.error("Error creating job card", job.id, cardErr);
+        }
+      });
+    }
+
+    // Attach Search & Sort listeners
+    document.getElementById('searchInput').addEventListener('input', (e) => {
+      currentSearch = e.target.value.trim();
+      renderJobs();
+    });
+
+    document.getElementById('sortSelect').addEventListener('change', (e) => {
+      currentSort = e.target.value;
+      renderJobs();
+    });
+
+    // Start App
+    if (document.readyState === 'loading') {
+      window.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  </script>
+</body>
+</html>

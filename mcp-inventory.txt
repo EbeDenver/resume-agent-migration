@@ -1,0 +1,115 @@
+SERVER_ID       NAME    TYPE    STATUS  TOOLS   AUTH_URL
+affinity        Affinity CRM guMCP Server       gumcp_server    unauthenticated 34      https://gumloop.com/settings/profile/apps?server=affinity
+ahrefs  Ahrefs guMCP Server     gumcp_server    unauthenticated 52      https://gumloop.com/settings/profile/apps?server=ahrefs
+airtable        Airtable guMCP Server   gumcp_server    unauthenticated 17      https://gumloop.com/settings/profile/apps?server=airtable
+apify   Apify guMCP Server      gumcp_server    connected       11      
+apollo  Apollo guMCP Server     gumcp_server    connected       5       
+applovin        AppLovin guMCP Server   gumcp_server    unauthenticated 22      https://gumloop.com/settings/profile/apps?server=applovin
+asana   Asana guMCP Server      gumcp_server    unauthenticated 48      https://gumloop.com/settings/profile/apps?server=asana
+ashby   Ashby guMCP Server      gumcp_server    unauthenticated 86      https://gumloop.com/settings/profile/apps?server=ashby
+attio   Attio guMCP Server      gumcp_server    unauthenticated 11      https://gumloop.com/settings/profile/apps?server=attio
+azure_cloud     Azure guMCP Server      gumcp_server    unauthenticated 89      https://gumloop.com/settings/profile/apps?server=azure_cloud
+beehiiv Beehiiv guMCP Server    gumcp_server    unauthenticated 19      https://gumloop.com/settings/profile/apps?server=beehiiv
+bing_webmaster  Bing Webmaster guMCP Server     gumcp_server    unauthenticated 36      https://gumloop.com/settings/profile/apps?server=bing_webmaster
+box     Box guMCP Server        gumcp_server    unauthenticated 19      https://gumloop.com/settings/profile/apps?server=box
+brandfetch      Brandfetch guMCP Server gumcp_server    connected       3       
+cal     Cal.com guMCP Server    gumcp_server    unauthenticated 10      https://gumloop.com/settings/profile/apps?server=cal
+chorus  Chorus guMCP Server     gumcp_server    unauthenticated 7       https://gumloop.com/settings/profile/apps?server=chorus
+clickhouse      ClickHouse guMCP Server gumcp_server    unauthenticated 17      https://gumloop.com/settings/profile/apps?server=clickhouse
+clickup ClickUp guMCP Server    gumcp_server    unauthenticated 12      https://gumloop.com/settings/profile/apps?server=clickup
+confluence      Confluence guMCP Server gumcp_server    unauthenticated 18      https://gumloop.com/settings/profile/apps?server=confluence
+cursor  Cursor guMCP Server     gumcp_server    connected       28      
+databricks      Databricks guMCP Server gumcp_server    unauthenticated 27      https://gumloop.com/settings/profile/apps?server=databricks
+datadog Datadog guMCP Server    gumcp_server    unauthenticated 44      https://gumloop.com/settings/profile/apps?server=datadog
+dataforseo      DataForSEO guMCP Server gumcp_server    connected       39      
+devin   Devin guMCP Server      gumcp_server    unauthenticated 13      https://gumloop.com/settings/profile/apps?server=devin
+docusign        DocuSign guMCP Server   gumcp_server    unauthenticated 17      https://gumloop.com/settings/profile/apps?server=docusign
+exa     Exa guMCP Server        gumcp_server    connected       6       
+excel   Excel guMCP Server      gumcp_server    unauthenticated 22      https://gumloop.com/settings/profile/apps?server=excel
+expensify       Expensify guMCP Server  gumcp_server    unauthenticated 3       https://gumloop.com/settings/profile/apps?server=expensify
+extend  Extend.ai guMCP Server  gumcp_server    unauthenticated 13      https://gumloop.com/settings/profile/apps?server=extend
+fal     fal guMCP Server        gumcp_server    connected       4       
+fathom  Fathom guMCP Server     gumcp_server    unauthenticated 5       https://gumloop.com/settings/profile/apps?server=fathom
+fellow  Fellow guMCP Server     gumcp_server    unauthenticated 5       https://gumloop.com/settings/profile/apps?server=fellow
+findymail       Findymail guMCP Server  gumcp_server    unauthenticated 13      https://gumloop.com/settings/profile/apps?server=findymail
+firecrawl       Firecrawl guMCP Server  gumcp_server    connected       17      
+foreplay        Foreplay guMCP Server   gumcp_server    connected       5       
+freshdesk       Freshdesk guMCP Server  gumcp_server    unauthenticated 98      https://gumloop.com/settings/profile/apps?server=freshdesk
+freshsales      Freshsales guMCP Server gumcp_server    unauthenticated 119     https://gumloop.com/settings/profile/apps?server=freshsales
+gads    Google Ads guMCP Server gumcp_server    unauthenticated 45      https://gumloop.com/settings/profile/apps?server=gads
+gamma   Gamma guMCP Server      gumcp_server    unauthenticated 5       https://gumloop.com/settings/profile/apps?server=gamma
+ganalytics      Google Analytics guMCP Server   gumcp_server    unauthenticated 50      https://gumloop.com/settings/profile/apps?server=ganalytics
+gappsheet       Google AppSheet guMCP Server    gumcp_server    unauthenticated 4       https://gumloop.com/settings/profile/apps?server=gappsheet
+gappsscript     Google Apps Script guMCP Server gumcp_server    unauthenticated 10      https://gumloop.com/settings/profile/apps?server=gappsscript
+gbigquery       Google BigQuery guMCP Server    gumcp_server    unauthenticated 6       https://gumloop.com/settings/profile/apps?server=gbigquery
+gcalendar       Google Calendar guMCP Server    gumcp_server    unauthenticated 13      https://gumloop.com/settings/profile/apps?server=gcalendar
+gcm360  Google Campaign Manager 360 guMCP Server        gumcp_server    unauthenticated 40      https://gumloop.com/settings/profile/apps?server=gcm360
+gcs     Google Cloud Storage guMCP Server       gumcp_server    unauthenticated 10      https://gumloop.com/settings/profile/apps?server=gcs
+gdocs   Google Docs guMCP Server        gumcp_server    connected       13      
+gdrive  Google Drive guMCP Server       gumcp_server    connected       15      
+gdv360  Google DV360 guMCP Server       gumcp_server    unauthenticated 63      https://gumloop.com/settings/profile/apps?server=gdv360
+github  Github GuMCP Server     gumcp_server    unauthenticated 101     https://gumloop.com/settings/profile/apps?server=github
+gitlab  GitLab guMCP Server     gumcp_server    unauthenticated 97      https://gumloop.com/settings/profile/apps?server=gitlab
+glooker Looker guMCP Server     gumcp_server    unauthenticated 67      https://gumloop.com/settings/profile/apps?server=glooker
+gmail   Gmail guMCP Server      gumcp_server    connected       20      
+gmaps   Google Maps GuMCP Server        gumcp_server    connected       5       
+gmeet   Google Meet guMCP Server        gumcp_server    unauthenticated 8       https://gumloop.com/settings/profile/apps?server=gmeet
+gnotebooklm     Google NotebookLM guMCP Server  gumcp_server    unauthenticated 13      https://gumloop.com/settings/profile/apps?server=gnotebooklm
+gong    Gong guMCP Server       gumcp_server    unauthenticated 20      https://gumloop.com/settings/profile/apps?server=gong
+gpagespeed      Google PageSpeed guMCP Server   gumcp_server    connected       3       
+greenhouse      Greenhouse guMCP Server gumcp_server    unauthenticated 37      https://gumloop.com/settings/profile/apps?server=greenhouse
+gsearchconsole  Google Search Console guMCP Server      gumcp_server    unauthenticated 6       https://gumloop.com/settings/profile/apps?server=gsearchconsole
+gsheets Google Sheets guMCP Server      gumcp_server    connected       16      
+gslides Google Slides guMCP Server      gumcp_server    unauthenticated 14      https://gumloop.com/settings/profile/apps?server=gslides
+gtasks  Google Tasks guMCP Server       gumcp_server    unauthenticated 11      https://gumloop.com/settings/profile/apps?server=gtasks
+hex     Hex guMCP Server        gumcp_server    unauthenticated 18      https://gumloop.com/settings/profile/apps?server=hex
+hubspot HubSpot guMCP Server    gumcp_server    unauthenticated 90      https://gumloop.com/settings/profile/apps?server=hubspot
+incident_io     Incident.io guMCP Server        gumcp_server    unauthenticated 6       https://gumloop.com/settings/profile/apps?server=incident_io
+instagram       Instagram guMCP Server  gumcp_server    connected       8       
+intercom        Intercom guMCP Server   gumcp_server    unauthenticated 23      https://gumloop.com/settings/profile/apps?server=intercom
+jira    JIRA guMCP Server       gumcp_server    unauthenticated 40      https://gumloop.com/settings/profile/apps?server=jira
+launchdarkly    LaunchDarkly guMCP Server       gumcp_server    unauthenticated 14      https://gumloop.com/settings/profile/apps?server=launchdarkly
+linear  Linear guMCP Server     gumcp_server    unauthenticated 49      https://gumloop.com/settings/profile/apps?server=linear
+linkedin_ads    LinkedIn Ads guMCP Server       gumcp_server    unauthenticated 9       https://gumloop.com/settings/profile/apps?server=linkedin_ads
+loops   Loops guMCP Server      gumcp_server    unauthenticated 9       https://gumloop.com/settings/profile/apps?server=loops
+luma    Luma guMCP Server       gumcp_server    unauthenticated 17      https://gumloop.com/settings/profile/apps?server=luma
+meta_ads        Meta Ads guMCP Server   gumcp_server    unauthenticated 17      https://gumloop.com/settings/profile/apps?server=meta_ads
+monday  Monday.com guMCP Server gumcp_server    unauthenticated 30      https://gumloop.com/settings/profile/apps?server=monday
+netsuite        NetSuite guMCP Server   gumcp_server    unauthenticated 7       https://gumloop.com/settings/profile/apps?server=netsuite
+notion  Notion guMCP Server     gumcp_server    unauthenticated 27      https://gumloop.com/settings/profile/apps?server=notion
+outlook Outlook guMCP Server    gumcp_server    unauthenticated 8       https://gumloop.com/settings/profile/apps?server=outlook
+outlook_calendar        Outlook Calendar guMCP Server   gumcp_server    unauthenticated 7       https://gumloop.com/settings/profile/apps?server=outlook_calendar
+outreach        Outreach guMCP Server   gumcp_server    unauthenticated 64      https://gumloop.com/settings/profile/apps?server=outreach
+pagerduty       PagerDuty guMCP Server  gumcp_server    unauthenticated 9       https://gumloop.com/settings/profile/apps?server=pagerduty
+parallel        Parallel guMCP Server   gumcp_server    connected       12      
+pipedrive       Pipedrive guMCP Server  gumcp_server    unauthenticated 93      https://gumloop.com/settings/profile/apps?server=pipedrive
+postgresql      PostgreSQL guMCP Server gumcp_server    unauthenticated 5       https://gumloop.com/settings/profile/apps?server=postgresql
+quickbooks      QuickBooks guMCP Server gumcp_server    unauthenticated 60      https://gumloop.com/settings/profile/apps?server=quickbooks
+rads    Reddit Ads guMCP Server gumcp_server    unauthenticated 42      https://gumloop.com/settings/profile/apps?server=rads
+reddit  Reddit MCP Server       gumcp_server    unauthenticated 12      https://gumloop.com/settings/profile/apps?server=reddit
+reducto Reducto guMCP Server    gumcp_server    connected       9       
+salesforce      Salesforce guMCP Server gumcp_server    unauthenticated 109     https://gumloop.com/settings/profile/apps?server=salesforce
+salesloft       SalesLoft guMCP Server  gumcp_server    unauthenticated 87      https://gumloop.com/settings/profile/apps?server=salesloft
+seismic Seismic guMCP Server    gumcp_server    unauthenticated 42      https://gumloop.com/settings/profile/apps?server=seismic
+semrush Semrush guMCP Server    gumcp_server    unauthenticated 35      https://gumloop.com/settings/profile/apps?server=semrush
+sharepoint      SharePoint guMCP Server gumcp_server    unauthenticated 29      https://gumloop.com/settings/profile/apps?server=sharepoint
+shopify Shopify guMCP Server    gumcp_server    unauthenticated 74      https://gumloop.com/settings/profile/apps?server=shopify
+sigma_computing Sigma Computing guMCP Server    gumcp_server    unauthenticated 45      https://gumloop.com/settings/profile/apps?server=sigma_computing
+slack   Slack guMCP Server      gumcp_server    unauthenticated 119     https://gumloop.com/settings/profile/apps?server=slack
+snapchat_ads    Snapchat Ads guMCP Server       gumcp_server    unauthenticated 40      https://gumloop.com/settings/profile/apps?server=snapchat_ads
+snowflake       Snowflake guMCP Server  gumcp_server    unauthenticated 3       https://gumloop.com/settings/profile/apps?server=snowflake
+sprig   Sprig guMCP Server      gumcp_server    unauthenticated 5       https://gumloop.com/settings/profile/apps?server=sprig
+sprout_social   Sprout Social guMCP Server      gumcp_server    unauthenticated 20      https://gumloop.com/settings/profile/apps?server=sprout_social
+stripe  Stripe guMCP Server     gumcp_server    unauthenticated 20      https://gumloop.com/settings/profile/apps?server=stripe
+tableau Tableau guMCP Server    gumcp_server    unauthenticated 15      https://gumloop.com/settings/profile/apps?server=tableau
+tastelabs       TasteLabs guMCP Server  gumcp_server    connected       8       
+teams   Microsoft Teams guMCP Server    gumcp_server    unauthenticated 21      https://gumloop.com/settings/profile/apps?server=teams
+tiktok  TikTok guMCP Server     gumcp_server    connected       6       
+trello  Trello guMCP Server     gumcp_server    unauthenticated 32      https://gumloop.com/settings/profile/apps?server=trello
+webflow Webflow guMCP Server    gumcp_server    unauthenticated 27      https://gumloop.com/settings/profile/apps?server=webflow
+word    Word guMCP Server       gumcp_server    unauthenticated 7       https://gumloop.com/settings/profile/apps?server=word
+workday Workday guMCP Server    gumcp_server    unauthenticated 1       https://gumloop.com/settings/profile/apps?server=workday
+x       X guMCP Server  gumcp_server    unauthenticated 25      https://gumloop.com/settings/profile/apps?server=x
+youtube YouTube guMCP Server    gumcp_server    connected       6       
+zendesk Zendesk guMCP Server    gumcp_server    unauthenticated 54      https://gumloop.com/settings/profile/apps?server=zendesk
+zoom    Zoom GuMCP Server       gumcp_server    unauthenticated 7       https://gumloop.com/settings/profile/apps?server=zoom

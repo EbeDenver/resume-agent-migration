@@ -1,0 +1,25 @@
+{
+  "google": {
+    "account_email": "ebeDenver@gmail.com",
+    "job_tracker_url": "https://docs.google.com/spreadsheets/d/1fXSxbi49_JY2HzKXTdPXpAOpJkNqwEcDuK8qp-uh12Y/edit",
+    "tracker_tab": "Tracker",
+    "config_tab": "Config",
+    "drive_root_folder_id": "1qUGsgipiDwuwMY-7oyUCtWuWH-GYu1H5",
+    "generated_resumes_folder_id": "1H_yfsR7r86NcuyL0x67ES7X44dSy549h",
+    "cover_letters_folder_id": "1Q4Rkxbw3UYlzGZRUAMYplvNaoM6RgvYA",
+    "job_analyses_folder_id": "1cRIpOeBAjk1P9RPn6Vn6rvvLiycEtln7",
+    "master_resume_folder_id": "1n7TzAJ7aFQsxL2cKKGz4kRQVKpRZJq52",
+    "resume_instructions_url": "https://docs.google.com/document/d/1csBfzkxUor6K-oHX24_rKcI159BaTahHn3wULBZSIS8/edit",
+    "cover_letter_instructions_url": "https://docs.google.com/document/d/10bl0RrenXocRyCzGkXh_qNtySJ-JOWWJjpXFO6QzFaE/edit",
+    "master_resume_url": null,
+    "job_listings_url": "https://docs.google.com/document/d/1SSn9tpakNaZZL70Z01XX-aYhlmRotS4_muAFET1Tjbo/edit",
+    "notification_email": "eberolston@yahoo.com"
+  },
+  "llm": {
+    "model": "gemini-2.5-pro",
+    "model_fast": "gemini-2.0-flash",
+    "temperature": 0.3,
+    "max_retries": 3
+  },
+  "timezone": "America/Denver"
+}
