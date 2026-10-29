@@ -6,7 +6,7 @@ PROFESSIONAL SUMMARY
 AI-first transformation and Program Analyst with 20+ years turning fragmented legacy environments into unified enterprise platforms across the federal and financial sectors. That work has reclaimed millions in unused government funds, saved $1M+ every year, and brought 85+ users onto new systems. Ebenezer architected the end-to-end DOI FBMS data conversion, an award-recognized transformation spanning the entire Department, and spent 14 years as the senior escalation lead handling 5 to 10 mission-critical business issues a day. He now pairs that delivery record with a University of Denver graduate certificate in AI Strategy, building AI maturity assessments, multi-year roadmaps, and ROI-backed business cases, and translating strategy fluently for executives, contracting officers, and Congress-level stakeholders.
 
 CORE COMPETENCIES 
-▪ AI-First Transformation Strategy ▪ AI Maturity Assessment & Roadmapping ▪ Business Operations Reporting ▪ AI Incident Brief ▪ Enterprise Workflow Reimagination ▪ ROI Modeling & Business Case Development ▪ Federal Acquisition ▪ Executive & Stakeholder Communication ▪ Machine Learning & NLP Fundamentals ▪ AI Use Case Triage ▪ AI Governance, Ethics, Risk & Compliance ▪ Vendor Evaluation & Selection ▪ Data Governance ▪ Cross-Functional Program Delivery (Agile) ▪ Data Integration, ETL & Cloud ▪ Stakeholder & Vendor Relationship ▪ Client Engagement & Proposal Development ▪ Change Enablement & User Training ▪ Incident Management
+▪ AI-First Transformation Strategy ▪ AI Maturity Assessment & Roadmapping ▪ AI Coding Agent Fluency ▪ Model Context Protocol Integration ▪ Multi-Agent Architecture ▪ Prompt Engineering & Specification Frameworks ▪ AI Workflow Governance ▪ Bounded Execution & Guardrails ▪ AI Enablement & Technical Coaching ▪ Enterprise Tool Integration ▪ ROI Modeling & Business Case Development ▪ Federal Acquisition ▪ Executive & Stakeholder Communication ▪ Machine Learning & NLP Fundamentals ▪ AI Use Case Triage ▪ Vendor Evaluation & Selection ▪ Data Governance ▪ Cross-Functional Program Delivery ▪ Data Integration & Cloud ETL ▪ Client Engagement & Proposal Development ▪ Change Enablement & User Training ▪ Incident Management
 
 AI STRATEGY & TRANSFORMATION PORTFOLIO 
 Graduate Certificate, AI Strategy & Applications in IT | University of Denver 
@@ -14,6 +14,30 @@ Graduate Certificate, AI Strategy & Applications in IT | University of Denver
 • Developed AI-first business cases across 9 enterprise functions, from operations and manufacturing to finance, HR, legal, sales, marketing, and customer service, rethinking each department's workflow around AI and quantifying the projected value and ROI.
 • Produced an executive-ready AI adoption risk assessment for a healthcare LLM use case (ChatGPT Health), covering 6 risk dimensions: hallucination, bias, privacy, governance, compliance, and ethical use. This is the kind of pre-deployment framing leadership needs before greenlighting a project.
 • Authored 3 published papers on AI in Government Contracting, AI Strategies for Logistics, and AI Ethics in Healthcare, establishing subject-matter thought leadership. Holds formal training in AI Strategies and AI Ethics.
+
+AI CODING AGENTS, MCP & ENABLEMENT PORTFOLIO (CODEX & ANTIGRAVITY)
+• AI Coding Agent Fluency & Multi-Agent Architecture: Mastered autonomous coding agent workflows across OpenAI Codex (CLI, IDE extension, desktop app) and Google Antigravity, utilizing Plan Mode for architectural trade-off analysis, parallel Git worktrees for concurrent development, and automated build–test–fix execution loops with regression verification.
+• Custom Agent Engineering & Runtime Hooks: Engineered specialized TOML and markdown agent definitions (architect, validator, auditor, reviewer, tester) configured with granular runtime hooks, deterministic command permissions, and automated CI fix workflows via Codex Exec.
+• Hierarchical Multi-Agent Systems: Implemented multi-agent collaboration patterns including supervisor-orchestrator topologies, subagent task delegation, independent peer-review agents, and tool calling via SDK, MCP, and application server integration layers.
+• Deterministic vs. Stochastic Architecture: Applied rigorous workload triage ("start deterministic, introduce agentic variability only where complexity warrants it") to minimize compute overhead, guarantee reproducible outputs, and control inference costs.
+• Model Context Protocol (MCP) & Enterprise Tooling: Architected Model Context Protocol (MCP) servers and plugins connecting agent environments to Figma for design ingestion, GitHub for version control, Atlassian for ticket tracking, and Google Workspace (Docs, Sheets, Drive, Gmail) for operational document synthesis.
+• Context Engineering & Reusable Skills Lifecycle: Standardized agent operational context via structured AGENTS.md guidelines, custom system instructions, and dynamic tool definitions; authored and maintained reusable AI skills across their full lifecycle with automated versioning and weekly maintenance routines.
+• Plugin Security & Bounded Permissions: Enforced strict security vetting for third-party tools and plugins, establishing bounded file-system sandboxes, read-only inspection stages, and mandatory human approval gates for privileged or state-changing operations.
+• Structured Prompting & Specification Frameworks: Developed and institutionalized an enterprise prompting methodology (Outcome, Constraints, Scope, Definition of Done, and Verification Rules) adopted as team onboarding guides and developer office-hours reference standards.
+• Non-Technical Workflow Democratization: Translated unstructured notes, customer feedback, operational logs, and spreadsheets into structured requirements briefs through a repeatable "Set Goal → Direct → Review → Package as Skill" workflow tailored for business and non-engineering users.
+• Evidence-Based Quality Standards: Replaced agent self-reporting with objective verification gates, requiring concrete regression test passes, static analysis and lint results, diff inspections, and severity-ranked review audits prior to merging.
+• AI Governance & Bounded Execution (NIST AI RMF & ISO 42001): Defined strict Goal Mode exit criteria, context token budgets, recursion limits, and automated handoffs; built human-in-the-loop controls into automated workflows separating discovery, implementation, and deployment to satisfy enterprise governance and compliance standards.
+• Model Right-Sizing & FinOps: Evaluated model reasoning tiers, context caching strategies, and task complexity routing to optimize the balance between execution speed, output fidelity, and token consumption costs.
+
+AI PRODUCT MANAGEMENT (AGENT-ENABLED DELIVERY)
+• Product Discovery & Requirements Engineering: Transformed unstructured client inputs, customer feedback, and multi-source operational data into rigorous project specifications using repeatable agentic extraction workflows, packaging proven pipelines into reusable organizational skills.
+• AI System Specifications: Authored comprehensive AI system specifications detailing functional outcomes, operational constraints, tool contract boundaries, Definition of Done, and programmatic stop conditions for human and AI contributors.
+• Plan Mode Trade-Off Analysis: Leveraged Plan Mode and architectural trade-off evaluations early in the product lifecycle to de-risk technical feasibility, align cross-functional stakeholders, and reduce downstream rework.
+• Multi-Agent Solution Design: Designed resilient multi-agent patterns (planner-executor, routing networks, parallel workstreams, evaluator-optimizer loops) with explicit tool schemas, state persistence, and error-recovery protocols.
+• Rapid Prototyping & Integration: Accelerated the concept-to-demo lifecycle using OpenAI Codex and Google Antigravity environments, implementing rapid build–test–fix iteration loops backed by automated regression verification.
+• Enterprise Toolchain Unification: Unified disparate enterprise workflows by integrating design systems (Figma), task management (Atlassian), code repositories (GitHub), and documentation (Google Drive/Workspace) via standard MCP protocols.
+• Human-in-the-Loop Governance: Built safety-first agent architectures isolating read-only investigation from implementation, requiring human checkpoint sign-off before committing modifications or invoking external APIs.
+• Third-Party Tool Vetting: Created comprehensive evaluation rubrics for third-party skills, MCP servers, and plugins, ensuring adherence to enterprise data privacy and security requirements.
 
 PROFESSIONAL EXPERIENCE 
 Program Analyst, Acquisitions Directorate | U.S. Department of the Interior, Denver, CO (Jan–Sep 2025)
@@ -43,6 +67,7 @@ Solutions Developer / Solution Architect | Acxiom Corporation (1999–2010)
 • Standardized company-wide SDLC/SCM methodology as a process-improvement specialist on the Acxiom Methodology Board, leading cross-functional teams across PMO, project management, and SMEs.
 
 EDUCATION & AI CREDENTIALS 
+• OpenAI Codex Bootcamps (7 Completed: Fundamentals, 201, 301) : OpenAI / Community Track (Agent Architecture, CLI/IDE/App Workflows, Plan Mode, Parallel Worktrees, MCP & Tool Integration)
 • Graduate Certificate, AI Strategy & Applications in IT : University of Denver
 • M.S. & B.S., Computer Science : St. Joseph's College
 • Data Analysis with Python : Stanford Continuing Studies (Taught by Matt Harrison)
@@ -54,14 +79,15 @@ EDUCATION & AI CREDENTIALS
 Awards: Interior Business Center Award for Excellence · DOI FBMS Special Recognition Award
 
 TECHNICAL PROFICIENCIES 
-• Generative AI & LLMs: Large Language Models (LLMs), Transformer Architectures, Azure OpenAI APIs, Retrieval-Augmented Generation (RAG), Agentic AI workflows, Multi-Agent Systems, Tool Calling, LoRA, Unsloth, MS Copilot, Claude, Cursor, Qdrant (semantic search), Prompt Engineering, Comet, REST APIs
+• Generative AI & AI Coding Agents: OpenAI Codex (CLI, IDE Extension, Desktop App), Google Antigravity (CLI, IDE, Custom Agents, Skills, Workflows), Plan Mode, Codex Exec, TOML Agent Configurations, Large Language Models (LLMs), Transformer Architectures, Azure OpenAI APIs, Retrieval-Augmented Generation (RAG), Agentic AI Workflows, Multi-Agent Systems, Tool Calling, LoRA, Unsloth, Cursor, Claude, ChatGPT, Qdrant (Semantic Search), Prompt Engineering Frameworks, REST APIs
+• Model Context Protocol (MCP) & Enterprise Tooling: Model Context Protocol (MCP) Server Architecture, Custom Tool Calling, Tool Schema Definition, Figma MCP, GitHub Plugin, Atlassian Plugin, Google Workspace Plugins (Docs, Sheets, Drive, Gmail), AGENTS.md Context Engineering, Reusable Skill Repositories
 • AI Cost Optimization & FinOps: Model Right-Sizing, Task Complexity Evaluation, Deterministic Workload Offloading, Prompt Caching, Context Compaction, Agentic Loop Bounding & Budget Guards, Golden-Set Evaluations, Consumption-Priced AI Billing Analysis
-• AI Governance & Ethics: AI Governance Frameworks, Algorithmic Bias Mitigation, AI Ethics Risk Assessments, Privacy Compliance, Trustworthy AI Safeguards, EU AI Act Article 4 Literacy, NIST AI RMF
+• AI Governance & Responsible AI: AI Governance Frameworks, NIST AI RMF 1.0, ISO 42001, Bounded Execution & Approvals, Human-in-the-Loop Safeguards, Third-Party Plugin Security Vetting, Algorithmic Bias Mitigation, AI Ethics Risk Assessments, Privacy Compliance, EU AI Act Article 4 Literacy
 • Data & Analytics: Python (Pandas, NumPy - Stanford Certified), Exploratory Data Analysis (EDA), Data Wrangling & Cleansing, Apache Spark, PySpark, Tableau, Matplotlib, Jupyter, Anaconda, Google Colab
-• Programming & Query: Python, SQL, PL/SQL, Pro*C, C
+• Software Engineering & Architecture: Python, SQL, PL/SQL, Pro*C, C, FastAPI, Pydantic, LangGraph, Lovable, Git Worktrees, Automated Build-Test-Fix Loops, Regression Verification, CI/CD Automated Fixes
 • Databases: Oracle, SQL Server, Sybase, Microsoft Access
 • Enterprise & Government Systems: Unison PRISM, Federal Business Management System (SAP S/4), FPDS, SAM
-• Delivery: Agile delivery environments, GitHub, Visual Studio
+• Delivery: Agile delivery environments, GitHub, Visual Studio, Technical Office Hours, Developer Enablement
 
 AI GUARDIANS COMPANY TOOLKIT & PORTFOLIO EVIDENCE 
 AI Guardians Portal: https://portal.aiguardiansllc.us/

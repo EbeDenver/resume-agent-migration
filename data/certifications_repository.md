@@ -166,6 +166,32 @@
 
 ---
 
+### 11. OpenAI Codex Bootcamps & Antigravity Agent Engineering Series
+* **Issuing Organization:** OpenAI / Codex Developer Community
+* **Recipient:** Ebenezer Rolston
+* **Date / Series:** 2026 (Completed 7 Intensive Bootcamps across Fundamentals, 201, and 301)
+* **Domains:** Autonomous Coding Agents, Multi-Agent Architecture, Model Context Protocol (MCP), Context Engineering, AI Enablement, Prompting Frameworks, AI Governance
+* **Target Roles:** AI Enablement Lead, AI Product Manager, AI Solutions Architect, Agentic AI Engineer, Transformation Consultant
+* **Verified Skills & Tools:**
+  * OpenAI Codex (CLI, IDE Extension, Desktop App), Google Antigravity (AGY CLI, Antigravity IDE, Custom Agents, Skills, Workflows)
+  * Plan Mode, `/review`, Parallel Git Worktrees, Automated Build–Test–Fix Loops, Codex Exec
+  * Custom TOML & Markdown Agents (Architect, Validator, Auditor, Reviewer, Tester) with Runtime Hooks and Deterministic Rules
+  * Model Context Protocol (MCP) Server Architecture & Integration: Figma MCP, GitHub Plugin, Atlassian Plugin, Google Workspace Integration (Drive, Docs, Sheets, Gmail)
+  * Context Engineering Standards: `AGENTS.md`, Reusable Skills Lifecycle Management, Weekly Agent Workflow Maintenance
+  * Enterprise Prompting Framework: Outcome, Constraints, Scope, Definition of Done, and Programmatic Verification
+  * AI Governance: NIST AI RMF 1.0, ISO 42001, Bounded Execution Budgets, Stop Conditions, Human-in-the-Loop (HITL) Gateways, Third-Party Plugin Security Vetting
+* **Extractable Resume Bullets:**
+  * *Bullet A (Agent Fluency & Prototyping):* "Completed seven OpenAI Codex bootcamps (Fundamentals, 201, 301), mastering CLI, IDE extension, and app workflows, Plan Mode trade-off analysis, parallel Git worktrees, and automated build–test–fix execution loops with regression verification."
+  * *Bullet B (Custom Agents & Architecture):* "Engineered specialized TOML and markdown agent definitions (architect, validator, auditor, reviewer, tester) configured with granular runtime hooks, deterministic command permissions, and subagent orchestration."
+  * *Bullet C (MCP & Enterprise Tooling):* "Architected Model Context Protocol (MCP) servers and plugins connecting agent environments to Figma, GitHub, Atlassian, and Google Workspace; standardized agent context via AGENTS.md and reusable skill lifecycles."
+  * *Bullet D (Enablement & Quality Gates):* "Authored enterprise prompting methodologies (Outcome, Constraints, Scope, Definition of Done, Verification Rules) and evidence-based verification gates replacing agent self-assessment with deterministic testing and diff reviews."
+* **Display Format:** `OpenAI Codex Bootcamps (7 Completed: Fundamentals, 201, 301) : OpenAI / Community Track`
+* **Guardrails:**
+  * Distinguish hands-on bootcamp, personal lab, and company portfolio engineering from commercial client enterprise production deployments.
+  * Strictly zero parentheses when extracting into Core Competencies.
+
+---
+
 ## 2. Dynamic Extraction Rules for Resume Generator
 
 When generating or updating a tailored resume, cover letter, or interview package, the **Resume Generator** MUST apply the following extraction logic:

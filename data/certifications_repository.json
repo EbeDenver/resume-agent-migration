@@ -485,6 +485,71 @@
       "guardrails": [
         "Per standing candidate rule: never include graduation or expected dates for University of Denver graduate certificate/coursework unless explicitly directed."
       ]
+    },
+    {
+      "id": "OPENAI-CODEX-BOOTCAMPS-2026",
+      "title": "OpenAI Codex Bootcamps (Fundamentals, 201, 301 — 7 Intensive Sessions)",
+      "issuing_organization": "OpenAI / Codex Developer Community",
+      "parent_institution": "OpenAI",
+      "credential_type": "Technical Bootcamp & Engineering Series",
+      "issue_date": "2026",
+      "expiration_date": null,
+      "credential_id": null,
+      "verification_type": "Hands-On Technical Proof & Repository Artifacts",
+      "verification_url": null,
+      "verification_contact": null,
+      "instructor": "OpenAI Codex Technical Instructors",
+      "signatory": null,
+      "domains": [
+        "agentic_ai",
+        "ai_coding_agents",
+        "mcp_tooling",
+        "ai_enablement",
+        "ai_governance",
+        "prompt_engineering"
+      ],
+      "target_roles": [
+        "AI Enablement Lead",
+        "AI Product Manager",
+        "AI Solutions Architect",
+        "Agentic AI Engineer",
+        "AI Transformation Consultant"
+      ],
+      "verified_skills_and_tools": [
+        "OpenAI Codex (CLI, IDE Extension, Desktop App)",
+        "Google Antigravity",
+        "Plan Mode",
+        "/review",
+        "Parallel Git Worktrees",
+        "Build-Test-Fix Loops",
+        "Custom TOML Agents",
+        "Runtime Hooks",
+        "Codex Exec",
+        "Subagents & Orchestrator Threads",
+        "Model Context Protocol (MCP)",
+        "Figma MCP",
+        "GitHub Plugin",
+        "Atlassian Plugin",
+        "Google Workspace Integration",
+        "AGENTS.md Context Standards",
+        "Reusable Skills Lifecycle",
+        "Prompting Frameworks",
+        "Evidence-Based Quality Gates",
+        "Bounded Execution & Budgets",
+        "NIST AI RMF",
+        "ISO 42001"
+      ],
+      "extractable_resume_bullets": [
+        "Completed seven OpenAI Codex bootcamps (Fundamentals, 201, 301), mastering CLI, IDE extension, desktop app workflows, Plan Mode, parallel Git worktrees, and automated build–test–fix execution loops.",
+        "Engineered specialized TOML and markdown agent architectures (architect, validator, auditor, reviewer, tester) with runtime hooks, deterministic command permissions, and subagent orchestration.",
+        "Integrated Figma, GitHub, Atlassian, and Google Workspace via Model Context Protocol (MCP) servers and plugins; standardized agent operational context via AGENTS.md and reusable skill lifecycles.",
+        "Authored enterprise prompting methodologies (Outcome, Constraints, Scope, Definition of Done, Verification Rules) and evidence-based verification gates replacing agent self-assessment with deterministic testing."
+      ],
+      "resume_display_format": "OpenAI Codex Bootcamps (7 Completed: Fundamentals, 201, 301) : OpenAI / Community Track",
+      "guardrails": [
+        "Distinguish hands-on bootcamp and lab engineering from commercial client enterprise production deployments.",
+        "Strictly zero parentheses when extracted into Core Competencies."
+      ]
     }
   ]
 }

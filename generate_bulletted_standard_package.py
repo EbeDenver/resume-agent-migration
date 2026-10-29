@@ -135,24 +135,23 @@ def build_bulletted_standard_docx_paragraphs():
         "space_before": 40,
         "space_after": 10,
         "text_runs": [
-            {"text": "AI Engineering | AI Guardians LLC ", "bold": True, "color": "17365D", "size": 18},
+            {"text": "AI Engineering & Enablement | AI Guardians LLC ", "bold": True, "color": "17365D", "size": 18},
             {"text": "Denver, CO | Jan 2026–Present", "italic": True, "size": 18, "color": "17365D"}
         ]
     })
-    p.append({
-        "space_before": 0,
-        "space_after": 20,
-        "left_indent": 360,
-        "hanging_indent": 180,
-        "text_runs": [{"text": "• Created AI maturity assessments, multi-year roadmaps, ROI models.", "size": 18}]
-    })
-    p.append({
-        "space_before": 0,
-        "space_after": 40,
-        "left_indent": 360,
-        "hanging_indent": 180,
-        "text_runs": [{"text": "• Designed AI transformation toolkit for AI Guardians, use-case prioritization canvases, Agentic NIST AI RMF governance scorecards.", "size": 18}]
-    })
+    for b in [
+        "Engineered autonomous multi-agent workflows and custom TOML/markdown agents using OpenAI Codex and Google Antigravity with runtime hooks, Plan Mode trade-off analysis, and automated build–test–fix loops.",
+        "Integrated enterprise toolchains (Figma, GitHub, Atlassian, Google Workspace) via Model Context Protocol (MCP) servers and plugins; standardized agent context via AGENTS.md and reusable skill lifecycles.",
+        "Formulated enterprise prompting methodologies (Outcome, Constraints, Definition of Done) and evidence-based verification gates replacing agent self-assessment with deterministic testing.",
+        "Designed AI transformation toolkits, AI maturity assessments, use-case prioritization canvases, and governance guardrails based on NIST AI RMF 1.0 and ISO 42001."
+    ]:
+        p.append({
+            "space_before": 0,
+            "space_after": 20,
+            "left_indent": 360,
+            "hanging_indent": 180,
+            "text_runs": [{"text": f"• {b}", "size": 18}]
+        })
 
     # Role 2: DOI
     p.append({
@@ -351,6 +350,7 @@ def build_bulletted_standard_docx_paragraphs():
         ]
     })
     edu_items = [
+        [{"text": "OpenAI Codex Bootcamps: ", "bold": True, "color": "17365D", "size": 18}, {"text": "Completed 7 Bootcamps across Fundamentals, 201, and 301 (Agent Orchestration, MCP Integration, Context Engineering)", "size": 18}],
         [{"text": "UC Berkeley Extension: ", "bold": True, "color": "17365D", "size": 18}, {"text": "Machine Learning and Deep Learning.", "size": 18}],
         [{"text": "University of Denver : ", "bold": True, "color": "17365D", "size": 18}, {"text": "Graduate Certificate, AI Strategy & Applications in IT", "size": 18}],
         [{"text": "Stanford Continuing Studies: ", "bold": True, "color": "17365D", "size": 18}, {"text": "Data Analysis with Python • Modern AI Architectures • AI Accountability", "size": 18}],
@@ -380,7 +380,7 @@ def build_bulletted_standard_docx_paragraphs():
         ("Data Engineering & Big Data Platforms: ", "Acxiom Hive, AbiliTec Links, Apache Spark • Oracle, PostgreSQL, SQL Server • ETL/ELT Architectures • Relational Data Modeling • Schema Normalization • Data Quality, Deduplication & Profiling"),
         ("Software Engineering & Analytical Workflows: ", "Python • pandas & NumPy • FastAPI • Pydantic • SQLAlchemy • RESTful API Contracts • JSON Schema • pytest • GitHub • Cloud Deployment (Google Cloud Run, Vercel)"),
         ("Enterprise Platforms, Privacy & Governance: ", "SAP S/4HANA Federal Business Management System • Unison PRISM • Remedy"),
-        ("AI Engineering & LLMOps: ", "Agentic AI Workflows • Retrieval-Augmented Generation • LLM Evaluation & Observability • Context Management • AI Governance & Responsible AI • NIST AI RMF 1.0 • Semantic Modeling & Ontology Design • Qdrant Vector Search • Codex, Antigravity, Cursor, OpenAI")
+        ("AI Engineering & LLMOps: ", "Agentic AI Workflows • Multi-Agent Orchestration • Model Context Protocol (MCP) • OpenAI Codex (CLI, IDE, App) • Google Antigravity • Context Engineering (AGENTS.md) • Retrieval-Augmented Generation • LLM Evaluation & Observability • AI Governance & Responsible AI • NIST AI RMF 1.0 • ISO 42001 • Bounded Execution Guardrails • Prompt Engineering Frameworks • Qdrant Vector Search • Codex, Antigravity, Cursor, OpenAI")
     ]
     for label, text in prof_items:
         p.append({

@@ -159,6 +159,16 @@ When applying the Bulletted-Standard format to different target job families, ap
 - **Core Competencies:** Lead with Advanced SQL, Relational Schema Normalization, Customer Data Profiling, ETL Conversion, and Stakeholder Reporting (no parentheses).
 - **Proficiencies:** Elevate SQL, Python (Pandas/NumPy), Tableau, and relational database platforms.
 
+### D. AI Enablement & AI Product Management (Codex & Antigravity)
+- **Header Subtitle:** `AI Enablement • AI Product Management • Agentic Delivery & MCP`
+- **Summary:** Emphasize hands-on fluency with AI coding agents (OpenAI Codex, Google Antigravity), Model Context Protocol (MCP) integrations, structured prompting frameworks, and evidence-based governance (NIST AI RMF, ISO 42001) that empower business and engineering teams to adopt AI safely and measurably.
+- **Core Competencies:** `▪ AI Coding Agent Fluency ▪ Model Context Protocol Integration ▪ Multi-Agent Architecture ▪ Prompt Engineering & Specification Frameworks ▪ AI Workflow Governance ▪ Bounded Execution & Guardrails ▪ AI Enablement & Technical Coaching ▪ Enterprise Tool Integration ▪ Plan Mode & Prototyping ▪ Automated Verification & Regression Testing ▪ Cross-Functional Team Leadership ▪ Executive Stakeholder Communication` (strictly zero parentheses).
+- **Tailored Bullet Bank (by Pillar):**
+  - *AI Coding Agent Fluency:* Mastered autonomous coding agent workflows across OpenAI Codex (CLI, IDE extension, desktop app) and Google Antigravity, utilizing Plan Mode for architectural trade-off analysis, parallel Git worktrees for concurrent development, and automated build–test–fix execution loops.
+  - *Custom Agent & MCP Tooling:* Engineered specialized TOML/markdown agents (architect, validator, auditor, reviewer, tester) with runtime hooks, tool contracts, and Model Context Protocol (MCP) integrations connecting Figma, GitHub, Atlassian, and Google Workspace.
+  - *Enablement & Prompting Frameworks:* Developed enterprise prompting standards (Outcome, Constraints, Scope, Definition of Done, Verification Rules) and non-technical workflows transforming unstructured briefs into reusable organizational skills.
+  - *Governance & Quality Gates:* Enforced bounded execution budgets, stop conditions, human-in-the-loop approvals, and third-party plugin security vetting aligned with NIST AI RMF 1.0 and ISO 42001, replacing agent self-assessment with objective regression verification.
+
 ---
 
 ## 5. Negative Guardrails & Prohibitions

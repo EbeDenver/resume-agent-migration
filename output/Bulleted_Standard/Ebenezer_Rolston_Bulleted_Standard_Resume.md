@@ -22,10 +22,12 @@ Combines this experience with recent hands-on AI engineering and workflow develo
 
 ## PROFESSIONAL EXPERIENCE
 
-### AI Engineering | AI Guardians LLC
+### AI Engineering & Enablement | AI Guardians LLC
 *Denver, CO | Jan 2026–Present*
-- Created AI maturity assessments, multi-year roadmaps, ROI models.
-- Designed AI transformation toolkit for AI Guardians, use-case prioritization canvases, Agentic NIST AI RMF governance scorecards.
+- Engineered autonomous multi-agent workflows and custom TOML/markdown agents using OpenAI Codex and Google Antigravity with runtime hooks, Plan Mode trade-off analysis, and automated build–test–fix loops.
+- Integrated enterprise toolchains (Figma, GitHub, Atlassian, Google Workspace) via Model Context Protocol (MCP) servers and plugins; standardized agent context via AGENTS.md and reusable skill lifecycles.
+- Formulated enterprise prompting methodologies (Outcome, Constraints, Definition of Done) and evidence-based verification gates replacing agent self-assessment with deterministic testing.
+- Designed AI transformation toolkits, AI maturity assessments, use-case prioritization canvases, and governance guardrails based on NIST AI RMF 1.0 and ISO 42001.
 
 ### Program Analyst, Acquisition Directorate | U.S. Department of the Interior
 *Denver, CO | Jan–Sep 2025*  
@@ -79,6 +81,7 @@ Combines this experience with recent hands-on AI engineering and workflow develo
 
 ## EDUCATION & PROFESSIONAL DEVELOPMENT
 
+- **OpenAI Codex Bootcamps:** Completed 7 Bootcamps across Fundamentals, 201, and 301 (Agent Orchestration, MCP Integration, Context Engineering)
 - **UC Berkeley Extension:** Machine Learning and Deep Learning.
 - **University of Denver:** Graduate Certificate, AI Strategy & Applications in IT
 - **Stanford Continuing Studies:** Data Analysis with Python • Modern AI Architectures • AI Accountability
@@ -95,4 +98,4 @@ Combines this experience with recent hands-on AI engineering and workflow develo
 - **Data Engineering & Big Data Platforms:** Acxiom Hive, AbiliTec Links, Apache Spark • Oracle, PostgreSQL, SQL Server • ETL/ELT Architectures • Relational Data Modeling • Schema Normalization • Data Quality, Deduplication & Profiling
 - **Software Engineering & Analytical Workflows:** Python • pandas & NumPy • FastAPI • Pydantic • SQLAlchemy • RESTful API Contracts • JSON Schema • pytest • GitHub • Cloud Deployment (Google Cloud Run, Vercel)
 - **Enterprise Platforms, Privacy & Governance:** SAP S/4HANA Federal Business Management System • Unison PRISM • Remedy
-- **AI Engineering & LLMOps:** Agentic AI Workflows • Retrieval-Augmented Generation • LLM Evaluation & Observability • Context Management • AI Governance & Responsible AI • NIST AI RMF 1.0 • Semantic Modeling & Ontology Design • Qdrant Vector Search • Codex, Antigravity, Cursor, OpenAI
+- **AI Engineering & LLMOps:** Agentic AI Workflows • Multi-Agent Orchestration • Model Context Protocol (MCP) • OpenAI Codex (CLI, IDE, App) • Google Antigravity • Context Engineering (AGENTS.md) • Retrieval-Augmented Generation • LLM Evaluation & Observability • AI Governance & Responsible AI • NIST AI RMF 1.0 • ISO 42001 • Bounded Execution Guardrails • Prompt Engineering Frameworks • Qdrant Vector Search • Codex, Antigravity, Cursor, OpenAI
