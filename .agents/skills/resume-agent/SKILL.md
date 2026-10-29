@@ -28,6 +28,9 @@ This skill is automatically activated when the user asks to process a job descri
    - **Step 5:** Emit 14-column Google Sheet tracker row (A–N).
    - **Step 6:** Create interactive markdown artifact in Antigravity brain directory with `RequestFeedback: true`.
 
-3. **Styling & Standards:**
-   - Visual System: Canonical Navy (`#17365D`), light blue banners (`#EBF1F5`), ATS single-column layout, 3 categorized Core Competencies.
+3. **Styling & Standards (The Bulletted-Standard):**
+   - Format Standard: Default to the **Bulletted-Standard** resume format (`skills/bulletted-standard/SKILL.md`) for all future jobs (including AI Engineering, AI Transformation, and Data Analyst roles).
+   - Visual System: Canonical Navy (`#17365D`), single-column ATS 2-page layout, underlined section headers, and centered contact block with active hyperlinks (LinkedIn, GitHub, AI Guardians).
+   - Core Competencies: Single dense inline block separated by square bullets (`▪` or `•`) with strict zero-parentheses enforcement.
+   - Zero Test Suite Trivia: Strictly prohibit including internal test counts, test runner metrics, or developer test suite artifacts like `(pytest, 1,296+ Tests)` anywhere on the resume.
    - Zero Hallucination: Never invent employers, dates, titles, or unearned certifications.

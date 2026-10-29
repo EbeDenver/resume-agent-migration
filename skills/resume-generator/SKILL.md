@@ -89,20 +89,20 @@ After answers:
 
 Never add an unconfirmed answer.
 
-## Resume rules
+## Resume rules: The Bulletted-Standard Format Standard (Default)
 
 Use only master-resume and confirmed evidence. Reorder and rewrite for relevance without increasing scope, seniority, ownership, technical depth, or impact.
 
-Use the DOL IT Analyst reference style:
-- Single-column, ATS-safe, compact senior layout
-- Navy 20-point candidate name
-- Light-blue 11-point target-role line
-- Navy contact line and separators
-- Navy uppercase section headings with rules
-- Bold navy role titles and bold light-blue employer/client text: use appropriate Title Case capitalization (e.g., Program Analyst ... | U.S. Department of the Interior), NOT all-caps default
-- Clean spacing before location and dates: use standard separators (e.g., ' • Denver, CO | ...' or ' | Denver, CO'); avoid raw tab characters (\t) that cause awkward spacing before city names
-- Approximately 0.5-inch top/bottom and 0.62-inch side margins
-- Approximately 10-point body, 9–9.5-point skills
+All future resume generation—including **AI Engineering / Transformation roles** and **Data Analyst / BI / Systems Analyst roles**—MUST adhere to the **Bulletted-Standard** format (`skills/bulletted-standard/SKILL.md`):
+- **Document Geometry:** 2-page executive format, 0.50" top/bottom and 0.62" side margins.
+- **Header:** Centered Name (18–20pt Bold Navy `#17365D`), centered 3-pillar tagline subtitle, centered contact line with live hyperlinks for LinkedIn (`https://www.linkedin.com/in/ebenezer-rolston/`), GitHub (`https://github.com/EbeDenver`), and AI Guardians (`https://portal.aiguardiansllc.us/`).
+- **Professional Summary:** Two-paragraph narrative arc bridging 20+ years of Acxiom identity architecture and DOI federal data conversion with Harvard SEAS / DU AI engineering credentials, followed by the highlighted italicized callout: *Winner of two Department of Interior Awards*.
+- **Core Competencies (Strict Zero-Parentheses Rule):** Single dense inline block separated by square bullets (`▪` or `•`). Absolutely zero parentheses `(...)` permitted anywhere in this section (e.g. no `(Pandas, NumPy)`, no `($1M+ Reclaimed)`, no `(pytest, 1,296+ Tests)`).
+- **Professional Experience:** 4 core roles in reverse-chronological order (AI Guardians LLC, DOI Acquisition Directorate GS-13, ARK Solutions / IBC Client, Acxiom Corporation), each with an italicized operational context subtitle beneath the title line.
+- **AI Engineering Portfolio:** Dedicated section with 4 production/capstone applications (`Trading Copilot`, `Rental Housing Law Navigator`, `AI Incident Monitor`, `Multimodal Document Intelligence`).
+- **Education & Professional Development:** Clean single-line entries with strict date-free rule for the University of Denver Graduate Certificate.
+- **Technical Proficiencies:** 5 categorized clusters (`Identity Analytics & Predictive Systems`, `Data Engineering & Big Data Platforms`, `Software Engineering & Analytical Workflows`, `Enterprise Platforms, Privacy & Governance`, `AI Engineering & LLMOps`).
+- **Zero Test Harness Trivia:** Never include internal software test runner statistics or test counts such as `(pytest, 1,296+ Tests)` anywhere on the document.
 
 For AI-focused roles, include the date-free section when relevant:
 
@@ -130,7 +130,7 @@ Resume filename:
 Always consult the **Certification Skill Repository** (`data/certifications_repository.json` and `data/certifications_repository.md`) before finalizing the Education & Credentials, Core Competencies, Technical Proficiencies, and Projects/Portfolio sections of the tailored resume:
 
 1. **Job Requirement Domain Matching:**
-   - **Data Analytics / Python:** Extract Stanford Continuing Studies `Data Analysis with Python` (Matt Harrison). Add `Python (Pandas, NumPy)`, `Exploratory Data Analysis (EDA)`, and data cleansing to Core Competencies and Technical Proficiencies. Include analytical workflow bullets.
+   - **Data Analytics / Python:** Extract Stanford Continuing Studies `Data Analysis with Python` (Matt Harrison). Add `Python Data Analytics`, `Exploratory Data Analysis`, and `Data Cleansing` to Core Competencies (strictly without parentheses), and list Pandas and NumPy cleanly in Technical Proficiencies. Include analytical workflow bullets.
    - **LLMs / Agentic AI / Generative AI:** Extract Harvard SEAS `Executive Certificate, Large Language Models: From Transformer Basics to Agentic AI` (CeDiD: `25TR-9XBP-E5NU`, `https://cecredential-validation.tlt.harvard.edu/`). Add `Transformer Architectures`, `Agentic AI Workflows`, `RAG`, and tool calling.
    - **AI Governance / Risk / Ethics / Privacy / Compliance:** Extract University of Denver `Credential, AI Literacy, Ethics, and Governance` (Credly: `wIjGxM38`) and AI, Tech & Privacy Academy `AI Governance Training` (Dr. Luiza Jarovsky). Add algorithmic fairness, risk scoring, and compliance frameworks.
    - **AI FinOps / Cost Engineering / LLMOps:** Extract AI Realist `Technical Workshop, Learn to Optimise Your AI Stack` (Cert #`AIS-2026-010`, EU AI Act Art. 4). Add prompt caching, context compaction, agent loop bounding, model right-sizing, and golden-set evaluations.

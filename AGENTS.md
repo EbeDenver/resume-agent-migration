@@ -13,9 +13,12 @@ Whenever the user provides a job URL (LinkedIn, Ashby, Workday, Greenhouse, SAP 
    - Tailored Cover Letter (`.docx` & `.md`)
    - Skill Gap Analysis (`.docx` & `.md`)
    - 13-Section Interview Preparation Package (`.docx` & `.md`)
-5. **Enforce Design & Guardrail Standards:**
-   - Single-column ATS layout in Canonical Navy (`#17365D`) and light blue role banners (`#EBF1F5`).
-   - Clickable embedded hyperlinks for LinkedIn (`https://www.linkedin.com/in/ebenezer-rolston/`) and AI Guardians (`https://portal.aiguardiansllc.us/`).
+5. **Enforce Design & Guardrail Standards (The Bulletted-Standard):**
+   - Format Standard: Always use the **Bulletted-Standard** resume format (`skills/bulletted-standard/SKILL.md`) as the default for all future jobs (including AI Engineering, AI Transformation, and Data Analyst roles).
+   - Single-column ATS 2-page layout in Canonical Navy (`#17365D`) with underlined section headers.
+   - Clickable embedded hyperlinks for LinkedIn (`https://www.linkedin.com/in/ebenezer-rolston/`), GitHub (`https://github.com/EbeDenver`), and AI Guardians (`https://portal.aiguardiansllc.us/`).
    - Strictly date-free University of Denver credentialing.
    - Zero hallucination (do not invent employers, dates, or client production deployments).
-   - Use standard library OpenXML generator: `src/resume_agent/utils/docx_writer.py`.
+   - **Zero Parentheses in Core Competencies:** Core Competencies must be a single dense inline block separated by square bullets (`▪` or `•`) strictly without parentheses `(...)`.
+   - **Zero Test Harness Trivia:** Never include internal software test framework statistics or test counts such as `(pytest, 1,296+ Tests)` anywhere on the document.
+   - Use standard library OpenXML generator: `src/resume_agent/utils/docx_writer.py` and `generate_bulletted_standard_package.py`.
