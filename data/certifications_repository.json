@@ -595,7 +595,7 @@
         "Harness Learning & Policy Optimization (GRPO, GSPO, RULER, KL Divergence)",
         "Reward Hacking Mitigation",
         "OWASP Top 15 Agent Vulnerabilities Mitigation",
-        "Confused Deputy Defense & PoLP",
+        "Principle of Least Privilege PoLP & Agent Authorization",
         "Execution Sandboxing (Docker, E2B, Pyodide/Deno)",
         "Zero-Trust UI Architecture (FastAPI, Streamlit)",
         "3-Tier Fallback Validation (Strict JSON Schema, Instructor Pydantic, Canonicalization)",
