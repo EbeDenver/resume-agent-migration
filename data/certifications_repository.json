@@ -550,6 +550,73 @@
         "Distinguish hands-on bootcamp and lab engineering from commercial client enterprise production deployments.",
         "Strictly zero parentheses when extracted into Core Competencies."
       ]
+    },
+    {
+      "id": "PACKT-AGENTIC-AI-FINANCE-2026",
+      "title": "Agentic AI for Finance",
+      "issuing_organization": "Packt Publishing",
+      "parent_institution": "Packt Publishing",
+      "credential_type": "Certificate of Completion (Masterclass & Workshop)",
+      "issue_date": "2026",
+      "expiration_date": null,
+      "credential_id": null,
+      "verification_type": "Certificate of Completion & Technical Portfolio Artifacts",
+      "verification_url": null,
+      "verification_contact": null,
+      "instructor": "Nicole Koenigstein",
+      "signatory": "Nicole Koenigstein, Lead Instructor & Chief Data Scientist",
+      "domains": [
+        "agentic_ai",
+        "harness_engineering",
+        "state_machines",
+        "multi_agent_systems",
+        "trajectory_observability",
+        "reinforcement_learning",
+        "agent_security",
+        "multimodal_rag",
+        "time_series_forecasting"
+      ],
+      "target_roles": [
+        "Agentic AI Engineer",
+        "AI Solutions Architect",
+        "Financial AI Systems Specialist",
+        "Quantitative AI Developer",
+        "AI Governance & Safety Lead"
+      ],
+      "verified_skills_and_tools": [
+        "Harness Engineering (4 Runtime Layers)",
+        "LangGraph StateGraph (FSM & HSM)",
+        "Multi-Agent Topologies (Hierarchical Supervisor, Peer-to-Peer, Blackboard, Swarm)",
+        "Coordination Tax Mitigation",
+        "Loop Engineering (6 Loops, 4 Termination Conditions, 3-Rung Escalation Ladder)",
+        "Trajectory Observability (OpenTelemetry GenAI, Langfuse, LangSmith)",
+        "6 Core Agent Measures (Correctness, Grounding, Latency p95, Cost, Safety, Auditability)",
+        "Contamination-Proof Evaluation (SWE-smith, Incident Replays)",
+        "Harness Learning & Policy Optimization (GRPO, GSPO, RULER, KL Divergence)",
+        "Reward Hacking Mitigation",
+        "OWASP Top 15 Agent Vulnerabilities Mitigation",
+        "Confused Deputy Defense & PoLP",
+        "Execution Sandboxing (Docker, E2B, Pyodide/Deno)",
+        "Zero-Trust UI Architecture (FastAPI, Streamlit)",
+        "3-Tier Fallback Validation (Strict JSON Schema, Instructor Pydantic, Canonicalization)",
+        "Non-Dataframe Financial Table Parsing & Footing Reconciliation",
+        "Multi-Stage Chart Visual Parsing (Locate-Read-Interpret)",
+        "Earnings Call Audio Diarization & Hedging Extraction",
+        "Foundation Time-Series Models (Chronos, TimesFM, PatchTST, AnomalyBERT)",
+        "LLM Serving Physics (vLLM PagedAttention, SGLang RadixAttention)"
+      ],
+      "extractable_resume_bullets": [
+        "Architected enterprise agentic workflows using LangGraph StateGraph, deploying Finite and Hierarchical State Machines (FSM/HSM) with 4-layer harness isolation separating non-deterministic model proposals from deterministic policy enforcement and sandbox bounds.",
+        "Engineered multi-agent collaboration topologies (hierarchical supervisor, peer-to-peer, blackboard, swarm) with bounded loop controls, 4 mandatory termination conditions, and a 3-rung escalation ladder to eliminate infinite loops and mitigate multi-agent coordination tax.",
+        "Instrumented end-to-end trajectory observability using OpenTelemetry and self-hosted Langfuse, evaluating multi-step reasoning traces across 6 dimensions (Correctness, Grounding, Latency p95, Cost, Safety, Auditability) and preventing benchmark contamination through programmatic SWE-smith task generation.",
+        "Designed multimodal financial intelligence pipelines parsing non-dataframe SEC filing tables with footing reconciliation, extracting audio earnings call guidance via speaker diarization, and integrating foundation time-series models (TimesFM, Chronos) as calibrated quantile distribution tool calls."
+      ],
+      "resume_display_format": "Agentic AI for Finance : Packt Certificate Course (Nicole Koenigstein)",
+      "guardrails": [
+        "Distinguish intensive masterclass and lab implementations from commercial banking production deployments.",
+        "Strictly zero parentheses when extracted into Core Competencies.",
+        "Omit completion dates from resume face per candidate rule."
+      ]
     }
   ]
 }

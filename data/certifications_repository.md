@@ -192,6 +192,35 @@
 
 ---
 
+### 12. Agentic AI for Finance — Packt Certificate Course
+* **Issuing Organization:** Packt Publishing
+* **Recipient:** Ebenezer Rolston
+* **Date / Series:** 2026 (4-Day Intensive Workshop & Masterclass)
+* **Instructor:** Nicole Koenigstein (Renowned AI/Quant Researcher, Chief Data Scientist & Author)
+* **Domains:** Agentic AI, Harness Engineering, State Machines (FSM/HSM), Multi-Agent Systems (MAS), Trajectory Observability, Reinforcement Learning & Policy Optimization (GRPO/GSPO), OWASP Top 15 Agent Vulnerabilities, Execution Sandboxing, Multimodal Financial RAG, Foundation Time Series
+* **Target Roles:** Agentic AI Engineer, AI Solutions Architect, Financial AI Systems Specialist, Quantitative AI Developer, AI Governance & Safety Lead
+* **Verified Skills & Tools:**
+  * Harness Engineering: 4 Runtime Layers (Identity & Behavior, Runtime, Feedback Loop, Governance & Security), "Model proposes, Harness disposes" architecture, `AGENTS.md` standing directives, loadable `SKILL.md` task specifications
+  * State Machine Orchestration: LangGraph StateGraph, Finite State Machines (FSM), Hierarchical State Machines (HSM) with Superstates, Substates, and Parallel Execution Regions
+  * Multi-Agent Topologies & Coordination Tax: Hierarchical Supervisor, Peer-to-Peer Negotiation, Blackboard Shared Memory, Swarm Exploration; mitigation of $p^n$ reliability decay via deterministic verification gates and consolidation checkpoints
+  * Loop Engineering & Escalation Ladders: 6 core loops (Planning, Reflection, Tool Use, Retrieval, Verification, Human Feedback); structural distinction between reflection (stylistic polish) and verification (objective truth); 4 termination conditions (Success, Budget, No-Progress 2-turn oscillation, Hard Stop); 3-rung escalation ladders (Retry → Re-plan → Human checkpoint)
+  * Trajectory Observability & Auditing: Trajectory evaluation ("the path is the deliverable") vs. outcome evaluation; 6 Core Agent Measures (Correctness, Grounding, Latency p95, Cost, Safety, Auditability); OpenTelemetry GenAI semantic conventions, Langfuse (self-hosted for banking data residency), LangSmith; Benchmark contamination defense via SWE-smith programmatic task generation and historical incident replays
+  * Reinforcement Learning & Harness Policy Optimization: Harness Learning holding base model weights constant; Group Relative Policy Optimization (GRPO) and Group Sequence Policy Optimization (GSPO) with KL divergence regularization; Relative Universal LLM-Elicited Rewards (RULER); Reward hacking defenses in financial workflows
+  * Threat Modeling & Sandboxing: OWASP Top 15 Agent Vulnerabilities mitigation (Confused Deputy defense, Principle of Least Privilege downscoping); Docker sandboxing, E2B cloud state sandboxing, Pyodide/Deno in MCP; Zero-Trust UI firewalls (FastAPI/Streamlit); Path traversal symlink resolution; 3-tier fallback validation (Strict JSON Schema Mode → Instructor + Pydantic → Canonicalization)
+  * Multimodal Financial Intelligence & Time Series: Non-dataframe financial table extraction (multi-level headers, scale units, parenthetical negatives, footnotes, restatements, footing subtotal reconciliation); Multi-stage chart visual reading (Locate → Read → Interpret); Earnings call audio diarization and hedging qualifier extraction; Foundation time-series models (Chronos, TimesFM, PatchTST, AnomalyBERT) as calibrated quantile distribution tool calls; LLM serving physics (vLLM PagedAttention, SGLang RadixAttention KV cache reuse)
+* **Extractable Resume Bullets:**
+  * *Bullet A (Harness Engineering & State Machines):* "Architected enterprise agentic workflows using LangGraph StateGraph, deploying Finite and Hierarchical State Machines (FSM/HSM) with 4-layer harness isolation separating non-deterministic model proposals from deterministic policy enforcement and sandbox bounds."
+  * *Bullet B (Multi-Agent Systems & Loop Governance):* "Engineered multi-agent collaboration topologies (hierarchical supervisor, peer-to-peer, blackboard, swarm) with bounded loop controls, 4 mandatory termination conditions, and a 3-rung escalation ladder to eliminate infinite loops and mitigate multi-agent coordination tax."
+  * *Bullet C (Trajectory Observability & Auditing):* "Instrumented end-to-end trajectory observability using OpenTelemetry and self-hosted Langfuse, evaluating multi-step reasoning traces across 6 dimensions (Correctness, Grounding, Latency p95, Cost, Safety, Auditability) and preventing benchmark contamination through programmatic SWE-smith task generation."
+  * *Bullet D (Multimodal Financial Intelligence & Time Series):* "Designed multimodal financial intelligence pipelines parsing non-dataframe SEC filing tables with footing reconciliation, extracting audio earnings call guidance via speaker diarization, and integrating foundation time-series models (TimesFM, Chronos) as calibrated quantile distribution tool calls."
+* **Display Format:** `Agentic AI for Finance : Packt Certificate Course (Nicole Koenigstein)`
+* **Guardrails:**
+  * Distinguish intensive masterclass and lab implementations from commercial banking production deployments.
+  * Strictly zero parentheses when extracting into Core Competencies.
+  * Omit completion dates from resume face per candidate rule.
+
+---
+
 ## 2. Dynamic Extraction Rules for Resume Generator
 
 When generating or updating a tailored resume, cover letter, or interview package, the **Resume Generator** MUST apply the following extraction logic:

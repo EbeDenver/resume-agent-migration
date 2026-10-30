@@ -16,7 +16,7 @@ Combines this experience with recent hands-on AI engineering and workflow develo
 
 ## CORE COMPETENCIES
 
-▪ Customer Data Integration & Entity Resolution ▪ Identity Scoring Models & Algorithmic Scoring ▪ Identity Data Quality, Profiling & Hygiene ▪ Identity Match Reach & Quality KPIs ▪ Relational Schema Design ▪ Advanced SQL ▪ Privacy, Regulatory & AI Governance ▪ Python Data Analysis ▪ Enterprise ETL Architecture & Conversion ▪ Automated Validation & Testing ▪ Cross-Functional Stakeholder Relationship ▪ User Enablement & Mentorship
+▪ Customer Data Integration & Entity Resolution ▪ Identity Scoring Models & Algorithmic Scoring ▪ Identity Data Quality, Profiling & Hygiene ▪ Identity Match Reach & Quality KPIs ▪ Agentic AI Harness Engineering ▪ State Machine & Multi-Agent Architecture ▪ Model Context Protocol Integration ▪ Trajectory Observability & Evaluation ▪ Relational Schema Design ▪ Advanced SQL ▪ Privacy, Regulatory & AI Governance ▪ Python Data Analysis ▪ Enterprise ETL Architecture & Conversion ▪ Automated Validation & Testing ▪ Cross-Functional Stakeholder Relationship ▪ User Enablement & Mentorship
 
 ---
 
@@ -61,8 +61,11 @@ Combines this experience with recent hands-on AI engineering and workflow develo
 ## AI Engineering Portfolio
 
 ### Trading Copilot — Governed Multi-Agent Research Platform
-*AI in Finance Nicole Koenigstein 2026*
-- Architected multi-agent equities research pipelines with supervisory layer, automated risk verification and deterministic execution bounds.
+*AI in Finance Nicole Koenigstein*
+- Architected multi-agent equities research pipelines in LangGraph combining hierarchical supervisor and peer-to-peer topologies with bounded execution budgets and deterministic state machine transitions.
+- Implemented 4-layer harness architecture separating non-deterministic model proposals from deterministic policy enforcement, tool contracts, and zero-trust sandbox execution.
+- Integrated 6-measure trajectory observability (Correctness, Grounding, Latency p95, Cost, Safety, Auditability) via OpenTelemetry and self-hosted Langfuse to audit multi-step reasoning paths.
+- Engineered multimodal financial parsing for SEC filings and earnings calls, combining tabular footing reconciliation, audio speaker diarization, and foundation time-series forecasting with calibrated predictive quantile distributions.
 
 ### Rental Housing Law Navigator — Regulatory Decision-Support Application
 *Global AI Hackathon 2026*
@@ -81,6 +84,7 @@ Combines this experience with recent hands-on AI engineering and workflow develo
 
 ## EDUCATION & PROFESSIONAL DEVELOPMENT
 
+- **Packt Certificate Course:** Agentic AI for Finance — Nicole Koenigstein (Harness Engineering, Multi-Agent Topologies, Trajectory Observability, Financial Multimodal RAG)
 - **OpenAI Codex Bootcamps:** Completed 7 Bootcamps across Fundamentals, 201, and 301 (Agent Orchestration, MCP Integration, Context Engineering)
 - **UC Berkeley Extension:** Machine Learning and Deep Learning.
 - **University of Denver:** Graduate Certificate, AI Strategy & Applications in IT
@@ -98,4 +102,4 @@ Combines this experience with recent hands-on AI engineering and workflow develo
 - **Data Engineering & Big Data Platforms:** Acxiom Hive, AbiliTec Links, Apache Spark • Oracle, PostgreSQL, SQL Server • ETL/ELT Architectures • Relational Data Modeling • Schema Normalization • Data Quality, Deduplication & Profiling
 - **Software Engineering & Analytical Workflows:** Python • pandas & NumPy • FastAPI • Pydantic • SQLAlchemy • RESTful API Contracts • JSON Schema • pytest • GitHub • Cloud Deployment (Google Cloud Run, Vercel)
 - **Enterprise Platforms, Privacy & Governance:** SAP S/4HANA Federal Business Management System • Unison PRISM • Remedy
-- **AI Engineering & LLMOps:** Agentic AI Workflows • Multi-Agent Orchestration • Model Context Protocol (MCP) • OpenAI Codex (CLI, IDE, App) • Google Antigravity • Context Engineering (AGENTS.md) • Retrieval-Augmented Generation • LLM Evaluation & Observability • AI Governance & Responsible AI • NIST AI RMF 1.0 • ISO 42001 • Bounded Execution Guardrails • Prompt Engineering Frameworks • Qdrant Vector Search • Codex, Antigravity, Cursor, OpenAI
+- **AI Engineering & LLMOps:** Agentic Harness Engineering • LangGraph StateGraph (FSM/HSM) • Multi-Agent Topologies (Hierarchical, Peer-to-Peer, Blackboard, Swarm) • Model Context Protocol (MCP) • OpenAI Codex (CLI, IDE, App) • Google Antigravity • Context Engineering (AGENTS.md) • Trajectory Observability & Tracing (OpenTelemetry, Langfuse, LangSmith) • Policy Optimization (GRPO, GSPO, RULER) • Sandboxing & Security (Docker, E2B, OWASP Top 15 Agent Vulnerabilities) • Financial Multimodal RAG & Table Footing Verification • Foundation Time-Series Models (Chronos, TimesFM, PatchTST, AnomalyBERT) • Inference Physics (vLLM PagedAttention, SGLang RadixAttention) • Structured Output Modes (Strict JSON Schema, Instructor Pydantic) • AI Governance & Responsible AI • NIST AI RMF 1.0 • ISO 42001 • Bounded Execution Guardrails • Qdrant Vector Search
