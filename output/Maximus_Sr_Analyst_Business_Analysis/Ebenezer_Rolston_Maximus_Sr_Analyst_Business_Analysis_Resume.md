@@ -41,7 +41,7 @@ Accomplished Senior Business Analyst and Enterprise Systems Specialist with 20+ 
 - Served as Senior Escalation Lead handling 5 to 10 mission-critical enterprise incidents daily; performed root-cause analysis to systematically eliminate recurring defect patterns.
 - Gathered and translated complex business needs into functional requirements, user stories, acceptance criteria, and system design specifications for engineering teams.
 - Served as Department ETL Architect for the multi-agency FBMS conversion, migrating, cleansing, and validating bureau databases into SAP S/4 across 4 federal agencies.
-- Engineered automated SQL reconciliation scripts across relational database systems (MS SQL Server, Oracle) to validate pre- and post-migration data integrity.
+- Engineered automated SQL reconciliation scripts across relational database systems including MS SQL Server and Oracle to validate pre- and post-migration data integrity.
 - Authored comprehensive Standard Operating Procedures, requirements traceability matrices, and technical documentation; delivered hands-on training to 85+ end users.
 
 ### Senior Solutions Architect / Systems Analyst | Acxiom Corporation
@@ -66,12 +66,12 @@ Accomplished Senior Business Analyst and Enterprise Systems Specialist with 20+ 
 
 ## EDUCATION & PROFESSIONAL CREDENTIALS
 
+- **OpenAI Codex:** Agent Orchestration • MCP Integration • Context Engineering — Completed 7 intensive bootcamps across Fundamentals, Codex 201, and Codex 301 covering Plan Mode, parallel worktrees, runtime hooks, and automated build–test–fix loops
 - **M.S. & B.S. in Computer Science:** St. Joseph's College
 - **Graduate Certificate in AI Strategy & Applications in IT:** University of Denver
 - **Executive Certificate — LLMs: Transformer to Agentic AI:** Harvard John A. Paulson SEAS
 - **Python Data Analysis & Modern Software Architectures:** Stanford Continuing Studies
 - **Machine Learning & Deep Learning Specialization:** UC Berkeley Extension
-- **OpenAI Codex Bootcamps: Fundamentals, 201, and 301:** Completed 7 Hands-on Technical Bootcamps
 - **Two Department of the Interior Awards for Excellence:** Interior Business Center & FBMS Program
 
 ---
@@ -81,5 +81,5 @@ Accomplished Senior Business Analyst and Enterprise Systems Specialist with 20+ 
 - **Business Analysis & Requirements Engineering:** Requirements Elicitation • User Stories & Acceptance Criteria • Functional & Technical Specifications • Traceability Matrices • Process Flow Diagramming • UML & BPMN • Use Case Modeling • Gap Analysis
 - **Database Systems & Data Analysis:** MS SQL Server • Oracle Database • PostgreSQL • Complex SQL Queries • Relational Data Modeling • Schema Normalization • Data Cleansing & Validation • Automated Reconciliation Scripts • Query Optimization • Schema-Governed Contract Validation
 - **Testing, Quality Assurance & UAT:** Functional Test Case Design • User Acceptance Testing Coordination • Test Plan Execution • Defect Tracking & Root Cause Analysis • Regression Testing • Deterministic Quality Gates • Service Desk Incident Triage
-- **Enterprise Platforms & Governance:** SAP S/4HANA (FBMS) • Unison PRISM • Remedy ITSM • Government Contract Systems • Standard Operating Procedures • Change Management • Federal Procurement Compliance • NIST Standards
+- **Enterprise Platforms & Governance:** SAP S/4HANA FBMS • Unison PRISM • Remedy ITSM • Government Contract Systems • Standard Operating Procedures • Change Management • Federal Procurement Compliance • NIST Standards
 - **Analytical Tools & Scripting:** Python • pandas & NumPy • Pydantic Contract Validation • JSON Schema • Excel Advanced Modeling & Pivot Tables • REST API Verification • Git & GitHub

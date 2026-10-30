@@ -51,7 +51,7 @@ Expert in advanced SQL, relational schema normalization, data lineage documentat
 ### Solutions Developer / Architect | Acxiom Corporation
 *Little Rock, AR | 1999–2009*  
 *Identity resolution, predictive scoring algorithms, and relational data warehousing; foundation of LiveRamp*
-- Lead Solution Architect & ETL Analyst partnering with commercial enterprise clients (Citibank, GE Money, ChoicePoint, Allstate) to design customer data integration and data warehouse pipelines.
+- Lead Solution Architect & ETL Analyst partnering with commercial enterprise clients including Citibank, GE Money, ChoicePoint, and Allstate to design customer data integration and data warehouse pipelines.
 - Built and supported Customer 360 recognition, precision marketing, and entity resolution models linking disparate legacy consumer datasets.
 - Built Citibank's online identity scoring model and real-time algorithmic verification pipeline for fraud prevention.
 - Standardized company-wide SDLC/SCM methodology as a process-improvement specialist on the Acxiom Methodology Board, leading cross-functional teams across PMO and engineering.
@@ -82,12 +82,12 @@ Expert in advanced SQL, relational schema normalization, data lineage documentat
 
 ## EDUCATION & PROFESSIONAL DEVELOPMENT
 
+- **OpenAI Codex:** Agent Orchestration • MCP Integration • Context Engineering — Completed 7 intensive bootcamps across Fundamentals, Codex 201, and Codex 301 covering Plan Mode, parallel worktrees, runtime hooks, and automated build–test–fix loops
 - **University of Denver:** Graduate Certificate, AI Strategy & Applications in IT
 - **M.S. & B.S., Computer Science:** St. Joseph's College
 - **Stanford Continuing Studies:** Data Analysis with Python • Modern AI Architectures • AI Accountability
 - **Harvard John A. Paulson SEAS:** Executive Certificate — LLMs: Transformer to Agentic AI
-- **OpenAI Codex Bootcamps:** Completed 7 Bootcamps across Fundamentals, 201, and 301 (Agent Orchestration, MCP Integration)
-- **UC Berkeley Extension:** Machine Learning and Deep Learning
+- **UC Berkeley Extension:** Machine Learning and Deep Learning with Spark
 - **Honors & Awards:** Interior Business Center Award for Excellence • DOI FBMS Special Recognition
 - **AI Tech and Privacy Academy:** AI Governance & Privacy Frameworks
 
@@ -97,6 +97,6 @@ Expert in advanced SQL, relational schema normalization, data lineage documentat
 
 - **Data Integration & ETL/ELT Architectures:** Source-to-Target Mapping • Enterprise Data Migration • Data Extraction, Transformation & Loading • Ingestion Patterns • Data Cleansing & Deduplication • Reconciliation Frameworks & Footing Checks • Data Lineage Tracking • Schema-Governed Validation
 - **Relational Databases & Query Languages:** Advanced SQL & Complex Queries • Oracle • PostgreSQL • SQL Server • MySQL • Relational Schema Design • Schema Normalization • Query Optimization • Indexing & Constraints
-- **Enterprise CRM & Business Systems:** CRM Data Architecture Concepts • Salesforce Platform Ecosystem (Data Cloud, Sales/Service/Education Cloud data models) • SAP S/4HANA (FBMS) • Unison PRISM • Remedy • Higher Education Data Flows
+- **Enterprise CRM & Business Systems:** CRM Data Architecture Concepts • Salesforce Platform Ecosystem — Data Cloud, Sales Cloud, Service Cloud, and Education Cloud data models • SAP S/4HANA FBMS • Unison PRISM • Remedy • Higher Education Data Flows
 - **Software Engineering & Analytical Workflows:** Python • pandas & NumPy • FastAPI • Pydantic Contract Validation • SQLAlchemy • RESTful API Contracts • JSON Schema • pytest • Git & GitHub • Cloud Run Deployment
 - **Data Quality, Governance & Stewardship:** Data Quality Profiling & Monitoring • Root Cause Defect Analysis • Metadata Management • Data Steward Approval Workflows • Standard Operating Procedures • Knowledge Transfer & Team Mentorship

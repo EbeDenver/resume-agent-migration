@@ -25,8 +25,8 @@ Combines this experience with recent hands-on AI engineering and workflow develo
 ### AI Engineering & Enablement | AI Guardians LLC
 *Denver, CO | Jan 2026–Present*
 - Engineered autonomous multi-agent workflows and custom TOML/markdown agents using OpenAI Codex and Google Antigravity with runtime hooks, Plan Mode trade-off analysis, and automated build–test–fix loops.
-- Integrated enterprise toolchains (Figma, GitHub, Atlassian, Google Workspace) via Model Context Protocol (MCP) servers and plugins; standardized agent context via AGENTS.md and reusable skill lifecycles.
-- Formulated enterprise prompting methodologies (Outcome, Constraints, Definition of Done) and evidence-based verification gates replacing agent self-assessment with deterministic testing.
+- Integrated enterprise toolchains including Figma, GitHub, Atlassian, and Google Workspace via Model Context Protocol servers and plugins; standardized agent context via AGENTS.md guidelines and reusable skill lifecycles.
+- Formulated enterprise prompting methodologies covering Outcome, Constraints, Scope, and Definition of Done, establishing evidence-based verification gates that replace agent self-assessment with deterministic testing.
 - Designed AI transformation toolkits, AI maturity assessments, use-case prioritization canvases, and governance guardrails based on NIST AI RMF 1.0 and ISO 42001.
 
 ### Program Analyst, Acquisition Directorate | U.S. Department of the Interior
@@ -50,8 +50,8 @@ Combines this experience with recent hands-on AI engineering and workflow develo
 ### Solutions Developer / Architect | Acxiom Corporation
 *Little Rock, AR | 1999–2009*  
 *Identity resolution, predictive scoring algorithms, and relational data warehousing; foundation of LiveRamp*
-- Worked with commercial enterprise clients (Citibank, GE Money, ChoicePoint, Allstate) deploying customer verification pipeline and marketing data solutions.
-- Built and supported customer recognition, precision marketing and cross-selling solutions.
+- Worked with commercial enterprise clients including Citibank, GE Money, ChoicePoint, and Allstate deploying customer verification pipelines and marketing data solutions.
+- Built and supported customer recognition, precision marketing, and cross-selling solutions.
 - Built Citibank's online identity scoring model, real-time scoring algorithms for fraud prevention.
 - Provided business and technical support for Application Verification System, SLA compliance.
 - SME on the Software Methodology Board, established SDLC governance.
@@ -64,7 +64,7 @@ Combines this experience with recent hands-on AI engineering and workflow develo
 *AI in Finance Nicole Koenigstein*
 - Architected multi-agent equities research pipelines in LangGraph combining hierarchical supervisor and peer-to-peer topologies with bounded execution budgets and deterministic state machine transitions.
 - Implemented 4-layer harness architecture separating non-deterministic model proposals from deterministic policy enforcement, tool contracts, and zero-trust sandbox execution.
-- Integrated 6-measure trajectory observability (Correctness, Grounding, Latency p95, Cost, Safety, Auditability) via OpenTelemetry and self-hosted Langfuse to audit multi-step reasoning paths.
+- Integrated 6-measure trajectory observability covering Correctness, Grounding, Latency p95, Cost, Safety, and Auditability via OpenTelemetry and self-hosted Langfuse to audit multi-step reasoning paths.
 - Engineered multimodal financial parsing for SEC filings and earnings calls, combining tabular footing reconciliation, audio speaker diarization, and foundation time-series forecasting with calibrated predictive quantile distributions.
 
 ### Rental Housing Law Navigator — Regulatory Decision-Support Application
@@ -84,9 +84,9 @@ Combines this experience with recent hands-on AI engineering and workflow develo
 
 ## EDUCATION & PROFESSIONAL DEVELOPMENT
 
-- **Packt Certificate Course:** Agentic AI for Finance — Nicole Koenigstein (Harness Engineering, Multi-Agent Topologies, Trajectory Observability, Financial Multimodal RAG)
-- **OpenAI Codex Bootcamps:** Completed 7 Bootcamps across Fundamentals, 201, and 301 (Agent Orchestration, MCP Integration, Context Engineering)
-- **UC Berkeley Extension:** Machine Learning and Deep Learning.
+- **OpenAI Codex:** Agent Orchestration • MCP Integration • Context Engineering — Completed 7 intensive bootcamps across Fundamentals, Codex 201, and Codex 301 covering Plan Mode, parallel worktrees, runtime hooks, and automated build–test–fix loops
+- **Packt Certificate Course:** Agentic AI for Finance — Nicole Koenigstein — Harness Engineering • Multi-Agent Topologies • Trajectory Observability • Financial Multimodal RAG
+- **UC Berkeley Extension:** Machine Learning and Deep Learning with Spark
 - **University of Denver:** Graduate Certificate, AI Strategy & Applications in IT
 - **Stanford Continuing Studies:** Data Analysis with Python • Modern AI Architectures • AI Accountability
 - **Harvard John A. Paulson SEAS:** Executive Certificate — LLMs: Transformer to Agentic AI
@@ -100,6 +100,6 @@ Combines this experience with recent hands-on AI engineering and workflow develo
 
 - **Identity Analytics & Predictive Systems:** Customer Data Integration • Identity Resolution & Entity Matching • Real-Time Identity Scoring • Algorithmic Scoring Models • Predictive Cross-Sell Models • Deep Learning & Neural Networks
 - **Data Engineering & Big Data Platforms:** Acxiom Hive, AbiliTec Links, Apache Spark • Oracle, PostgreSQL, SQL Server • ETL/ELT Architectures • Relational Data Modeling • Schema Normalization • Data Quality, Deduplication & Profiling
-- **Software Engineering & Analytical Workflows:** Python • pandas & NumPy • FastAPI • Pydantic • SQLAlchemy • RESTful API Contracts • JSON Schema • pytest • GitHub • Cloud Deployment (Google Cloud Run, Vercel)
+- **Software Engineering & Analytical Workflows:** Python • pandas & NumPy • FastAPI • Pydantic • SQLAlchemy • RESTful API Contracts • JSON Schema • pytest • GitHub • Cloud Deployment on Google Cloud Run and Vercel
 - **Enterprise Platforms, Privacy & Governance:** SAP S/4HANA Federal Business Management System • Unison PRISM • Remedy
-- **AI Engineering & LLMOps:** Agentic Harness Engineering • LangGraph StateGraph (FSM/HSM) • Multi-Agent Topologies (Hierarchical, Peer-to-Peer, Blackboard, Swarm) • Model Context Protocol (MCP) • OpenAI Codex (CLI, IDE, App) • Google Antigravity • Context Engineering (AGENTS.md) • Trajectory Observability & Tracing (OpenTelemetry, Langfuse, LangSmith) • Policy Optimization (GRPO, GSPO, RULER) • Sandboxing & Security (Docker, E2B, OWASP Top 15 Agent Vulnerabilities) • Financial Multimodal RAG & Table Footing Verification • Foundation Time-Series Models (Chronos, TimesFM, PatchTST, AnomalyBERT) • Inference Physics (vLLM PagedAttention, SGLang RadixAttention) • Structured Output Modes (Strict JSON Schema, Instructor Pydantic) • AI Governance & Responsible AI • NIST AI RMF 1.0 • ISO 42001 • Bounded Execution Guardrails • Qdrant Vector Search
+- **AI Engineering & LLMOps:** Agentic Harness Engineering • LangGraph StateGraph FSM and HSM • Multi-Agent Topologies — Hierarchical, Peer-to-Peer, Blackboard, Swarm • Model Context Protocol MCP • OpenAI Codex CLI, IDE, Desktop App • Google Antigravity • Context Engineering with AGENTS.md • Trajectory Observability & Tracing via OpenTelemetry, Langfuse, LangSmith • Policy Optimization via GRPO, GSPO, RULER • Sandboxing & Security with Docker, E2B, OWASP Top 15 Agent Vulnerabilities • Financial Multimodal RAG & Table Footing Verification • Foundation Time-Series Models — Chronos, TimesFM, PatchTST, AnomalyBERT • Inference Physics with vLLM PagedAttention and SGLang RadixAttention • Structured Output Modes — Strict JSON Schema, Instructor Pydantic • AI Governance & Responsible AI • NIST AI RMF 1.0 • ISO 42001 • Bounded Execution Guardrails • Qdrant Vector Search

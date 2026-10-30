@@ -8,7 +8,7 @@ Denver, CO • eberolston@yahoo.com • 501-307-3237 • [LinkedIn](https://www.
 
 Technical Communicator and Solutions Architect with 20+ years of enterprise experience turning complex data systems into unified platforms across regulated financial services, insurance, and federal sectors. Brings 11 years at Acxiom Corporation deploying real-time verification and predictive scoring models for major insurance and financial clients, alongside Department-wide federal data modernization. Proven record establishing SDLC standards, training 85+ cohort users, and leading mission-critical technical escalations.
 
-Pairs this enterprise foundation with hands-on AI enablement and agentic engineering—fluent in AI coding assistants (OpenAI Codex, Claude Code, Google Antigravity), Model Context Protocol (MCP) tooling, harness engineering architecture, and structured prompting frameworks. Trained in production-grade agent governance including 4-layer harness isolation, bounded execution guardrails, trajectory observability, and OWASP agent security hardening—directly applicable to teaching engineering teams how to build robust, auditable AI systems in an insurance compliance environment. Holds a University of Denver graduate certificate in AI Strategy and a Harvard SEAS executive certificate in LLMs and Agentic AI.
+Pairs this enterprise foundation with hands-on AI enablement and agentic engineering — fluent in AI coding assistants including OpenAI Codex, Claude Code, and Google Antigravity, Model Context Protocol MCP tooling, harness engineering architecture, and structured prompting frameworks. Trained in production-grade agent governance including 4-layer harness isolation, bounded execution guardrails, trajectory observability, and OWASP agent security hardening — directly applicable to teaching engineering teams how to build robust, auditable AI systems in an insurance compliance environment. Holds a University of Denver graduate certificate in AI Strategy and a Harvard SEAS executive certificate in LLMs and Agentic AI.
 
 *Winner of two Department of Interior Awards*
 
@@ -25,8 +25,8 @@ Pairs this enterprise foundation with hands-on AI enablement and agentic enginee
 ### AI Engineering & Enablement | AI Guardians LLC
 *Denver, CO | Jan 2026–Present*
 - Engineered autonomous multi-agent workflows and custom TOML/markdown agents using OpenAI Codex and Google Antigravity with runtime hooks, Plan Mode trade-off analysis, and automated build–test–fix loops.
-- Integrated enterprise toolchains (Figma, GitHub, Atlassian, Google Workspace) via Model Context Protocol (MCP) servers and plugins; standardized agent context via AGENTS.md and reusable skill lifecycles.
-- Formulated enterprise prompting methodologies (Outcome, Constraints, Scope, Definition of Done) and evidence-based verification gates replacing agent self-assessment with deterministic testing.
+- Integrated enterprise toolchains including Figma, GitHub, Atlassian, and Google Workspace via Model Context Protocol servers and plugins; standardized agent context via AGENTS.md guidelines and reusable skill lifecycles.
+- Formulated enterprise prompting methodologies covering Outcome, Constraints, Scope, and Definition of Done, establishing evidence-based verification gates that replace agent self-assessment with deterministic testing.
 - Designed AI transformation toolkits, AI maturity assessments, use-case prioritization canvases, and governance guardrails based on NIST AI RMF 1.0 and ISO 42001.
 
 ### Program Analyst, Acquisition Directorate | U.S. Department of the Interior
@@ -51,7 +51,7 @@ Pairs this enterprise foundation with hands-on AI enablement and agentic enginee
 ### Solutions Developer / Architect | Acxiom Corporation
 *Little Rock, AR | 1999–2009*  
 *Identity resolution, predictive scoring algorithms, and relational data warehousing; foundation of LiveRamp*
-- Partnered with enterprise financial services and insurance clients (Citibank, Allstate, GE Money) to gather requirements, build consensus, and deploy mission-critical customer verification pipelines.
+- Partnered with enterprise financial services and insurance clients including Citibank, Allstate, and GE Money to gather requirements, build consensus, and deploy mission-critical customer verification pipelines.
 - Built Citibank's online identity scoring model, real-time scoring algorithms for fraud prevention.
 - Standardized company-wide SDLC/SCM methodology as a process-improvement specialist on the Acxiom Methodology Board, leading cross-functional teams across PMO, project management, and SMEs.
 - Provided business and technical support for Application Verification System, SLA compliance.
@@ -75,8 +75,8 @@ Pairs this enterprise foundation with hands-on AI enablement and agentic enginee
 
 ### Codex & Antigravity Agentic Systems — Enterprise Enablement & MCP Platform
 *AI Guardians | 2026*
-- Built specialized multi-agent workflows (architect, validator, auditor, reviewer, tester) with runtime hooks, tool contracts, and subagent orchestration.
-- Connected Figma, GitHub, Atlassian, and Google Workspace through Model Context Protocol (MCP) and custom plugins; enforced bounded execution and human-in-the-loop approvals.
+- Built specialized multi-agent workflows with architect, validator, auditor, reviewer, and tester roles, configured with runtime hooks, tool contracts, and subagent orchestration.
+- Connected Figma, GitHub, Atlassian, and Google Workspace through Model Context Protocol and custom plugins; enforced bounded execution and human-in-the-loop approvals.
 
 ### AI Incident Monitor — AI Risk Intelligence Platform
 *AI Guardians LLC | 2026*
@@ -86,9 +86,9 @@ Pairs this enterprise foundation with hands-on AI enablement and agentic enginee
 
 ## EDUCATION & PROFESSIONAL DEVELOPMENT
 
-- **Packt Certificate Course:** Agentic AI for Finance — Nicole Koenigstein (Harness Engineering, Multi-Agent Topologies, Trajectory Observability, Agent Security & Sandboxing)
-- **OpenAI Codex Bootcamps:** Completed 7 Bootcamps across Fundamentals, 201, and 301 (Agent Orchestration, MCP Integration, Context Engineering)
-- **UC Berkeley Extension:** Machine Learning and Deep Learning.
+- **OpenAI Codex:** Agent Orchestration • MCP Integration • Context Engineering — Completed 7 intensive bootcamps across Fundamentals, Codex 201, and Codex 301 covering Plan Mode trade-off analysis, custom TOML/markdown agents, runtime hooks, parallel Git worktrees, and automated build–test–fix verification loops
+- **Packt Certificate Course:** Agentic AI for Finance — Nicole Koenigstein — Harness Engineering • Multi-Agent Topologies • Trajectory Observability • Agent Security & Sandboxing
+- **UC Berkeley Extension:** Machine Learning and Deep Learning with Spark
 - **University of Denver:** Graduate Certificate, AI Strategy & Applications in IT
 - **Stanford Continuing Studies:** Data Analysis with Python • Modern AI Architectures • AI Accountability
 - **Harvard John A. Paulson SEAS:** Executive Certificate — LLMs: Transformer to Agentic AI
@@ -100,9 +100,9 @@ Pairs this enterprise foundation with hands-on AI enablement and agentic enginee
 
 ## TECHNICAL PROFICIENCIES
 
-- **AI Coding Agents & LLMOps:** OpenAI Codex (CLI, IDE, App) • Google Antigravity • Claude Code • Cursor • Large Language Models • Transformer Architectures • Retrieval-Augmented Generation • Agentic AI Workflows • Multi-Agent Systems • Tool Calling • LoRA • Unsloth • Qdrant Vector Search
-- **Agentic Harness Engineering & Governance:** 4-Layer Harness Architecture • LangGraph StateGraph (FSM/HSM) • Multi-Agent Topologies (Hierarchical Supervisor, Peer-to-Peer, Blackboard, Swarm) • Loop Engineering & Termination Conditions • 3-Rung Escalation Ladders • Trajectory Observability (OpenTelemetry, Langfuse, LangSmith) • Bounded Execution Guardrails • NIST AI RMF 1.0 • ISO 42001
-- **Agent Security & Structured Output:** OWASP Top 15 Agent Vulnerabilities • Confused Deputy Defense • Docker & E2B Sandboxing • Zero-Trust UI Firewall Architecture • 3-Tier Fallback Validation (Strict JSON Schema, Instructor/Pydantic, Canonicalization)
-- **Model Context Protocol & Enterprise Tooling:** MCP Server Architecture • Custom Tool Calling • Tool Schema Definition • Figma MCP • GitHub Plugin • Atlassian Plugin • Google Workspace Plugins • AGENTS.md Context Engineering • Reusable Skill Repositories
-- **Software Engineering & Analytical Workflows:** Python • pandas & NumPy • FastAPI • Pydantic • SQLAlchemy • RESTful API Contracts • JSON Schema • pytest • GitHub • Cloud Deployment (Google Cloud Run, Vercel)
+- **AI Coding Agents & LLMOps:** OpenAI Codex CLI, IDE, Desktop App • Google Antigravity • Claude Code • Cursor • Large Language Models • Transformer Architectures • Retrieval-Augmented Generation • Agentic AI Workflows • Multi-Agent Systems • Tool Calling • LoRA • Unsloth • Qdrant Vector Search
+- **Agentic Harness Engineering & Governance:** 4-Layer Harness Architecture • LangGraph StateGraph FSM and HSM • Multi-Agent Topologies — Hierarchical Supervisor, Peer-to-Peer, Blackboard, Swarm • Loop Engineering & Termination Conditions • 3-Rung Escalation Ladders • Trajectory Observability via OpenTelemetry, Langfuse, LangSmith • Bounded Execution Guardrails • NIST AI RMF 1.0 • ISO 42001
+- **Agent Security & Structured Output:** OWASP Top 15 Agent Vulnerabilities • Confused Deputy Defense • Docker & E2B Sandboxing • Zero-Trust UI Firewall Architecture • 3-Tier Fallback Validation — Strict JSON Schema, Instructor Pydantic, Canonicalization
+- **Model Context Protocol & Enterprise Tooling:** MCP Server Architecture • Custom Tool Calling • Tool Schema Definition • Figma MCP • GitHub Plugin • Atlassian Plugin • Google Workspace Plugins • Context Engineering with AGENTS.md • Reusable Skill Repositories
+- **Software Engineering & Analytical Workflows:** Python • pandas & NumPy • FastAPI • Pydantic • SQLAlchemy • RESTful API Contracts • JSON Schema • pytest • GitHub • Cloud Deployment on Google Cloud Run and Vercel
 - **AI Enablement, Adoption & Measurement:** Developer Relations • Technical Office Hours • Prompt Engineering Frameworks • Cohort Training & User Enablement • Adoption Tracking & Metrics • Golden-Set Evaluations • Cross-Functional Technical Advocacy

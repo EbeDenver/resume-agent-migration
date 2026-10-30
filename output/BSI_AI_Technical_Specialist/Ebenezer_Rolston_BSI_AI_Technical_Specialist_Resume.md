@@ -80,7 +80,8 @@ AI Systems and Conformity Specialist with 20+ years of technical systems enginee
 
 ## EDUCATION & PROFESSIONAL CREDENTIALS
 
-- **Packt Certificate Course:** Agentic AI for Finance — Nicole Koenigstein — Harness Engineering, Multi-Agent Topologies, Trajectory Observability, OWASP Agent Vulnerabilities, Structured Output Validation
+- **OpenAI Codex:** Agent Orchestration • MCP Integration • Context Engineering — Completed 7 intensive bootcamps across Fundamentals, Codex 201, and Codex 301 covering Plan Mode, parallel worktrees, runtime hooks, and automated build–test–fix loops
+- **Packt Certificate Course:** Agentic AI for Finance — Nicole Koenigstein — Harness Engineering • Multi-Agent Topologies • Trajectory Observability • OWASP Agent Vulnerabilities • Structured Output Validation
 - **M.S. & B.S. in Computer Science:** St. Joseph's College
 - **Machine Learning and Deep Learning with Spark — COMPSCI X433.7, Grade A:** UC Berkeley Extension
 - **TECH 77: Modern AI Architectures & Data Analysis with Python:** Stanford Continuing Studies
@@ -95,8 +96,8 @@ AI Systems and Conformity Specialist with 20+ years of technical systems enginee
 ## TECHNICAL & CONFORMITY PROFICIENCIES
 
 - **AI Regulations, Standards & Notified Body Criteria:** EU AI Act High-Risk Requirements • ISO/IEC 42001 AI Management Systems • ISO/IEC 23894 Risk Management • NIST AI RMF 1.0 • CE Marking Technical Documentation • Conformity Assessment Procedures
-- **AI System Evaluation & Harness Engineering:** 4-Layer Harness Architecture • Trajectory Observability & 6-Dimension Scorecard • OpenTelemetry GenAI Semantic Conventions • Langfuse & LangSmith Tracing • OWASP Top 15 Agent Vulnerability Assessment • Confused Deputy & Privilege Escalation Defense • 3-Tier Structured Output Validation • Loop Engineering & Termination Condition Verification • Escalation Ladder Assessment
+- **AI System Evaluation & Harness Engineering:** 4-Layer Harness Architecture • Trajectory Observability & 6-Dimension Scorecard • OpenTelemetry GenAI Semantic Conventions • Langfuse & LangSmith Tracing • OWASP Top 15 Agent Vulnerability Assessment • Confused Deputy & Privilege Escalation Defense • 3-Tier Structured Output Validation • Loop Engineering & Bounded Execution Verification
 - **Machine Learning & Deep Learning Architectures:** Supervised & Unsupervised Learning • Neural Networks & Deep Learning • Classification & Regression • Clustering • PySpark & Spark MLlib • Large Language Models • Vision Language Models • Document Transformers • Foundation Time-Series Models • Probabilistic Methods
 - **Model Evaluation, Testing & Validation:** Model Performance Metrics — ROC-AUC, Precision, Recall, F1 • Cross-Validation & Hyperparameter Optimization • Data Drift & Distribution Shifts • Algorithmic Bias & Fairness Auditing • Adversarial & Prompt Injection Testing • Hallucination Gating • Benchmark Contamination Defense
-- **Software Engineering, SDLC & Governance:** Python — Pandas, NumPy, Scikit-Learn • Pydantic Contract Enforcement • FastAPI • LangGraph StateGraph — FSM/HSM • Docker & E2B Sandboxing • REST API & JSON Schema • Git & GitHub • Relational SQL
+- **Software Engineering, SDLC & Governance:** Python — Pandas, NumPy, Scikit-Learn • Pydantic Contract Enforcement • FastAPI • LangGraph StateGraph FSM and HSM • Docker & E2B Sandboxing • REST API & JSON Schema • Git & GitHub • Relational SQL
 - **Technical Advisory & Stakeholder Communication:** Conformity Assessment Technical Reporting • Client Technical Consultation • Internal Team Mentoring • Cross-Functional Consensus Building • Standard Operating Procedures • Auditable Work Product Authoring

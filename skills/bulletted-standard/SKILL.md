@@ -173,7 +173,10 @@ When applying the Bulletted-Standard format to different target job families, ap
 
 ## 5. Negative Guardrails & Prohibitions
 
-1. **Zero Parentheses in Core Competencies:** Never place parentheses in the Core Competencies section.
+1. **Zero-Parentheses Policy Across the Entire Resume (MANDATORY):** Never place parentheses `(...)` anywhere on the face of the resume — not in Core Competencies, not in Professional Summary, not in Experience bullets, not in Education, and not in Technical Proficiencies (the sole technical exception is structural Markdown hyperlink targets `[Text](url)`, which render as plain clickable text without visible parentheses). All tools, frameworks, programs, and specifications must be formatted cleanly with colons, bullets (`•`), em-dashes (`—`), or natural prose.
+   * *Example:* Instead of `OpenAI Codex Bootcamps: Completed 7 Bootcamps across Fundamentals, 201, and 301 (Agent Orchestration, MCP Integration, Context Engineering)`, write `OpenAI Codex: Agent Orchestration • MCP Integration • Context Engineering — Completed 7 intensive bootcamps across Fundamentals, Codex 201, and Codex 301 covering Plan Mode, parallel worktrees, runtime hooks, and automated build–test–fix loops`.
+   * *Example:* Instead of `LangGraph StateGraph (FSM/HSM)`, write `LangGraph StateGraph FSM and HSM`.
+   * *Example:* Instead of `(Strict JSON Schema, Instructor Pydantic)`, write `Strict JSON Schema, Instructor Pydantic, Canonicalization`.
 2. **Zero Internal Test Metrics:** Never include internal developer test runner statistics such as `(pytest, 1,296+ Tests)` anywhere on the document.
 3. **Zero Jira:** Absolutely no mention of Jira application skills.
 4. **Zero Expected Dates:** Never add expected graduation or completion dates to the University of Denver Graduate Certificate.
