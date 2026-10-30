@@ -178,3 +178,10 @@ When applying the Bulletted-Standard format to different target job families, ap
 3. **Zero Jira:** Absolutely no mention of Jira application skills.
 4. **Zero Expected Dates:** Never add expected graduation or completion dates to the University of Denver Graduate Certificate.
 5. **Strict Truthfulness:** Never claim unperformed enterprise client deployments for personal/portfolio tools.
+6. **Strict Evidence-Grounding & Prohibition on Skill Invention (MANDATORY GENERAL RULE):** Never invent, extrapolate, or hallucinate skills, regulatory frameworks, tools, or domain credentials simply because they appear in a target job description. Every skill, tool, framework, regulation, or technology appearing on a resume MUST be grounded strictly in:
+   - Verified credentials and coursework in `data/certifications_repository.md` and `.json`.
+   - Concrete, documented professional experience in `data/master_resume.md`.
+   - Explicit answers provided by the candidate during fact-finding Q&A sessions.
+   If a target job description requires or mentions a domain, regulation, or tool that the candidate has NOT provided evidence for (e.g. MDR/IVDR, ISO 13485, FDA 510(k), Salesforce Apex, AWS Bedrock, UiPath):
+   - **NEVER** list it as an owned competency, skill, or bullet on the face of the resume.
+   - **DO** address it honestly as a gap in the `Skill_Gap_Analysis.md` (Weighted Fit Matrix and Gap Mitigation Blueprint), explaining how the candidate's verified baseline enables rapid bridging.

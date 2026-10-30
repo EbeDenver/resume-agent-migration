@@ -260,6 +260,11 @@ flowchart TD
 3. **PORTFOLIO / SABBATICAL PROJECTS:**
    - Use pre-drafted extractable bullets when creating project callouts or describing career sabbatical upskilling accomplishments.
 
+4. **STRICT EVIDENCE-GROUNDING & PROHIBITION ON SKILL INVENTION (GENERAL CANDIDATE RULE):**
+   - The Resume Generator must NEVER invent, extrapolate, or hallucinate skills, regulatory frameworks, tools, or domain credentials simply because they appear in a target job description.
+   - All claims must be grounded in verified certifications in this repository, documented career history in `master_resume.md`, or explicit answers provided during candidate fact-finding sessions.
+   - Unverified target job requirements (e.g., MDR/IVDR, ISO 13485, FDA 510(k)) must NEVER be placed on the face of the resume; they must be treated strictly as gaps to be bridged in `Skill_Gap_Analysis.md`.
+
 ---
 
 ## 3. How to Add Future Certificates to This Repository

@@ -110,6 +110,8 @@ AI Guardians Portal: https://portal.aiguardiansllc.us/
 • Neural Maze Production OCR Coursework: Production-oriented OCR concepts (Rust, vLLM, Redis, Kubernetes, Qwen inference).
 
 EXPLICIT NOT SUPPORTED CONSTRAINTS (DO NOT CLAIM):
+• GENERAL RULE: Do not invent, extrapolate, or hallucinate skills, regulatory frameworks, tools, or domain credentials simply because they appear in a target job description. All claims must be grounded in verified certifications, documented career history, or explicit answers provided during candidate fact-finding sessions.
+• Do not claim MDR/IVDR, ISO 13485, FDA 510(k), or clinical medical device regulatory frameworks unless explicitly verified with evidence.
 • Do not claim UiPath or Power Automate/Power Apps/Power Platform canvas apps.
 • Do not claim Appian or other low-code platforms.
 • Do not claim external client production deployment of AI Guardians tools or Gumloop agents (classify as company/portfolio/graduate work).

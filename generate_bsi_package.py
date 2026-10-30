@@ -315,7 +315,7 @@ def generate_resume_paragraphs():
     })
 
     proficiencies = [
-        ("AI Regulations, Standards & Notified Body Criteria", "EU AI Act High-Risk Requirements • ISO/IEC 42001 AI Management Systems • ISO/IEC 23894 Risk Management • NIST AI RMF 1.0 • CE Marking Technical Documentation • ISO 13485 & MDR/IVDR AI Device Principles • Conformity Assessment Procedures"),
+        ("AI Regulations, Standards & Notified Body Criteria", "EU AI Act High-Risk Requirements • ISO/IEC 42001 AI Management Systems • ISO/IEC 23894 Risk Management • NIST AI RMF 1.0 • CE Marking Technical Documentation • Conformity Assessment Procedures"),
         ("Machine Learning & Deep Learning Architectures", "Supervised & Unsupervised Learning • Neural Networks • Deep Learning • Classification & Regression • Clustering • PySpark & Spark MLlib • Large Language Models (LLMs) • Vision Language Models (VLMs) • Document Transformers • Probabilistic Methods"),
         ("Model Evaluation, Testing & Validation", "Model Performance Metrics (ROC-AUC, Precision, Recall, F1) • Cross-Validation & Hyperparameter Optimization • Data Drift & Distribution Shifts • Algorithmic Bias & Fairness Auditing • Adversarial & Prompt Injection Testing • Hallucination Gating"),
         ("Software Engineering, SDLC & Governance", "Technical Documentation Review • Traceability Matrices • Risk Management & Mitigation • Python (Pandas, NumPy, Scikit-Learn) • Pydantic Contract Enforcement • REST API & JSON Schema • Git & GitHub • Stored Procedures & Relational SQL"),
@@ -417,7 +417,7 @@ AI Systems and Conformity Specialist with 20+ years of technical systems enginee
 
 ## TECHNICAL & CONFORMITY PROFICIENCIES
 
-- **AI Regulations, Standards & Notified Body Criteria:** EU AI Act High-Risk Requirements • ISO/IEC 42001 AI Management Systems • ISO/IEC 23894 Risk Management • NIST AI RMF 1.0 • CE Marking Technical Documentation • ISO 13485 & MDR/IVDR AI Device Principles • Conformity Assessment Procedures
+- **AI Regulations, Standards & Notified Body Criteria:** EU AI Act High-Risk Requirements • ISO/IEC 42001 AI Management Systems • ISO/IEC 23894 Risk Management • NIST AI RMF 1.0 • CE Marking Technical Documentation • Conformity Assessment Procedures
 - **Machine Learning & Deep Learning Architectures:** Supervised & Unsupervised Learning • Neural Networks • Deep Learning • Classification & Regression • Clustering • PySpark & Spark MLlib • Large Language Models (LLMs) • Vision Language Models (VLMs) • Document Transformers • Probabilistic Methods
 - **Model Evaluation, Testing & Validation:** Model Performance Metrics (ROC-AUC, Precision, Recall, F1) • Cross-Validation & Hyperparameter Optimization • Data Drift & Distribution Shifts • Algorithmic Bias & Fairness Auditing • Adversarial & Prompt Injection Testing • Hallucination Gating
 - **Software Engineering, SDLC & Governance:** Technical Documentation Review • Traceability Matrices • Risk Management & Mitigation • Python (Pandas, NumPy, Scikit-Learn) • Pydantic Contract Enforcement • REST API & JSON Schema • Git & GitHub • Stored Procedures & Relational SQL

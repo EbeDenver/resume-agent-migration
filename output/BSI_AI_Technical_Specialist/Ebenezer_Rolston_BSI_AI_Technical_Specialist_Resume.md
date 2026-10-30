@@ -94,7 +94,7 @@ AI Systems and Conformity Specialist with 20+ years of technical systems enginee
 
 ## TECHNICAL & CONFORMITY PROFICIENCIES
 
-- **AI Regulations, Standards & Notified Body Criteria:** EU AI Act High-Risk Requirements • ISO/IEC 42001 AI Management Systems • ISO/IEC 23894 Risk Management • NIST AI RMF 1.0 • CE Marking Technical Documentation • ISO 13485 & MDR/IVDR AI Device Principles • Conformity Assessment Procedures
+- **AI Regulations, Standards & Notified Body Criteria:** EU AI Act High-Risk Requirements • ISO/IEC 42001 AI Management Systems • ISO/IEC 23894 Risk Management • NIST AI RMF 1.0 • CE Marking Technical Documentation • Conformity Assessment Procedures
 - **AI System Evaluation & Harness Engineering:** 4-Layer Harness Architecture • Trajectory Observability & 6-Dimension Scorecard • OpenTelemetry GenAI Semantic Conventions • Langfuse & LangSmith Tracing • OWASP Top 15 Agent Vulnerability Assessment • Confused Deputy & Privilege Escalation Defense • 3-Tier Structured Output Validation • Loop Engineering & Termination Condition Verification • Escalation Ladder Assessment
 - **Machine Learning & Deep Learning Architectures:** Supervised & Unsupervised Learning • Neural Networks & Deep Learning • Classification & Regression • Clustering • PySpark & Spark MLlib • Large Language Models • Vision Language Models • Document Transformers • Foundation Time-Series Models • Probabilistic Methods
 - **Model Evaluation, Testing & Validation:** Model Performance Metrics — ROC-AUC, Precision, Recall, F1 • Cross-Validation & Hyperparameter Optimization • Data Drift & Distribution Shifts • Algorithmic Bias & Fairness Auditing • Adversarial & Prompt Injection Testing • Hallucination Gating • Benchmark Contamination Defense
