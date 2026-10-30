@@ -6,7 +6,7 @@ Denver, CO • eberolston@yahoo.com • 501-307-3237 • [LinkedIn](https://www.
 
 ## PROFESSIONAL SUMMARY
 
-Accomplished Senior Business Analyst and Enterprise Systems Specialist with 20+ years of experience leading requirements engineering, business process modeling, relational database analysis, and software delivery across federal, state, and large-scale enterprise environments. Served 14 years supporting mission-critical enterprise platforms at the U.S. Department of the Interior Acquisition Directorate and IBC, acting as cross-functional Analyst Lead and Senior Escalation Lead handling 5 to 10 high-impact technical incidents daily. Proven expertise in translating complex stakeholder needs into precise system requirements, user stories, functional test cases, and standard operating procedures (SOPs). Skilled in MS SQL Server, Oracle, PostgreSQL, data validation, automated reconciliation, and UAT execution. Brings 11 years at Acxiom engineering large-scale Customer 360 data pipelines and identity resolution frameworks, with deep proximity to public health and demographic data hygiene. Holds an M.S. and B.S. in Computer Science, a Graduate Certificate in AI Strategy from the University of Denver, credentials from Stanford and Harvard, and is a two-time recipient of Department of the Interior Awards for Excellence.
+Accomplished Senior Business Analyst and Enterprise Systems Specialist with 20+ years of experience leading requirements engineering, business process modeling, relational database analysis, and software delivery across federal, state, and large-scale enterprise environments. Served 14 years supporting mission-critical enterprise platforms at the U.S. Department of the Interior Acquisition Directorate and IBC, acting as cross-functional Analyst Lead and Senior Escalation Lead handling 5 to 10 high-impact technical incidents daily. Proven expertise in translating complex stakeholder needs into precise system requirements, user stories, functional test cases, and standard operating procedures. Skilled in MS SQL Server, Oracle, PostgreSQL, data validation, automated reconciliation, and UAT execution. Brings 11 years at Acxiom engineering large-scale Customer 360 data pipelines and identity resolution frameworks, with deep proximity to public health and demographic data hygiene. Holds an M.S. and B.S. in Computer Science, a Graduate Certificate in AI Strategy from the University of Denver, and credentials from Stanford and Harvard.
 
 *Winner of two Department of Interior Awards*
 
@@ -14,7 +14,7 @@ Accomplished Senior Business Analyst and Enterprise Systems Specialist with 20+ 
 
 ## CORE COMPETENCIES
 
-▪ Business Requirements Gathering ▪ Functional & System Specifications ▪ User Stories & Acceptance Criteria ▪ Relational Databases & MS SQL Server ▪ Data Quality & Automated Reconciliation ▪ Process Modeling & Workflow Optimization ▪ UAT & Functional Test Execution ▪ Root Cause Analysis & Defect Resolution ▪ Government Systems & Compliance ▪ Cross-Functional Stakeholder Alignment ▪ Standard Operating Procedures ▪ Agile & SDLC Methodologies
+▪ Business Requirements Gathering ▪ Functional & System Specifications ▪ User Stories & Acceptance Criteria ▪ Relational Databases & MS SQL Server ▪ Data Quality & Automated Reconciliation ▪ Process Modeling & Workflow Optimization ▪ UAT & Functional Test Execution ▪ Root Cause Analysis & Defect Resolution ▪ Schema-Governed Validation & Traceability ▪ Government Systems & Compliance ▪ Cross-Functional Stakeholder Alignment ▪ Standard Operating Procedures ▪ Agile & SDLC Methodologies
 
 ---
 
@@ -23,9 +23,9 @@ Accomplished Senior Business Analyst and Enterprise Systems Specialist with 20+ 
 ### AI Engineering & Enablement | AI Guardians LLC
 *Denver, CO | Jan 2026–Present*
 - Architected schema-governed data pipelines and API tool contracts using Python, Pydantic, and JSON Schema, establishing rigorous validation rules for heterogeneous data ingestion.
-- Engineered automated regression validation suites and deterministic quality checks, replacing stochastic models with verifiable schema contracts.
+- Authored comprehensive system specifications detailing functional outcomes, operational constraints, data contract boundaries, acceptance criteria, and programmatic stop conditions.
+- Engineered automated regression validation suites and deterministic quality checks, replacing manual testing with verifiable schema contracts and auditable data lineage.
 - Integrated multi-source enterprise data streams via Model Context Protocol servers, standardizing context schemas and eliminating data pipeline drift.
-- Designed comprehensive data governance scorecards and compliance checklists aligned with NIST AI RMF 1.0 and enterprise data standards.
 
 ### Program Analyst, Acquisition Directorate | U.S. Department of the Interior
 *Denver, CO | Jan–Sep 2025*  
@@ -42,7 +42,7 @@ Accomplished Senior Business Analyst and Enterprise Systems Specialist with 20+ 
 - Gathered and translated complex business needs into functional requirements, user stories, acceptance criteria, and system design specifications for engineering teams.
 - Served as Department ETL Architect for the multi-agency FBMS conversion, migrating, cleansing, and validating bureau databases into SAP S/4 across 4 federal agencies.
 - Engineered automated SQL reconciliation scripts across relational database systems (MS SQL Server, Oracle) to validate pre- and post-migration data integrity.
-- Authored comprehensive Standard Operating Procedures (SOPs), requirements traceability matrices, and technical documentation; delivered hands-on training to 85+ end users.
+- Authored comprehensive Standard Operating Procedures, requirements traceability matrices, and technical documentation; delivered hands-on training to 85+ end users.
 
 ### Senior Solutions Architect / Systems Analyst | Acxiom Corporation
 *Conway, AR | 2000–2011*  
@@ -79,7 +79,7 @@ Accomplished Senior Business Analyst and Enterprise Systems Specialist with 20+ 
 ## TECHNICAL PROFICIENCIES
 
 - **Business Analysis & Requirements Engineering:** Requirements Elicitation • User Stories & Acceptance Criteria • Functional & Technical Specifications • Traceability Matrices • Process Flow Diagramming • UML & BPMN • Use Case Modeling • Gap Analysis
-- **Database Systems & Data Analysis:** MS SQL Server • Oracle Database • PostgreSQL • Complex SQL Queries • Relational Data Modeling • Schema Normalization • Data Cleansing & Validation • Automated Reconciliation Scripts • Query Optimization
-- **Testing, Quality Assurance & UAT:** Functional Test Case Design • User Acceptance Testing (UAT) Coordination • Test Plan Execution • Defect Tracking & Root Cause Analysis • Regression Testing • Jira & Confluence • Service Desk Incident Triage
-- **Enterprise Platforms & Governance:** SAP S/4HANA (FBMS) • Unison PRISM • Remedy ITSM • Government Contract Systems • Standard Operating Procedures (SOPs) • Change Management • Federal Procurement Compliance • NIST Standards
-- **Analytical Tools & Scripting:** Python • pandas & NumPy • Excel Advanced Modeling & Pivot Tables • Power BI & Tableau Reporting • JSON & XML Data Interchange • REST API Verification
+- **Database Systems & Data Analysis:** MS SQL Server • Oracle Database • PostgreSQL • Complex SQL Queries • Relational Data Modeling • Schema Normalization • Data Cleansing & Validation • Automated Reconciliation Scripts • Query Optimization • Schema-Governed Contract Validation
+- **Testing, Quality Assurance & UAT:** Functional Test Case Design • User Acceptance Testing Coordination • Test Plan Execution • Defect Tracking & Root Cause Analysis • Regression Testing • Deterministic Quality Gates • Service Desk Incident Triage
+- **Enterprise Platforms & Governance:** SAP S/4HANA (FBMS) • Unison PRISM • Remedy ITSM • Government Contract Systems • Standard Operating Procedures • Change Management • Federal Procurement Compliance • NIST Standards
+- **Analytical Tools & Scripting:** Python • pandas & NumPy • Pydantic Contract Validation • JSON Schema • Excel Advanced Modeling & Pivot Tables • REST API Verification • Git & GitHub

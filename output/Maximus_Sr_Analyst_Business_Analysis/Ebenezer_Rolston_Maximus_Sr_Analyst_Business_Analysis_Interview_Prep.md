@@ -9,8 +9,8 @@ Candidate: Ebenezer J. Rolston (Denver, CO) • Prepared for Maximus Search Comm
 Maximus is a leading partner to government agencies worldwide, managing essential health and human services programs (Medicaid, Medicare, CHIP, child support, eligibility determinations, and federal benefit administration). The company's technology initiatives focus on digital modernization, legacy system replacement, automated customer service, and cloud migration to deliver efficient, citizen-centric government services.
 
 ### Core Strategic Focus for the Sr Analyst - Business Analysis:
-- **Translating Government Policy into Agile Stories:** Government requirements are often written in legal, statutory, or policy language. The Sr. BA must deconstruct these complex requirements into clear, testable user stories with unambiguous acceptance criteria.
-- **Relational Data Integrity (MS SQL Server):** System modifications frequently touch underlying relational schemas, state reporting interfaces, and federal audit trails. The BA must write SQL queries to validate data models, extract reports, and verify pre/post-change consistency.
+- **Translating Government Policy into Agile Stories:** Government requirements are often written in legal, statutory, or policy language. The Sr. BA must deconstruct these complex requirements into clear, testable user stories with unambiguous acceptance criteria and schema-governed validation bounds.
+- **Relational Data Integrity (MS SQL Server):** System modifications frequently touch underlying relational schemas, state reporting interfaces, and federal audit trails. The BA must write SQL queries to validate data models, extract reports, and verify pre/post-change consistency using automated reconciliation scripts.
 - **Defect Resolution & Production Stability:** Balancing active development of new product features with day-to-day operational support, researching ambiguous defects, and collaborating with developers and QA to resolve tickets before release.
 - **Remote Collaboration & Independent Ownership:** Operating as an autonomous, self-directed team member in a fully remote environment, driving cross-functional alignment across project managers, developers, and government clients.
 
@@ -26,7 +26,7 @@ Maximus is a leading partner to government agencies worldwide, managing essentia
 
 ### Days 31–60: Lead Requirements Discovery & Drive Test Execution
 - **Take Ownership of Feature Requirements:** Lead requirements discovery sessions with stakeholders, producing comprehensive user stories, process flows, and acceptance criteria.
-- **Develop Functional Test Cases:** Author detailed test cases mapped to business requirements; execute testing in staging environments to validate software releases.
+- **Develop Functional Test Cases:** Author detailed test cases mapped to business requirements; execute testing in staging environments to validate software releases using deterministic verification gates.
 - **Support SQL Data Validation:** Write SQL queries in MS SQL Server to validate data transformations, audit trail completeness, and report outputs.
 - **Partner with Developers on Defect Remediation:** Actively assist engineering in reproducing ambiguous bugs and clarifying expected business outcomes.
 
@@ -44,7 +44,7 @@ Maximus is a leading partner to government agencies worldwide, managing essentia
 * **Context:** Maximus emphasizes the ability to translate industry and client needs into language understood by developers for high-efficiency system development.
 * **Situation:** During the Department of the Interior FBMS enterprise conversion, federal bureau stakeholders submitted contradictory and vaguely defined data migration requirements for legacy procurement databases.
 * **Task:** As Department ETL Architect and Analyst Lead, I had to synthesize ambiguous policy statements into precise, auditable source-to-target mapping specifications and engineering requirements.
-* **Action:** I organized structured discovery workshops with bureau program managers. I developed visual process flow diagrams (BPMN) and user stories with explicit "Given-When-Then" acceptance criteria. For every data entity, I codified validation rules, data typing, and nullability constraints in a centralized traceability matrix.
+* **Action:** I organized structured discovery workshops with bureau program managers. I developed visual process flow diagrams (BPMN) and user stories with explicit "Given-When-Then" acceptance criteria. For every data entity, I codified validation rules, data typing, and nullability constraints in a centralized traceability matrix, establishing clear input/output contracts.
 * **Result:** Eliminated rework across development sprints, achieved 100% stakeholder sign-off prior to coding, and enabled successful migration across 4 agencies, earning the DOI Award for Excellence.
 
 ### Scenario 2: Troubleshooting Complex Data Discrepancies in MS SQL Server
@@ -65,7 +65,7 @@ Maximus is a leading partner to government agencies worldwide, managing essentia
 * **Context:** Maximus requires developing functional test cases and executing them to validate that system changes meet expected outcomes defined in business requirements.
 * **Situation:** A major system update introduced automated workflow approval routing for high-value government procurement actions.
 * **Task:** Ensure comprehensive test coverage to prevent unauthorized approval bypasses or routing dead-ends before deployment.
-* **Action:** I developed a comprehensive functional test matrix covering positive, negative, and boundary test scenarios. I authored detailed test cases in Jira/Confluence detailing preconditions, input datasets, expected state transitions, and audit log entries. I executed test runs across test environments, logged defect tickets with exact reproduction steps, and verified fixes with developers.
+* **Action:** I developed a comprehensive functional test matrix covering positive, negative, and boundary test scenarios. I authored detailed test cases in Jira/Confluence detailing preconditions, input datasets, expected state transitions, and audit log entries. I executed test runs across test environments, logged defect tickets with exact reproduction steps, and verified fixes with developers using deterministic verification gates.
 * **Result:** Identified and remediated 8 critical workflow defects during UAT before production deployment, ensuring zero operational disruption upon go-live.
 
 ### Scenario 5: Root-Cause Incident Resolution Under High-Stakes Operational Pressure
@@ -98,4 +98,3 @@ Maximus is a leading partner to government agencies worldwide, managing essentia
 
 ### Questions on Team Culture & Growth:
 7. *"Given that this is a fully remote position, what tools and communication rhythms (Slack, Teams, daily standups) does the team use to maintain high cohesion and rapid collaboration?"*
-8. *"How does Maximus support continuous learning and professional development for analysts working on evolving government and Medicaid health technologies?"*

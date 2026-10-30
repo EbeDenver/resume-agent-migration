@@ -8,7 +8,7 @@ Denver, CO • eberolston@yahoo.com • 501-307-3237 • [LinkedIn](https://www.
 
 Technical Communicator and Solutions Architect with 20+ years of enterprise experience turning complex data systems into unified platforms across regulated financial services, insurance, and federal sectors. Brings 11 years at Acxiom Corporation deploying real-time verification and predictive scoring models for major insurance and financial clients, alongside Department-wide federal data modernization. Proven record establishing SDLC standards, training 85+ cohort users, and leading mission-critical technical escalations.
 
-Pairs this enterprise foundation with hands-on AI enablement and agentic engineering—fluent in AI coding assistants (OpenAI Codex, Claude Code, Google Antigravity), Model Context Protocol (MCP) tooling, and structured prompting frameworks. Holds a University of Denver graduate certificate in AI Strategy and a Harvard SEAS executive certificate in LLMs and Agentic AI, specializing in empowering business teams and software engineers to adopt AI safely, predictably, and measurably.
+Pairs this enterprise foundation with hands-on AI enablement and agentic engineering—fluent in AI coding assistants (OpenAI Codex, Claude Code, Google Antigravity), Model Context Protocol (MCP) tooling, harness engineering architecture, and structured prompting frameworks. Trained in production-grade agent governance including 4-layer harness isolation, bounded execution guardrails, trajectory observability, and OWASP agent security hardening—directly applicable to teaching engineering teams how to build robust, auditable AI systems in an insurance compliance environment. Holds a University of Denver graduate certificate in AI Strategy and a Harvard SEAS executive certificate in LLMs and Agentic AI.
 
 *Winner of two Department of Interior Awards*
 
@@ -16,7 +16,7 @@ Pairs this enterprise foundation with hands-on AI enablement and agentic enginee
 
 ## CORE COMPETENCIES
 
-▪ AI Enablement & Developer Advocacy ▪ AI Coding Agent Fluency ▪ Model Context Protocol Integration ▪ Prompt Engineering & Specification Frameworks ▪ Technical Office Hours & User Training ▪ Enterprise Toolchain Integration ▪ Multi-Agent Architecture ▪ Bounded Execution & Guardrails ▪ AI Adoption Metrics & Measurement ▪ Python & REST API Integration ▪ NIST AI RMF & ISO 42001 ▪ Document Intelligence & OCR Extraction ▪ Cross-Functional Stakeholder Alignment ▪ Change Management
+▪ AI Enablement & Developer Advocacy ▪ AI Coding Agent Fluency ▪ Model Context Protocol Integration ▪ Agentic Harness Engineering ▪ Trajectory Observability & Evaluation ▪ Prompt Engineering & Specification Frameworks ▪ Bounded Execution & Loop Governance ▪ Technical Office Hours & User Training ▪ Enterprise Toolchain Integration ▪ Multi-Agent Architecture & Topologies ▪ Agent Security & Sandboxing ▪ AI Adoption Metrics & Measurement ▪ Python & REST API Integration ▪ NIST AI RMF & ISO 42001 ▪ Cross-Functional Stakeholder Alignment ▪ Change Management
 
 ---
 
@@ -61,6 +61,13 @@ Pairs this enterprise foundation with hands-on AI enablement and agentic enginee
 
 ## AI Engineering Portfolio
 
+### Trading Copilot — Governed Multi-Agent Research Platform
+*AI in Finance Nicole Koenigstein*
+- Architected multi-agent equities research pipelines in LangGraph combining hierarchical supervisor and peer-to-peer topologies with bounded execution budgets and deterministic state machine transitions.
+- Implemented 4-layer harness architecture separating non-deterministic model proposals from deterministic policy enforcement, tool contracts, and zero-trust sandbox execution.
+- Integrated 6-measure trajectory observability via OpenTelemetry and self-hosted Langfuse to audit multi-step reasoning paths across Correctness, Grounding, Latency, Cost, Safety, and Auditability.
+- Enforced loop governance with 4 mandatory termination conditions and a 3-rung escalation ladder to eliminate runaway agent execution and mitigate coordination tax.
+
 ### Multimodal Document Intelligence — Auditable Data Extraction Pipeline
 *Stanford | 2026*
 - Built an auditable document intelligence pipeline using LangGraph StateGraph & OCR parsing for unstructured business documents, matching modular architectures like Symetra's docstream.
@@ -71,10 +78,6 @@ Pairs this enterprise foundation with hands-on AI enablement and agentic enginee
 - Built specialized multi-agent workflows (architect, validator, auditor, reviewer, tester) with runtime hooks, tool contracts, and subagent orchestration.
 - Connected Figma, GitHub, Atlassian, and Google Workspace through Model Context Protocol (MCP) and custom plugins; enforced bounded execution and human-in-the-loop approvals.
 
-### Trading Copilot — Governed Multi-Agent Research Platform
-*AI in Finance Nicole Koenigstein 2026*
-- Architected multi-agent equities research pipelines with supervisory layer, automated risk verification and deterministic execution bounds.
-
 ### AI Incident Monitor — AI Risk Intelligence Platform
 *AI Guardians LLC | 2026*
 - Architected Explainable AI incident severity scoring and compliance taxonomy mapping based on NIST AI RMF 1.0.
@@ -83,6 +86,7 @@ Pairs this enterprise foundation with hands-on AI enablement and agentic enginee
 
 ## EDUCATION & PROFESSIONAL DEVELOPMENT
 
+- **Packt Certificate Course:** Agentic AI for Finance — Nicole Koenigstein (Harness Engineering, Multi-Agent Topologies, Trajectory Observability, Agent Security & Sandboxing)
 - **OpenAI Codex Bootcamps:** Completed 7 Bootcamps across Fundamentals, 201, and 301 (Agent Orchestration, MCP Integration, Context Engineering)
 - **UC Berkeley Extension:** Machine Learning and Deep Learning.
 - **University of Denver:** Graduate Certificate, AI Strategy & Applications in IT
@@ -96,8 +100,9 @@ Pairs this enterprise foundation with hands-on AI enablement and agentic enginee
 
 ## TECHNICAL PROFICIENCIES
 
-- **AI Coding Agents & LLMOps:** OpenAI Codex (CLI, IDE, App) • Google Antigravity • Claude Code • Cursor • Large Language Models (LLMs) • Transformer Architectures • Retrieval-Augmented Generation (RAG) • Agentic AI Workflows • Multi-Agent Systems • Tool Calling • LoRA • Unsloth • Qdrant Vector Search
-- **Model Context Protocol (MCP) & Enterprise Tooling:** Model Context Protocol (MCP) Server Architecture • Custom Tool Calling • Tool Schema Definition • Figma MCP • GitHub Plugin • Atlassian Plugin • Google Workspace Plugins (Docs, Sheets, Drive, Gmail) • AGENTS.md Context Engineering • Reusable Skill Repositories
+- **AI Coding Agents & LLMOps:** OpenAI Codex (CLI, IDE, App) • Google Antigravity • Claude Code • Cursor • Large Language Models • Transformer Architectures • Retrieval-Augmented Generation • Agentic AI Workflows • Multi-Agent Systems • Tool Calling • LoRA • Unsloth • Qdrant Vector Search
+- **Agentic Harness Engineering & Governance:** 4-Layer Harness Architecture • LangGraph StateGraph (FSM/HSM) • Multi-Agent Topologies (Hierarchical Supervisor, Peer-to-Peer, Blackboard, Swarm) • Loop Engineering & Termination Conditions • 3-Rung Escalation Ladders • Trajectory Observability (OpenTelemetry, Langfuse, LangSmith) • Bounded Execution Guardrails • NIST AI RMF 1.0 • ISO 42001
+- **Agent Security & Structured Output:** OWASP Top 15 Agent Vulnerabilities • Confused Deputy Defense • Docker & E2B Sandboxing • Zero-Trust UI Firewall Architecture • 3-Tier Fallback Validation (Strict JSON Schema, Instructor/Pydantic, Canonicalization)
+- **Model Context Protocol & Enterprise Tooling:** MCP Server Architecture • Custom Tool Calling • Tool Schema Definition • Figma MCP • GitHub Plugin • Atlassian Plugin • Google Workspace Plugins • AGENTS.md Context Engineering • Reusable Skill Repositories
 - **Software Engineering & Analytical Workflows:** Python • pandas & NumPy • FastAPI • Pydantic • SQLAlchemy • RESTful API Contracts • JSON Schema • pytest • GitHub • Cloud Deployment (Google Cloud Run, Vercel)
-- **Enterprise Platforms, Privacy & Governance:** SAP S/4HANA Federal Business Management System • Unison PRISM • Remedy • NIST AI RMF 1.0 • ISO 42001 • Bounded Execution Guardrails
-- **AI Enablement, Adoption & Measurement:** Developer Relations (DevRel) • Technical Office Hours • Prompt Engineering Frameworks • Cohort Training & User Enablement • Adoption Tracking & Metrics • Golden-Set Evaluations • Cross-Functional Technical Advocacy
+- **AI Enablement, Adoption & Measurement:** Developer Relations • Technical Office Hours • Prompt Engineering Frameworks • Cohort Training & User Enablement • Adoption Tracking & Metrics • Golden-Set Evaluations • Cross-Functional Technical Advocacy

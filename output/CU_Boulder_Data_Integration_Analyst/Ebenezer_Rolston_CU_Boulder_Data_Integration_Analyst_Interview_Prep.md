@@ -1,108 +1,95 @@
 # CU Boulder Interview Preparation Package
-**Data & Integration Analyst | OIT Enterprise CRM | Requisition 75732**  
-Candidate: Ebenezer J. Rolston (Denver, CO) • Prepared for CU Boulder Search Committee & CRM Data Architect
+**Data Integration Analyst | University of Colorado Boulder | Requisition 75732**  
+Candidate: Ebenezer J. Rolston (Denver, CO) • Prepared for CU Boulder IT & Data Architecture Interview Panel
 
 ---
 
-## 1. CU Boulder OIT & Enterprise CRM Context
+## 1. CU Boulder & Data Integration Strategic Context
 
-The University of Colorado Boulder's Office of Information Technology (OIT) serves over 36,000 students, 9,000 faculty and staff, and dozens of academic and auxiliary departments. The Enterprise CRM team is modernizing campus-wide engagement across student recruitment, advising, alumni relations, and student success using Salesforce platforms (Education Cloud, Sales/Service Cloud, and Salesforce Data Cloud / Data 360).
+The University of Colorado Boulder is modernizing its enterprise data infrastructure, with a focus on integrating disparate campus systems into unified CRM and analytical platforms. The **Data Integration Analyst** is responsible for building and maintaining ETL/ELT pipelines, designing source-to-target mappings, ensuring data quality across the Salesforce ecosystem, and supporting data-driven decision making across enrollment, student services, advancement, and academic operations.
 
-### Key Team Dynamics & The Single-Person Dependency Challenge:
-- **Partnership with the CRM Data Architect:** The Data Architect currently carries heavy architectural design, mapping, and operational load. OIT created this role to serve as the Architect's direct implementation partner and operational backup.
-- **Cross-Functional Coordination:** You will sit at the nexus of the Salesforce DevOps team, product managers, business analysts, data stewards from academic departments, and University Information Systems (UIS) integration teams.
-- **Core Strategic Imperatives:** Execute high-integrity data migrations, create source-to-target mapping artifacts, develop automated reconciliation test plans, and support Data Cloud ingestion patterns.
+### Key Dimensions of the Role:
+- **ETL/ELT Pipeline Development:** Building reliable data pipelines that extract data from legacy campus systems, transform it according to business rules, and load it into Salesforce and analytical platforms.
+- **Source-to-Target Mapping:** Documenting detailed field-level mappings between source systems and target schemas, including transformation logic, data type conversions, and business rule enforcement.
+- **CRM Data Architecture:** Working within the Salesforce ecosystem (Education Cloud, Data Cloud) to maintain clean, deduplicated, and well-governed student, prospect, and alumni records.
+- **Data Quality & Governance:** Establishing monitoring, reconciliation, and audit processes to ensure ongoing data health and compliance with FERPA and university governance standards.
+- **Stakeholder Collaboration:** Partnering with Data Architects, application teams, and business stakeholders to translate requirements into robust integration solutions.
 
 ---
 
 ## 2. 30-60-90 Day Strategic Onboarding Charter
 
-### Days 1–30: Discover, Shadow & Inventory Assets
-- **Shadow the CRM Data Architect:** Gain deep understanding of the existing Salesforce data model, active integration pipelines (UIS, SIS, downstream warehouses), and known operational pain points.
-- **Catalog Source-to-Target Mappings:** Review current mapping documentation, identify undocumented business rules, and establish standardized mapping templates with clear data lineage.
-- **Engage Data Stewards & DevOps:** Meet with campus data stewards across admissions, registrar, and advising to understand data governance protocols and data steward approval workflows.
+### Days 1–30: Understand the Landscape
+- **Map the Data Ecosystem:** Inventory all source systems, target platforms, existing ETL pipelines, and integration touchpoints across CU Boulder's IT environment.
+- **Review Existing Source-to-Target Documentation:** Assess current data mapping artifacts, transformation logic documentation, and data lineage records for completeness and accuracy.
+- **Understand Salesforce Data Model:** Deep-dive into CU Boulder's Salesforce Education Cloud configuration — object relationships, custom fields, data flows, and integration connectors.
+- **Establish Relationships:** Meet key stakeholders across IT, enrollment, advancement, and academic affairs to understand their data consumption patterns and pain points.
 
-### Days 31–60: Standardize Mappings & Implement Reconciliation Tests
-- **Take Ownership of Migration Specifications:** Lead the development of detailed source-to-target mapping specs for upcoming CRM releases, documenting transformations and validation rules.
-- **Deploy Automated Reconciliation Frameworks:** Write SQL-based validation scripts comparing source system extracts against target CRM staging tables, automating pre- and post-load reconciliation.
-- **Support Salesforce Data Cloud Ingestion:** Assist in mapping enterprise data streams into Data Cloud data lake objects (DLOs) and data model objects (DMOs), establishing identity resolution rules.
+### Days 31–60: Contribute and Build
+- **Assume Pipeline Ownership:** Take ownership of assigned ETL/ELT pipelines, running validations, troubleshooting failures, and implementing fixes with full documentation.
+- **Enhance Data Quality Monitoring:** Implement automated reconciliation checks and row-count/hash-based validation scripts to catch data drift, truncation, and duplication proactively.
+- **Author Source-to-Target Mappings:** Produce detailed field-level mapping documents for new integration initiatives, including transformation rules, null handling, deduplication logic, and referential integrity constraints.
+- **Introduce Schema-Governed Validation:** Pilot Pydantic-style contract validation for incoming data feeds, enforcing data type constraints and business rule checks at ingestion time.
 
-### Days 61–90: Eliminate Dependencies & Institutionalize Standards
-- **Serve as Confident Operational Backup:** Assume full day-to-day operational support for CRM data migrations, release testing, and integration incident triage, allowing the Data Architect to focus on strategic roadmap items.
-- **Publish Standard Operating Procedures (SOPs):** Document standard procedures for data quality monitoring, defect root-cause analysis, and integration error handling.
-- **Lead Cross-Functional Knowledge Transfer:** Host technical walkthroughs for business analysts and campus partners to demystify integration flows and promote data quality at the point of entry.
-
----
-
-## 3. Core Technical Topics for the Search Committee
-
-### Topic A: Source-to-Target Mapping & Data Lineage Best Practices
-A rigorous source-to-target mapping document is not just a column-to-column spreadsheet; it is an executable contract. It specifies source table/field definitions, data types, business transformation logic, default values, nullability rules, primary/foreign key mappings, and audit logging triggers. Clear documentation prevents ambiguity between business analysts, developers, and data stewards.
-
-### Topic B: Data Reconciliation & Automated Quality Assurance
-Reconciliation must go beyond row counts. In high-stakes migrations, three levels of reconciliation are required:
-1. *Record-level counts and volume matching* (ensuring no drop-offs during extraction).
-2. *Hash-total or financial sum reconciliation* on critical numeric attributes.
-3. *Boundary and anomaly checks* verifying that coded enumerations (e.g., student residency status, enrollment codes) map to valid target domain values.
-
-### Topic C: Bridging Acxiom Customer 360 with Salesforce Data Cloud
-Salesforce Data Cloud / Data 360 operates on principles identical to enterprise identity resolution platforms: ingesting high-volume disparate records, normalizing them into a canonical data model, applying deterministic or probabilistic match rules to create a unified profile, and exposing that unified record for analytics and engagement. Your Acxiom and ETL architecture background directly translates to Data Cloud modeling.
+### Days 61–90: Optimize and Scale
+- **Optimize SQL & Pipeline Performance:** Profile existing queries and ETL jobs for performance bottlenecks; implement indexing improvements, query refactoring, and incremental load strategies.
+- **Establish Operational Documentation:** Create and maintain runbooks, SOPs, and troubleshooting guides that enable the team to operate pipelines without single-person dependencies.
+- **Deliver Stakeholder Training:** Conduct cross-functional training sessions on data integration best practices, data quality expectations, and self-service data request procedures.
+- **Propose Pipeline Modernization:** Identify legacy batch processes that could benefit from event-driven or incremental architectures, presenting a prioritized modernization roadmap.
 
 ---
 
-## 4. Key Behavioral & Technical Interview Scenarios (STAR Method)
+## 3. High-Probability Technical & Behavioral Scenarios (STAR Format)
 
-### Q1: Can you describe your experience leading or supporting large-scale enterprise data migrations?
-* **Strategic Intent:** Demonstrates Department-level technical leadership, risk mitigation, and end-to-end ETL execution.
-* **Response (STAR):**
-  - **Situation:** At the U.S. Department of the Interior, four distinct federal bureau agencies operated fragmented legacy databases that needed conversion into a single, unified SAP S/4 Federal Business Management System.
-  - **Task:** As Department ETL Architect, I was responsible for the end-to-end data conversion—cleansing, transforming, validating, and migrating millions of enterprise procurement and financial records.
-  - **Action:** I designed detailed source-to-target mappings, created business transformation rules in collaboration with data stewards, and engineered automated pre- and post-load reconciliation scripts. I instituted strict validation test gates before any mock cutover.
-  - **Result:** Successfully completed the Department-wide migration without disruption to ongoing acquisition operations, recognized with two Department of the Interior Awards for Excellence.
+### Scenario 1: Leading a Multi-System Enterprise Data Migration
+* **Situation:** At the Department of the Interior, I was appointed Department ETL Architect for the FBMS enterprise data conversion — a Department-wide initiative to migrate fragmented legacy databases into a unified SAP S/4 platform across 4 federal agencies.
+* **Task:** Design and execute end-to-end source-to-target mappings, transformation rules, data cleansing procedures, and validation test plans ensuring complete data fidelity and zero business disruption.
+* **Action:** I authored detailed field-level source-to-target mappings documenting every transformation rule, data type conversion, null handling protocol, and business logic derivation. I built automated SQL reconciliation scripts that compared record counts, financial totals, and hash checksums between source and target systems at each migration stage. I established a multi-pass validation methodology: (1) structural validation (schema match), (2) quantitative validation (row counts and financial footing checks), and (3) semantic validation (business rule correctness sampling).
+* **Result:** Successfully migrated all 4 agencies' data into the unified FBMS platform with zero unresolved data discrepancies. Received two Department of Interior Awards for Excellence. This experience directly transfers to CU Boulder's need to integrate disparate campus systems into Salesforce.
 
-### Q2: How do you approach creating source-to-target mappings when legacy documentation is incomplete or outdated?
-* **Strategic Intent:** Demonstrates proactive discovery, technical detective work, and stakeholder elicitation.
-* **Response (STAR):**
-  - **Situation:** In long-standing enterprise environments, legacy documentation often diverges from actual system reality.
-  - **Task:** Create accurate, audit-compliant source-to-target mappings for integration.
-  - **Action:** I employ a three-step methodology: (1) *Data Profiling:* I run exploratory SQL queries directly against source relational databases to profile actual data distributions, null percentages, distinct value sets, and edge cases. (2) *Business Discovery:* I sit down with data stewards and operational end-users to understand how they actually use specific fields, rather than how the legacy spec was written years ago. (3) *Living Documentation:* I capture transformations, business logic, and boundary conditions in a centralized mapping document, obtaining sign-off from both technical leads and business stewards before development begins.
-  - **Result:** Eliminated downstream migration rework and established clean data lineage that persisted across subsequent releases.
+### Scenario 2: Building Automated Data Quality Reconciliation Frameworks
+* **Situation:** During the FBMS migration, post-conversion data quality issues were detected by contracting officers who noticed financial totals that didn't match their legacy system records.
+* **Task:** Design and implement an automated reconciliation framework that could systematically detect and flag data discrepancies between source and target systems.
+* **Action:** I built SQL-based reconciliation scripts that performed: (1) row-count comparisons by entity type and date range, (2) financial footing checks verifying that detail-level transaction amounts summed exactly to reported control totals, (3) cross-reference validation ensuring referential integrity between related tables, and (4) hash-based change detection to identify records modified during the migration window. The framework ran automatically and generated exception reports highlighting discrepancies with their root causes.
+* **Result:** The reconciliation framework resolved financial discrepancies that helped reclaim millions in government funds and became the standard validation methodology adopted across the Department. At CU Boulder, I would apply the identical framework pattern to validate Salesforce data loads, enrollment record migrations, and advancement data integrations.
 
-### Q3: This role serves as an operational backup to our CRM Data Architect to reduce single-person dependencies. How do you approach this dynamic?
-* **Strategic Intent:** Demonstrates professional humility, collaborative reliability, and immediate operational value.
-* **Response (STAR):**
-  - **Situation:** In many growing IT organizations, lead data architects become overwhelmed by balancing strategic design with day-to-day operational support and data requests.
-  - **Task:** Act as a force multiplier and operational backup, absorbing day-to-day data operations without needing micromanagement.
-  - **Action:** During my 14 years supporting the Department of the Interior and 11 years at Acxiom, I frequently served as the senior escalation point alongside lead architects. I establish rapid trust by mastering the existing architecture, meticulously documenting operational procedures, and taking ownership of integration test plans, mapping updates, and defect triage.
-  - **Result:** The Data Architect gains freedom to focus on strategic roadmap architecture, knowing that data operations, stakeholder requests, and release validations are handled with absolute technical rigor.
+### Scenario 3: Resolving Complex Data Quality Issues Across Interconnected Platforms
+* **Situation:** At the Department of the Interior, I handled 5 to 10 mission-critical enterprise incidents daily, many of which involved data quality issues that cascaded across interconnected procurement, financial, and reporting systems.
+* **Task:** Perform rapid root-cause analysis to determine whether data issues originated in source system extraction, transformation logic, loading procedures, or downstream reporting.
+* **Action:** I developed a systematic triage methodology: (1) trace the data lineage backward from the reported error to identify the earliest point of corruption, (2) examine transformation logs for truncation, rounding, or character encoding issues, (3) compare source timestamps with load timestamps to detect race conditions or out-of-order processing, and (4) validate business rules at each transformation step. I documented each root cause and implemented preventive fixes to eliminate recurrence.
+* **Result:** Systematically reduced recurring incident volume by eliminating root causes rather than repeatedly patching symptoms. At CU Boulder, this diagnostic methodology would be directly applicable to troubleshooting Salesforce data feed failures, duplicate record creation, and cross-system synchronization issues.
 
-### Q4: Tell me about a time you identified a critical data discrepancy and how you resolved it through root cause analysis.
-* **Strategic Intent:** Demonstrates deep analytical troubleshooting, SQL forensics, and systemic problem solving.
-* **Response (STAR):**
-  - **Situation:** During contract and financial operations in FBMS, discrepancies arose between federal financial obligations and vendor platform records, causing billing disputes and blocking year-end close.
-  - **Task:** Identify root causes and implement a durable reconciliation mechanism.
-  - **Action:** I conducted forensic SQL analysis across relational transaction logs, tracing data lineage from original PRISM procurement records through interface staging tables into SAP general ledger tables. I discovered that a legacy interface was dropping specific status flags during batch updates. I implemented a data realignment framework that reconciled historical mismatches, corrected interface transformation logic, and built an automated monitoring query to alert on unaligned records.
-  - **Result:** Resolved the recurring discrepancies, reclaimed over $1M in annual contract funds, and established a permanent reconciliation routine.
+### Scenario 4: Training Users and Establishing Operational Documentation
+* **Situation:** At DOI/IBC, I was responsible for training 85+ users across multiple agencies on enterprise system operations, data entry standards, and reporting procedures.
+* **Task:** Design and deliver a comprehensive training program that reduced support tickets and eliminated knowledge silos.
+* **Action:** I created structured cohort training sessions combining live demonstrations, hands-on exercises, and reference documentation. I authored Standard Operating Procedures covering common workflows, troubleshooting guides for frequent error patterns, and data dictionary documentation explaining field definitions and business rules. I established office hours for ongoing support and maintained living documentation that evolved with system updates.
+* **Result:** Achieved measurable reduction in recurring support requests and eliminated single-person dependencies. At CU Boulder, I would apply this approach to cross-functional training on data integration processes, data quality expectations, and Salesforce data stewardship practices.
 
-### Q5: How do you collaborate with non-technical campus partners and data stewards who may not understand relational database schemas?
-* **Strategic Intent:** Demonstrates empathy, clear technical translation, and consultative communication.
-* **Response (STAR):**
-  - **Situation:** Academic advisors, admissions officers, and department coordinators care deeply about student outcomes and business rules, but do not speak SQL or entity-relationship diagrams.
-  - **Task:** Elicit accurate business requirements and validate data integration rules with non-technical stakeholders.
-  - **Action:** I avoid technical jargon and frame discussions around real-world student and operational lifecycles: *"When a student changes majors, what should the advisor see on Day 1?"* I translate database fields into business concepts and use mock data outputs or side-by-side comparison tables during discovery sessions. When presenting validation results, I provide clear summary dashboards highlighting discrepancies in business terms.
-  - **Result:** Campus partners felt heard and trusted, data steward approvals were secured on schedule, and the resulting CRM data models accurately mirrored campus operational needs.
+### Scenario 5: Designing Customer Data Integration Pipelines at Acxiom Scale
+* **Situation:** At Acxiom, I partnered with Fortune 500 clients (Citibank, GE Money, ChoicePoint, Allstate) to design customer data integration and data warehouse pipelines processing millions of consumer records.
+* **Task:** Design and implement ETL architectures that ingested, cleansed, deduplicated, and matched consumer records from dozens of disparate source files into a unified customer data platform.
+* **Action:** I designed source-to-target mappings for complex multi-source ingestion, implementing entity resolution algorithms that linked consumer identities across inconsistent name spellings, address variations, and demographic discrepancies. I built relational data warehouse schemas (star and snowflake models) and optimized SQL queries for high-volume batch processing. I implemented data quality profiling and hygiene routines that flagged duplicate records, stale addresses, and orphaned relationships.
+* **Result:** Delivered production-grade customer data platforms that powered precision marketing, cross-selling, and identity verification for the nation's largest financial institutions. The entity resolution and deduplication expertise directly applies to CU Boulder's need to maintain clean, unduplicated student and prospect records across the Salesforce ecosystem.
 
 ---
 
-## 5. High-Impact Reverse Questions for the CU Boulder Search Committee
+## 4. Technical Deep-Dive Questions & Prepared Responses
 
-### For the CRM Data Architect / Technical Lead:
-1. *"The job description explicitly emphasizes reducing single-person dependencies across CRM data architecture and operations. From your perspective, where are the biggest operational bottlenecks right now, and what can I take off your plate in the first 90 days?"*
-2. *"How far along is CU Boulder in deploying Salesforce Data Cloud / Data 360? Are you currently in the initial data ingestion and identity resolution phase, or are you already building downstream activation pipelines for student engagement?"*
+### Q: "Walk us through how you would design a source-to-target mapping for a new data feed."
+**A:** I start by understanding the business context — what decisions will this data support? Then I obtain sample source data and the target schema documentation. I create a field-level mapping spreadsheet documenting: source field name, source data type, target field name, target data type, transformation rule (direct map, derivation, concatenation, lookup), null handling (default value, reject, flag), and validation rule (regex pattern, range check, referential integrity). I identify deduplication keys and matching logic. I include data volume estimates and update frequency. Before building the pipeline, I walk the mapping through a review with both the source system SME and the target system architect to catch misunderstandings early. Every mapping gets a corresponding validation test plan.
 
-### For the Hiring Manager / OIT Leadership:
-1. *"OIT serves a decentralized campus environment across multiple colleges and institutes. How mature are the data governance and data stewardship processes across departments, and where does OIT see the greatest opportunity for standardizing CRM data exchange?"*
-2. *"What does outstanding performance look like for this role after 6 months? Is it measured by the successful cutover of a specific CRM migration phase, the completeness of integration documentation, or the stability of operational data flows?"*
+### Q: "How do you handle data quality issues you discover during a migration?"
+**A:** I categorize issues by severity and source: (1) systemic issues (affecting all records — usually a transformation logic error), (2) pattern issues (affecting a subset — usually a data type or encoding issue in specific source files), and (3) isolated issues (individual records — usually source data quality problems). Systemic issues get immediate pipeline fixes. Pattern issues get targeted cleansing rules. Isolated issues go into an exception queue with the source system team for manual resolution. I never silently discard or default-fill problematic records — every exception must be explicitly handled and documented.
 
-### For DevOps & Integration Partners (UIS):
-1. *"How do the campus CRM integration flows coordinate with University Information Systems (UIS) central data engineering? What integration middleware (e.g., Boomi, MuleSoft, custom APIs) is primarily leveraged for cross-system data exchange?"*
+### Q: "What's your experience with Salesforce data architecture?"
+**A:** My direct CRM data architecture experience comes from 11 years at Acxiom building Customer 360 platforms — entity resolution, identity matching, deduplication, and multi-source data integration for financial services and insurance clients. The underlying data architecture principles are identical to Salesforce: understanding multi-object relational models, managing many-to-many relationships through junction objects, handling record matching and merge operations, and maintaining referential integrity across related records. I'm transparent that Salesforce-specific configuration (object manager, flow builder, Data Cloud connectors) is the learnable delta — but the core ETL/integration architecture I bring is platform-agnostic and transfers directly.
+
+---
+
+## 5. Questions to Ask the CU Boulder Interview Panel
+
+1. "What are the primary source systems feeding into CU Boulder's Salesforce environment today, and which integrations are the highest priority for improvement?"
+2. "How is the team currently handling data deduplication and identity matching across student, prospect, and alumni records?"
+3. "What's the current ETL/ELT technology stack — is CU Boulder using Salesforce Data Loader, MuleSoft, Informatica, or custom solutions?"
+4. "How does the team manage data governance and FERPA compliance within the integration pipeline?"
+5. "What does success look like for this role in the first 6 months?"

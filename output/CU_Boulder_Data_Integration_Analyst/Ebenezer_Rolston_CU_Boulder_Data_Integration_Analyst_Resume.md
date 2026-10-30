@@ -8,7 +8,7 @@ Denver, CO • eberolston@yahoo.com • 501-307-3237 • [LinkedIn](https://www.
 
 Enterprise Data Integration Analyst and Solutions Architect with 20+ years of experience leading complex data migrations, source-to-target mapping, ETL/ELT pipeline implementation, and enterprise data quality management across the federal and financial sectors. Served as Department ETL Architect for the U.S. Department of the Interior FBMS enterprise conversion, migrating, cleansing, and reconciling legacy bureau databases into a unified SAP S/4 platform across 4 agencies. Brings 11 years at Acxiom Corporation architecting customer data integration, entity resolution, and real-time identity scoring solutions for major enterprise clients.
 
-Expert in advanced SQL, relational schema normalization, data lineage documentation, automated reconciliation, and root-cause incident resolution. A Denver-area resident holding an M.S. in Computer Science and credentials from Stanford and Harvard, Ebenezer excels as an operational partner to Data Architects, translating complex business requirements into robust, auditable data integration assets that eliminate single-person dependencies.
+Expert in advanced SQL, relational schema normalization, data lineage documentation, automated reconciliation, and root-cause incident resolution. Augments this data integration foundation with modern AI-assisted data validation capabilities, including schema-governed pipeline verification, automated footing reconciliation, and deterministic quality gates. A Denver-area resident holding an M.S. in Computer Science and credentials from Stanford and Harvard, Ebenezer excels as an operational partner to Data Architects, translating complex business requirements into robust, auditable data integration assets that eliminate single-person dependencies.
 
 *Winner of two Department of Interior Awards*
 
@@ -16,7 +16,7 @@ Expert in advanced SQL, relational schema normalization, data lineage documentat
 
 ## CORE COMPETENCIES
 
-▪ Enterprise Data Integration & Migration ▪ Source-to-Target Mapping ▪ Relational Schema Design ▪ Advanced SQL ▪ Data Quality & Automated Reconciliation ▪ CRM Data Architecture ▪ ETL & ELT Pipelines ▪ Root Cause Analysis & Incident Resolution ▪ Data Governance & Stewardship ▪ Business Requirements Discovery ▪ Python Data Analysis ▪ Cross-Functional Stakeholder Alignment
+▪ Enterprise Data Integration & Migration ▪ Source-to-Target Mapping ▪ Relational Schema Design ▪ Advanced SQL ▪ Data Quality & Automated Reconciliation ▪ CRM Data Architecture ▪ ETL & ELT Pipelines ▪ Schema-Governed Validation & Footing Checks ▪ Root Cause Analysis & Incident Resolution ▪ Data Governance & Stewardship ▪ Business Requirements Discovery ▪ Python Data Analysis ▪ Cross-Functional Stakeholder Alignment
 
 ---
 
@@ -25,8 +25,8 @@ Expert in advanced SQL, relational schema normalization, data lineage documentat
 ### AI Engineering & Enablement | AI Guardians LLC
 *Denver, CO | Jan 2026–Present*
 - Architected schema-governed data pipelines and API tool contracts using Python, Pydantic, and JSON Schema, establishing rigorous validation rules for heterogeneous data ingestion.
-- Integrated multi-source enterprise data streams via Model Context Protocol (MCP) servers, standardizing context schemas and eliminating data pipeline drift.
-- Engineered automated regression validation suites and deterministic quality checks, replacing stochastic models with verifiable schema contracts.
+- Integrated multi-source enterprise data streams via Model Context Protocol servers, standardizing context schemas and eliminating data pipeline drift.
+- Engineered automated reconciliation suites and deterministic footing checks, verifying that extracted detail rows mathematically reconcile to reported subtotals before data enters downstream analytical systems.
 - Designed comprehensive data governance scorecards and compliance checklists aligned with NIST AI RMF 1.0 and enterprise data standards.
 
 ### Program Analyst, Acquisition Directorate | U.S. Department of the Interior
@@ -67,8 +67,8 @@ Expert in advanced SQL, relational schema normalization, data lineage documentat
 - Enforced Pydantic contract validation, confidence scoring, schema-governed conditional routing, and semantic retrieval.
 
 ### Trading Copilot — Governed Multi-Agent Research Platform
-*AI in Finance Nicole Koenigstein 2026*
-- Architected multi-agent equities research pipelines with supervisory layer, automated risk verification and deterministic execution bounds.
+*AI in Finance Nicole Koenigstein*
+- Architected multi-agent equities research pipelines combining hierarchical data ingestion, tabular footing reconciliation, and deterministic data validation gates.
 
 ### Rental Housing Law Navigator — Regulatory Decision-Support Application
 *Global AI Hackathon 2026*
@@ -95,8 +95,8 @@ Expert in advanced SQL, relational schema normalization, data lineage documentat
 
 ## TECHNICAL PROFICIENCIES
 
-- **Data Integration & ETL/ELT Architectures:** Source-to-Target Mapping • Enterprise Data Migration • Data Extraction, Transformation & Loading • Ingestion Patterns • Data Cleansing & Deduplication • Reconciliation Frameworks • Data Lineage Tracking
+- **Data Integration & ETL/ELT Architectures:** Source-to-Target Mapping • Enterprise Data Migration • Data Extraction, Transformation & Loading • Ingestion Patterns • Data Cleansing & Deduplication • Reconciliation Frameworks & Footing Checks • Data Lineage Tracking • Schema-Governed Validation
 - **Relational Databases & Query Languages:** Advanced SQL & Complex Queries • Oracle • PostgreSQL • SQL Server • MySQL • Relational Schema Design • Schema Normalization • Query Optimization • Indexing & Constraints
 - **Enterprise CRM & Business Systems:** CRM Data Architecture Concepts • Salesforce Platform Ecosystem (Data Cloud, Sales/Service/Education Cloud data models) • SAP S/4HANA (FBMS) • Unison PRISM • Remedy • Higher Education Data Flows
-- **Software Engineering & Analytical Workflows:** Python • pandas & NumPy • FastAPI • Pydantic • SQLAlchemy • RESTful API Contracts • JSON Schema • pytest • Git & GitHub • Cloud Run Deployment
-- **Data Quality, Governance & Stewardship:** Data Quality Profiling & Monitoring • Root Cause Defect Analysis • Metadata Management • Data Steward Approval Workflows • Standard Operating Procedures (SOPs) • Knowledge Transfer & Team Mentorship
+- **Software Engineering & Analytical Workflows:** Python • pandas & NumPy • FastAPI • Pydantic Contract Validation • SQLAlchemy • RESTful API Contracts • JSON Schema • pytest • Git & GitHub • Cloud Run Deployment
+- **Data Quality, Governance & Stewardship:** Data Quality Profiling & Monitoring • Root Cause Defect Analysis • Metadata Management • Data Steward Approval Workflows • Standard Operating Procedures • Knowledge Transfer & Team Mentorship
