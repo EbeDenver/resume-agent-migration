@@ -617,6 +617,67 @@
         "Strictly zero parentheses when extracted into Core Competencies.",
         "Omit completion dates from resume face per candidate rule."
       ]
+    },
+    {
+      "id": "ai-guardians-trading-copilot-as-built",
+      "name": "AI Trading Copilot — As-Built Production Decision-Support Platform",
+      "issuing_organization": "AI Guardians LLC",
+      "date": "2026",
+      "credential_type": "Production Engineering & Architectural As-Built Reference",
+      "verification_url": "https://portal.aiguardiansllc.us/",
+      "domains": [
+        "Agentic AI Architecture",
+        "Production LLMOps",
+        "Financial Systems Engineering",
+        "Quantitative Analytics",
+        "Cloud Security & VPC",
+        "Microservices & API Contracts",
+        "Deterministic Guardrails"
+      ],
+      "target_roles": [
+        "AI Systems Architect",
+        "Staff AI Engineer",
+        "Financial AI Engineer",
+        "Quantitative Solutions Developer",
+        "AI Platform & Cloud Engineer"
+      ],
+      "verified_skills_and_tools": [
+        "Private Google Cloud Run Deployment (trading-copilot-api, Scale-to-Zero, Max 2)",
+        "Private Cloud SQL PostgreSQL 15 (Dedicated VPC, 21 Domain Tables, Alembic Migrations)",
+        "Google Secret Manager & Artifact Registry",
+        "IAM Least-Privilege Dedicated Service Identities (Zero Service Account JSON Keys)",
+        "Server-Side TradingCopilotClient & Native AI Guardians Portal Integration",
+        "Human-in-the-Loop (HITL) Workflow Governance & Deterministic Action Approval Gating",
+        "Deterministic Quantitative Computation (RSI, ATR, Moving Averages, Volatility, Pivots, MFE, MAE)",
+        "LLMs Interpret Not Invent Principle (Unsupported Facts = UNKNOWN)",
+        "LangGraph Supervisor Workflow with Typed Pydantic v2 Contracts",
+        "5 Specialist Agents (ChartRangeAgent, LevelsAgent, FundamentalsAgent with SEC EDGAR/XBRL, News/Catalyst Agent, Thesis/Scenario Agent)",
+        "Non-Bypassable Deterministic RiskGate (PASS, WARN, BLOCK)",
+        "Fail-Closed Security & Governance Architecture",
+        "Anti-Lookahead Temporal Integrity (Fixed as_of, accepted_at <= as_of Filtering)",
+        "Machine-Verifiable EvidenceLedger (evidence_id, Provenance, Content Hashing)",
+        "Multi-Tenant SafeReusePolicy (5-Tier Data Isolation: GLOBAL_SHARED to SYSTEM_INTERNAL)",
+        "Immutable Prediction Ledger (PredictionRecord & PredictionOutcome Separation)",
+        "Forward Return, MFE & MAE Outcome Tracking and Gated Calibration",
+        "ModelRouter & BaseLLMProvider Modular Abstractions",
+        "FinBERT Financial Sentiment Classification & Specialized Financial Encoders",
+        "Business-Level Request Correlation Tracing (request_id, run_id, workspace_id, ticker, as_of)",
+        "Cloud Logging Structured Logging with Secrets Scrubbing",
+        "Phase-Gated Test Verification (722 Passed, 11 Skipped, 0 Failed, Zero-Network Fixtures)"
+      ],
+      "extractable_resume_bullets": [
+        "Architected a multi-horizon U.S. equities decision-support platform deployed as private Google Cloud Run FastAPI microservices connected to private Cloud SQL PostgreSQL 15 (21 domain tables, Alembic migrations) via dedicated VPC peering.",
+        "Engineered 5 specialist agents (ChartRange, Levels, Fundamentals with SEC EDGAR/XBRL, News/Catalyst, Thesis/Scenario) orchestrated by a LangGraph supervisor using typed Pydantic v2 state contracts.",
+        "Enforced deterministic quantitative calculations in Python for RSI, ATR, moving averages, pivots, and MFE/MAE with a non-bypassable fail-closed RiskGate that suppresses recommendations and blocks human approvals on integrity failures.",
+        "Implemented machine-verifiable EvidenceLedger tracking citations by evidence ID, source provider, content hash, and fixed as-of timestamps to eliminate lookahead bias and ensure temporal auditability.",
+        "Established an immutable Prediction Ledger separating forecast-time PredictionRecord from post-run PredictionOutcome, backed by a phase-gated test suite of 722 automated tests with zero network leaks."
+      ],
+      "resume_display_format": "AI Trading Copilot : As-Built Production Platform — AI Guardians LLC",
+      "guardrails": [
+        "Maintain strict distinction between decision-support platform (no autonomous broker execution) and automated trading execution systems.",
+        "Strictly zero parentheses when extracted into Core Competencies or Technical Proficiencies.",
+        "Preserve production attribution to AI Guardians LLC."
+      ]
     }
   ]
 }

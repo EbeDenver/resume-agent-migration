@@ -16,7 +16,7 @@ Combines this experience with recent hands-on AI engineering and workflow develo
 
 ## CORE COMPETENCIES
 
-▪ Customer Data Integration & Entity Resolution ▪ Identity Scoring Models & Algorithmic Scoring ▪ Identity Data Quality, Profiling & Hygiene ▪ Identity Match Reach & Quality KPIs ▪ Agentic AI Harness Engineering ▪ State Machine & Multi-Agent Architecture ▪ Model Context Protocol Integration ▪ Trajectory Observability & Evaluation ▪ Relational Schema Design ▪ Advanced SQL ▪ Privacy, Regulatory & AI Governance ▪ Python Data Analysis ▪ Enterprise ETL Architecture & Conversion ▪ Automated Validation & Testing ▪ Cross-Functional Stakeholder Relationship ▪ User Enablement & Mentorship
+▪ Customer Data Integration & Entity Resolution ▪ Identity Scoring Models & Algorithmic Scoring ▪ Identity Data Quality, Profiling & Hygiene ▪ Identity Match Reach & Quality KPIs ▪ Agentic AI Harness Engineering ▪ State Machine & Multi-Agent Architecture ▪ Non-Bypassable RiskGate & Fail-Closed Guardrails ▪ Model Context Protocol Integration ▪ Trajectory Observability & Evaluation ▪ Relational Schema Design ▪ Advanced SQL ▪ Privacy, Regulatory & AI Governance ▪ Python Data Analysis ▪ Enterprise ETL Architecture & Conversion ▪ Automated Validation & Testing ▪ Cross-Functional Stakeholder Relationship ▪ User Enablement & Mentorship
 
 ---
 
@@ -24,7 +24,11 @@ Combines this experience with recent hands-on AI engineering and workflow develo
 
 ### AI Engineering & Enablement | AI Guardians LLC
 *Denver, CO | Jan 2026–Present*
-- Engineered autonomous multi-agent workflows and custom TOML/markdown agents using OpenAI Codex and Google Antigravity with runtime hooks, Plan Mode trade-off analysis, and automated build–test–fix loops.
+- Architected and deployed the AI Trading Copilot decision-support platform, featuring private Google Cloud Run FastAPI microservices, private Cloud SQL PostgreSQL 15 with 21 domain tables, Alembic migrations, Secret Manager, and VPC networking.
+- Built a 5-agent LangGraph supervisor system with specialist agents for chart range, levels, fundamentals with SEC EDGAR XBRL, news catalysts, and thesis scenarios utilizing typed Pydantic v2 contracts.
+- Implemented a deterministic fail-closed RiskGate emitting PASS, WARN, or BLOCK, preventing recommendation generation and blocking human approvals on integrity breaches.
+- Engineered machine-verifiable EvidenceLedger tracking citations by evidence ID, source provider, content hash, and fixed as-of timestamps to eliminate lookahead bias.
+- Engineered autonomous multi-agent workflows and custom TOML and markdown agents using OpenAI Codex and Google Antigravity with runtime hooks, Plan Mode trade-off analysis, and automated build–test–fix loops.
 - Integrated enterprise toolchains including Figma, GitHub, Atlassian, and Google Workspace via Model Context Protocol servers and plugins; standardized agent context via AGENTS.md guidelines and reusable skill lifecycles.
 - Formulated enterprise prompting methodologies covering Outcome, Constraints, Scope, and Definition of Done, establishing evidence-based verification gates that replace agent self-assessment with deterministic testing.
 - Designed AI transformation toolkits, AI maturity assessments, use-case prioritization canvases, and governance guardrails based on NIST AI RMF 1.0 and ISO 42001.
@@ -61,11 +65,12 @@ Combines this experience with recent hands-on AI engineering and workflow develo
 ## AI Engineering Portfolio
 
 ### Trading Copilot — Governed Multi-Agent Research Platform
-*AI in Finance Nicole Koenigstein*
-- Architected multi-agent equities research pipelines in LangGraph combining hierarchical supervisor and peer-to-peer topologies with bounded execution budgets and deterministic state machine transitions.
-- Implemented 4-layer harness architecture separating non-deterministic model proposals from deterministic policy enforcement, tool contracts, and zero-trust sandbox execution.
-- Integrated 6-measure trajectory observability covering Correctness, Grounding, Latency p95, Cost, Safety, and Auditability via OpenTelemetry and self-hosted Langfuse to audit multi-step reasoning paths.
-- Engineered multimodal financial parsing for SEC filings and earnings calls, combining tabular footing reconciliation, audio speaker diarization, and foundation time-series forecasting with calibrated predictive quantile distributions.
+*AI Guardians LLC • As-Built Production Architecture*
+- Architected multi-horizon U.S. equities decision-support platform deployed on private Google Cloud Run FastAPI microservice trading-copilot-api and private Cloud SQL PostgreSQL 15 with 21 domain tables and Alembic migrations.
+- Engineered 5 specialist agents — ChartRange, Levels, Fundamentals with SEC EDGAR XBRL, News Catalyst, and Thesis Scenario — orchestrated via LangGraph supervisor with typed Pydantic v2 contracts.
+- Enforced strict separation between deterministic calculation — RSI, ATR, moving averages, pivots, financial ratios, MFE and MAE in Python — and LLM structured interpretation, backed by a non-bypassable fail-closed RiskGate emitting PASS, WARN, or BLOCK.
+- Built machine-verifiable EvidenceLedger tracking citations by evidence ID, source provider, content hash, and fixed point-in-time as-of boundaries to guarantee anti-lookahead temporal integrity.
+- Established immutable Prediction Ledger separating forecast-time PredictionRecord from post-run PredictionOutcome, validated across 722 automated tests with zero network leaks.
 
 ### Rental Housing Law Navigator — Regulatory Decision-Support Application
 *Global AI Hackathon 2026*
@@ -99,7 +104,7 @@ Combines this experience with recent hands-on AI engineering and workflow develo
 ## TECHNICAL PROFICIENCIES
 
 - **Identity Analytics & Predictive Systems:** Customer Data Integration • Identity Resolution & Entity Matching • Real-Time Identity Scoring • Algorithmic Scoring Models • Predictive Cross-Sell Models • Deep Learning & Neural Networks
-- **Data Engineering & Big Data Platforms:** Acxiom Hive, AbiliTec Links, Apache Spark • Oracle, PostgreSQL, SQL Server • ETL/ELT Architectures • Relational Data Modeling • Schema Normalization • Data Quality, Deduplication & Profiling
-- **Software Engineering & Analytical Workflows:** Python • pandas & NumPy • FastAPI • Pydantic • SQLAlchemy • RESTful API Contracts • JSON Schema • pytest • GitHub • Cloud Deployment on Google Cloud Run and Vercel
-- **Enterprise Platforms, Privacy & Governance:** SAP S/4HANA Federal Business Management System • Unison PRISM • Remedy
-- **AI Engineering & LLMOps:** Agentic Harness Engineering • LangGraph StateGraph FSM and HSM • Multi-Agent Topologies — Hierarchical, Peer-to-Peer, Blackboard, Swarm • Model Context Protocol MCP • OpenAI Codex CLI, IDE, Desktop App • Google Antigravity • Context Engineering with AGENTS.md • Trajectory Observability & Tracing via OpenTelemetry, Langfuse, LangSmith • Policy Optimization via GRPO, GSPO, RULER • Sandboxing & Security with Docker, E2B, OWASP Top 15 Agent Vulnerabilities • Financial Multimodal RAG & Table Footing Verification • Foundation Time-Series Models — Chronos, TimesFM, PatchTST, AnomalyBERT • Inference Physics with vLLM PagedAttention and SGLang RadixAttention • Structured Output Modes — Strict JSON Schema, Instructor Pydantic • AI Governance & Responsible AI • NIST AI RMF 1.0 • ISO 42001 • Bounded Execution Guardrails • Qdrant Vector Search
+- **Data Engineering & Big Data Platforms:** Acxiom Hive, AbiliTec Links, Apache Spark • Oracle, PostgreSQL 15 on Cloud SQL, SQL Server • Alembic Migrations • 21 Domain Tables • ETL/ELT Architectures • Relational Data Modeling • Schema Normalization • Data Quality, Deduplication & Profiling
+- **Software Engineering & Analytical Workflows:** Python • pandas & NumPy • FastAPI & Uvicorn • OpenAPI 3.1 • Pydantic v2 • SQLAlchemy • RESTful API Contracts • JSON Schema • pytest • GitHub • Cloud Deployment on Private Google Cloud Run, Cloud SQL, Secret Manager, VPC Peering, and Vercel
+- **Enterprise Platforms, Privacy & Governance:** SAP S/4HANA Federal Business Management System • Unison PRISM • Remedy • Multi-Tenant SafeReusePolicy • 5-Tier Data Isolation • NIST AI RMF 1.0 • ISO 42001
+- **AI Engineering & LLMOps:** Agentic Harness Engineering • LangGraph StateGraph FSM and HSM • Non-Bypassable RiskGate • Fail-Closed Architecture • EvidenceLedger Provenance Tracking • Anti-Lookahead Temporal Integrity • Prediction Ledger with PredictionRecord and PredictionOutcome • MFE and MAE Tracking • ModelRouter & BaseLLMProvider • FinBERT Financial Sentiment Classification • Multi-Agent Topologies — Hierarchical, Peer-to-Peer, Blackboard, Swarm • Model Context Protocol MCP • OpenAI Codex CLI, IDE, Desktop App • Google Antigravity • Context Engineering with AGENTS.md • Trajectory Observability & Tracing via OpenTelemetry, Langfuse, LangSmith • Policy Optimization via GRPO, GSPO, RULER • Sandboxing & Security with Docker, E2B, OWASP Top 15 Agent Vulnerabilities • Financial Multimodal RAG & Table Footing Verification • Foundation Time-Series Models — Chronos, TimesFM, PatchTST, AnomalyBERT • Inference Physics with vLLM PagedAttention and SGLang RadixAttention • Structured Output Modes — Strict JSON Schema, Instructor Pydantic • Bounded Execution Guardrails • Qdrant Vector Search

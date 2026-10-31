@@ -221,6 +221,40 @@
 
 ---
 
+### 13. AI Trading Copilot — As-Built Production Engineering & Architecture
+* **Issuing Organization / Company:** AI Guardians LLC
+* **Recipient / Lead Architect:** Ebenezer Rolston
+* **Date / Status:** October 2026 (As-Built Production Architecture & Technical Design Guide)
+* **Production Systems:** `portal.aiguardiansllc.us` • `trading-copilot-api` (Google Cloud Run) • Cloud SQL PostgreSQL 15
+* **Domains:** Agentic AI Systems Architecture, Production LLMOps, Financial Systems Engineering, Quantitative Analytics, Cloud Security & VPC Peering, Microservices & API Contracts, Deterministic Guardrails
+* **Target Roles:** AI Systems Architect, Staff AI Engineer, Financial AI Engineer, Quantitative Solutions Developer, AI Platform & Cloud Engineer
+* **Verified Skills & Tools:**
+  * Cloud & Infrastructure: Private Google Cloud Run (`trading-copilot-api`, scale-to-zero, max 2), private Cloud SQL PostgreSQL 15 (21 domain tables, Alembic migrations) via dedicated VPC peering with public IPv4 disabled; Google Secret Manager; Artifact Registry; IAM least-privilege service identities (zero service-account JSON keys)
+  * Native Portal & HITL Integration: Native AI Guardians portal client via server-side authenticated `TradingCopilotClient`; Human-in-the-Loop (HITL) actions with deterministic rejection of `ACCEPT_ANALYSIS` on RiskGate BLOCK
+  * Deterministic Analytics & Core Philosophy: Python/NumPy deterministic computation for protected facts (RSI, ATR, moving averages, returns, volatility, confirmed pivots, support/resistance zones, financial ratios, MFE, MAE); "LLMs interpret, not invent" (unsupported facts = UNKNOWN); deterministic recommendation scorer invariant to LLM provider
+  * Specialist Agents & LangGraph Supervisor: 5 point-in-time specialist agents (ChartRangeAgent, LevelsAgent, FundamentalsAgent with SEC EDGAR/XBRL, News/Catalyst Agent, Thesis/Scenario Agent) orchestrated by a LangGraph supervisor using typed Pydantic v2 contracts
+  * Non-Bypassable RiskGate & Guardrails: Deterministic safety and integrity aggregator enforcing fail-closed behavior (PASS, WARN, BLOCK); aggregates input/schema, temporal/as_of, data freshness, price integrity, numeric integrity, evidence, retry integrity, market/session, and liquidity/spread gates; BLOCK suppresses recommendations
+  * Anti-Lookahead Temporal Integrity: Fixed point-in-time `as_of` boundaries; SEC filings filtered by `accepted_at <= as_of`; chronological market bars; confirmed pivot points; ingestion-timestamped research
+  * Machine-Verifiable EvidenceLedger: Provenance tracking linking claims to `evidence_id`, source provider, availability timestamps, `as_of`, content hash, and model/provider version; missing citations trigger RiskGate BLOCK
+  * Multi-Tenancy & SafeReusePolicy: 5-tier tenant isolation (GLOBAL_SHARED, WORKSPACE_PRIVATE, USER_PRIVATE, LICENSE_RESTRICTED, SYSTEM_INTERNAL)
+  * Prediction Ledger & Calibration: Immutable `PredictionRecord` paired with separately stored post-run `PredictionOutcome` (forward returns, MFE, MAE, benchmark comparisons); versioned calibration without self-modifying thresholds
+  * Model Layer & Provider Neutrality: `BaseLLMProvider` and `ModelRouter` abstractions; FinBERT financial sentiment classification; narrow financial encoders
+  * Tracing & Observability: Request correlation across `request_id`, `run_id`, `workspace_id`, `ticker + as_of`, and `evidence_ids`; Cloud Logging structured logs with scrubbed secrets
+  * Phase-Gated Quality Verification: 722 automated tests passed, 11 skipped, 0 failed across zero-network unit tests, fixture providers, real PostgreSQL immutability, and adversarial test scenarios
+* **Extractable Resume Bullets:**
+  * *Bullet A (Cloud Microservices & Database Architecture):* "Architected a multi-horizon U.S. equities decision-support platform deployed as private Google Cloud Run FastAPI microservices connected to private Cloud SQL PostgreSQL 15 with 21 domain tables and Alembic migrations via dedicated VPC peering."
+  * *Bullet B (Specialist Agents & LangGraph Supervisor):* "Engineered 5 specialist agents (ChartRange, Levels, Fundamentals with SEC EDGAR/XBRL, News/Catalyst, Thesis/Scenario) orchestrated by a LangGraph supervisor using typed Pydantic v2 state contracts."
+  * *Bullet C (Deterministic Facts vs. LLM Interpretation & RiskGate):* "Enforced deterministic quantitative calculations in Python for RSI, ATR, moving averages, pivots, and MFE/MAE with a non-bypassable fail-closed RiskGate that suppresses recommendations and blocks human approvals on integrity failures."
+  * *Bullet D (EvidenceLedger & Anti-Lookahead Integrity):* "Implemented machine-verifiable EvidenceLedger tracking citations by evidence ID, source provider, content hash, and fixed as-of timestamps to eliminate lookahead bias and ensure temporal auditability."
+  * *Bullet E (Prediction Ledger & Comprehensive Verification):* "Established an immutable Prediction Ledger separating forecast-time PredictionRecord from post-run PredictionOutcome, backed by a phase-gated test suite of 722 automated tests with zero network leaks."
+* **Display Format:** `AI Trading Copilot : As-Built Production Platform — AI Guardians LLC`
+* **Guardrails:**
+  * Maintain strict distinction: decision-support platform only (no broker calls or autonomous trade execution).
+  * Strictly zero parentheses when extracting into Core Competencies.
+  * Ground all claims in the as-built technical design documentation.
+
+---
+
 ## 2. Dynamic Extraction Rules for Resume Generator
 
 When generating or updating a tailored resume, cover letter, or interview package, the **Resume Generator** MUST apply the following extraction logic:

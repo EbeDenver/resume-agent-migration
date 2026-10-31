@@ -108,8 +108,8 @@ Strict reverse-chronological order across 4 core engagements. Every role feature
 
 ### 5. AI Engineering Portfolio
 Dedicated section featuring 4 high-impact engineering projects:
-* **Trading Copilot — Governed Multi-Agent Research Platform** (*AI in Finance Nicole Koenigstein 2026*):  
-  Architected multi-agent equities research pipelines with supervisory layer, automated risk verification and deterministic execution bounds.
+* **Trading Copilot — Governed Multi-Agent Research Platform** (*AI Guardians LLC • As-Built Production Architecture*):  
+  Multi-horizon U.S. equities decision-support platform deployed on private Google Cloud Run FastAPI and private Cloud SQL PostgreSQL 15 with 21 domain tables and Alembic migrations; features 5 specialist agents orchestrated by a LangGraph supervisor with typed Pydantic v2 contracts, non-bypassable fail-closed RiskGate, machine-verifiable EvidenceLedger, and anti-lookahead temporal integrity.
 * **Rental Housing Law Navigator — Regulatory Decision-Support Application** (*Global AI Hackathon 2026*):  
   Engineered full-stack regulatory decision application linking Lovable frontend, Google Cloud Run, Python/FastAPI backend.
 * **AI Incident Monitor — AI Risk Intelligence Platform** (*AI Guardians LLC | 2026*):  
@@ -130,10 +130,10 @@ Clean single-line entries with strict date-free rule for the University of Denve
 ### 7. Technical Proficiencies
 Organized into 5 categorized inline blocks:
 1. **Identity Analytics & Predictive Systems:** Customer Data Integration • Identity Resolution & Entity Matching • Real-Time Identity Scoring • Algorithmic Scoring Models • Predictive Cross-Sell Models • Deep Learning & Neural Networks
-2. **Data Engineering & Big Data Platforms:** Acxiom Hive, AbiliTec Links, Apache Spark • Oracle, PostgreSQL, SQL Server • ETL/ELT Architectures • Relational Data Modeling • Schema Normalization • Data Quality, Deduplication & Profiling
-3. **Software Engineering & Analytical Workflows:** Python • pandas & NumPy • FastAPI • Pydantic • SQLAlchemy • RESTful API Contracts • JSON Schema • pytest • GitHub • Cloud Deployment (Google Cloud Run, Vercel)
-4. **Enterprise Platforms, Privacy & Governance:** SAP S/4HANA Federal Business Management System • Unison PRISM • Remedy
-5. **AI Engineering & LLMOps:** Agentic AI Workflows • Retrieval-Augmented Generation • LLM Evaluation & Observability • Context Management • AI Governance & Responsible AI • NIST AI RMF 1.0 • Semantic Modeling & Ontology Design • Qdrant Vector Search • Codex, Antigravity, Cursor, OpenAI
+2. **Data Engineering & Big Data Platforms:** Acxiom Hive, AbiliTec Links, Apache Spark • Oracle, PostgreSQL 15 on Cloud SQL, SQL Server • Alembic Migrations • 21 Domain Tables • ETL/ELT Architectures • Relational Data Modeling • Schema Normalization • Data Quality, Deduplication & Profiling
+3. **Software Engineering & Analytical Workflows:** Python • pandas & NumPy • FastAPI & Uvicorn • OpenAPI 3.1 • Pydantic v2 • SQLAlchemy • RESTful API Contracts • JSON Schema • pytest • GitHub • Cloud Deployment on Private Google Cloud Run, Cloud SQL, Secret Manager, VPC Peering, and Vercel
+4. **Enterprise Platforms, Privacy & Governance:** SAP S/4HANA Federal Business Management System • Unison PRISM • Remedy • Multi-Tenant SafeReusePolicy • 5-Tier Data Isolation • NIST AI RMF 1.0 • ISO 42001
+5. **AI Engineering & LLMOps:** Agentic Harness Engineering • LangGraph StateGraph FSM and HSM • Non-Bypassable RiskGate • Fail-Closed Architecture • EvidenceLedger Provenance Tracking • Anti-Lookahead Temporal Integrity • Prediction Ledger with PredictionRecord and PredictionOutcome • MFE and MAE Tracking • ModelRouter & BaseLLMProvider • FinBERT Financial Sentiment Classification • Multi-Agent Topologies — Hierarchical, Peer-to-Peer, Blackboard, Swarm • Model Context Protocol MCP • OpenAI Codex CLI, IDE, Desktop App • Google Antigravity • Context Engineering with AGENTS.md • Trajectory Observability & Tracing via OpenTelemetry, Langfuse, LangSmith • Policy Optimization via GRPO, GSPO, RULER • Sandboxing & Security with Docker, E2B, OWASP Top 15 Agent Vulnerabilities • Financial Multimodal RAG & Table Footing Verification • Foundation Time-Series Models — Chronos, TimesFM, PatchTST, AnomalyBERT • Inference Physics with vLLM PagedAttention and SGLang RadixAttention • Structured Output Modes — Strict JSON Schema, Instructor Pydantic • Bounded Execution Guardrails • Qdrant Vector Search
 
 ---
 
